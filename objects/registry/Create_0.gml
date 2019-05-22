@@ -1,4 +1,6 @@
 /// @desc Initialize Game
+// Load game settings
+load_settings();
 // Set game flags
 global.debug_show_extra_data = true;
 // Register External Assets
@@ -10,6 +12,7 @@ spr_backgrounds = sprite_add("assets/textures/background.png", 1, false, false, 
 instance_create_depth(room_width / 2, room_height / 2, 0, obj_player_ship);
 instance_create_depth(obj_player_ship.x, obj_player_ship.y, 0, obj_player_target);
 instance_create_depth(room_width / 2, room_height / 2, 0, obj_camera);
+instance_create_depth(room_width / 2, room_height / 2, 0, control_handler);
 // Create background
 background_layer = layer_get_id("Background");
 background_1 = layer_background_get_id(background_layer);

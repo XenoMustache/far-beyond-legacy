@@ -1,4 +1,5 @@
 /// @desc Initalize Player
+// TODO NPC disposition system
 image_angle = 90;
 ship_hull = 100;
 spd = 4;
