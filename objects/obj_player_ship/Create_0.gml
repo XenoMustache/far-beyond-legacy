@@ -1,5 +1,6 @@
 /// @desc Initalize Player
 // TODO NPC disposition system
+// TODO Player energy system
 image_angle = 90;
 ship_hull_max = 100;
 ship_hull = ship_hull_max;

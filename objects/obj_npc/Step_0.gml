@@ -2,6 +2,7 @@
 // Get directives
 // TODO Pirates attack civillians
 // TODO Civillians flee players and pirates
+// TODO Boss health regen behvaior
 switch (ai_state) {
 	case ai_directive.wander:
 		if (!target_exist) {
@@ -14,7 +15,7 @@ switch (ai_state) {
 			speed = 0;
 				if (alarm[0] = -1) alarm[0] = room_speed * 5;
 		}
-		if (npc_type == npc_types.pirate_test)
+		if (npc_faction == factions.pirate)
 			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
 	break;
 	case ai_directive.attack:
@@ -36,6 +37,7 @@ switch (ai_state) {
 					image_angle = direction;
 					bullet_type = bullet_types.pirate;
 					hit_bullet = choose(true, false);
+					bullet_damage = obj_npc.dmg;
 				}
 				can_shoot = false;
 				alarm[1] = room_speed / attack_speed;

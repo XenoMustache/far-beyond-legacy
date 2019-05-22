@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "13182298-16e8-4df6-9a67-6a8856c13d0c",
+            "Value": {
+                "id": "f8a54534-ee6d-4fec-bb34-816491129c92",
+                "resourcePath": "datafiles_yy\\assets\\textures\\background.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "15ad8783-ca05-47d4-bdd5-39dbb7aee53e",
             "Value": {
                 "id": "2e9a7f10-0cfd-4af7-9261-cef11c4c612e",
@@ -255,6 +263,14 @@
             }
         },
         {
+            "Key": "9b4108cd-ac67-4792-82fc-71874b6a1665",
+            "Value": {
+                "id": "b65d79c3-4bf5-4a0d-a759-78b2983a6d26",
+                "resourcePath": "scripts\\set_npc_type\\set_npc_type.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a8cfa1f9-0c96-40f9-ba91-4d706f31f138",
             "Value": {
                 "id": "fc7802cb-cb0b-4e71-abfd-49fd8b8038ef",
@@ -359,14 +375,6 @@
             }
         },
         {
-            "Key": "ed96c503-eba8-41be-836c-689a31020391",
-            "Value": {
-                "id": "42f82ccb-e936-4e62-b93a-6bc5bf40e3f5",
-                "resourcePath": "datafiles_yy\\assets\\textures\\background.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "eeb3a90a-7a8d-4a7c-bed7-188f6121162b",
             "Value": {
                 "id": "b1eef6f2-97e5-4e07-9176-0d03cbb0ddd1",
@@ -394,7 +402,8 @@
     "script_order": [
         "da7519c0-ba75-4e58-bc33-4f48c98e0ec8",
         "e7a59738-f7fb-4d06-8bd2-f1ba13d24290",
-        "67b6da5d-2d57-4cff-891d-f07fa9d9c7a5"
+        "67b6da5d-2d57-4cff-891d-f07fa9d9c7a5",
+        "9b4108cd-ac67-4792-82fc-71874b6a1665"
     ],
     "tutorial": ""
 }

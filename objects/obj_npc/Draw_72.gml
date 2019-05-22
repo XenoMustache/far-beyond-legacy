@@ -8,6 +8,13 @@ switch (npc_type) {
 		image_xscale = 3;
 		image_yscale = 3;
 	break;
+	case npc_types.pirate_boss:
+		sprite_index = registry.spr_small_ships_pirate;
+		image_index = 1;
+		image_speed = 0;
+		image_xscale = 3;
+		image_yscale = 3;
+	break;
 	case npc_types.civ_test:
 		sprite_index = registry.spr_small_ships;
 		image_index = 1;

@@ -15,6 +15,7 @@ if (keyboard_check(vk_space) && can_shoot == true) {
 		image_angle = direction;
 		bullet_type = bullet_types.player;
 		hit_bullet = choose(true, true, true, false);
+		bullet_dmg = obj_player_ship.bullet_damage;
 	}
 	can_shoot = false;
 	alarm[0] = room_speed / attack_speed;
