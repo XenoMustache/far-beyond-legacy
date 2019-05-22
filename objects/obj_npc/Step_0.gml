@@ -4,7 +4,6 @@ switch (ai_state) {
 	case ai_directive.wander:
 		if (!target_exist) {
 			target_exist = true;
-			randomize();
 			target_x = random_range(128, room_width - 128);
 			target_y = random_range(128, room_height - 128);
 		}
@@ -34,6 +33,7 @@ switch (ai_state) {
 					direction = other.image_angle + random_range(25 * obj_npc.accuracy, -25 * obj_npc.accuracy);
 					image_angle = direction;
 					bullet_type = bullet_types.pirate;
+					hit_bullet = choose(true, false);
 				}
 				can_shoot = false;
 				alarm[1] = room_speed / attack_speed;

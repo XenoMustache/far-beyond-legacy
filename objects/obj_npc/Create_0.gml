@@ -32,6 +32,7 @@ switch (npc_type) {
 		ship_hull = ship_hull_max;
 		attack_speed = 1;
 		dmg = 25;
+		shield = 0;
 		bullet_speed = 40;
 		damage_cooldown = 0.5;
 		accuracy = 0.5;
@@ -46,6 +47,7 @@ switch (npc_type) {
 		ship_hull = ship_hull_max;
 		attack_speed = 0;
 		dmg = 0;
+		shield = 0;
 		bullet_speed = 0;
 		damage_cooldown = 0.5;
 		accuracy = 0;

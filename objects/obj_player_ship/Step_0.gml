@@ -11,10 +11,10 @@ if (keyboard_check(vk_space) && can_shoot == true) {
 		image_xscale = 2;
 		image_yscale = 2;
 		speed = obj_player_ship.bullet_speed;
-		direction = other.image_angle;
+		direction = other.image_angle + random_range(25 * obj_npc.accuracy, -25 * obj_npc.accuracy);
 		image_angle = direction;
 		bullet_type = bullet_types.player;
-		// TODO Player accuracy system
+		hit_bullet = choose(true, true, true, false);
 	}
 	can_shoot = false;
 	alarm[0] = room_speed / attack_speed;
@@ -28,3 +28,13 @@ if (target_x != pointer_null && target_y != pointer_null) {
 }
 // Check movement
 if (speed != 0) is_moving = true; else is_moving = false;
+// Manage health and shields
+if (ship_hull <= 0) room_restart();
+if (shield <= 0) has_shield = false;
+if (can_rechage_shield) {
+	has_shield = true;
+	shield += recharge_rate;
+}
+if (shield >= shield_max) can_rechage_shield = false;
+health_percent = (ship_hull / ship_hull_max) * 100;
+shield_percent = (shield / shield_max) * 100;

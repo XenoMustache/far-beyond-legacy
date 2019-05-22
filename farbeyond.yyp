@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "3eaef40c-8d73-41ee-b87e-e9d5ac9242ae",
+            "Value": {
+                "id": "3675c8ae-6b1f-4a02-8deb-361ebc9110b2",
+                "resourcePath": "datafiles_yy\\assets\\textures\\shield.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "43c9fb21-5919-402d-9c4b-f97db2128c9d",
             "Value": {
                 "id": "d178d82d-5ce0-44f0-afc6-26a56365524d",
