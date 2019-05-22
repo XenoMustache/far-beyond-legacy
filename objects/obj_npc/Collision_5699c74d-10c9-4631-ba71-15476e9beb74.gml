@@ -4,6 +4,7 @@ if (other.bullet_type == bullet_types.player) {
 		if (can_take_damage) {
 			ship_hull -= obj_player_ship.bullet_damage;
 			alarm[2] = room_speed * damage_cooldown;
+			hit = true;
 		}
 	}
 }

@@ -9,6 +9,7 @@ spd = 4;
 rotation_speed = 0.05;
 is_moving = false;
 can_take_damage = true;
+hit = false;
 can_shoot = true;
 attack_speed = 4;
 bullet_speed = 40;

@@ -12,6 +12,7 @@ if (other.bullet_type == bullet_types.pirate) {
 			can_rechage_shield = false;
 			alarm[1] = room_speed * damage_cooldown;
 			if (alarm[2] = -1) alarm[2] = room_speed * recharge_cooldown;
+			hit = true;
 			}
 		}
 	}

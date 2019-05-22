@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "390a6822-bbb1-47f1-bd9d-96d5a655b981",
+            "Value": {
+                "id": "f40d9dc3-5101-489f-837e-833dfcc83044",
+                "resourcePath": "shaders\\shd_hit\\shd_hit.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "3afbf708-2c5d-4f3a-baf2-3bdc9c9360cf",
             "Value": {
                 "id": "9cde6a0a-58be-4011-9f7c-e8440dd43e67",
@@ -243,6 +251,14 @@
             "Value": {
                 "id": "b79f813e-27f8-475d-9bc4-3486c22bbba1",
                 "resourcePath": "objects\\obj_bullet\\obj_bullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a8cfa1f9-0c96-40f9-ba91-4d706f31f138",
+            "Value": {
+                "id": "fc7802cb-cb0b-4e71-abfd-49fd8b8038ef",
+                "resourcePath": "objects\\obj_shield_render\\obj_shield_render.yy",
                 "resourceType": "GMObject"
             }
         },

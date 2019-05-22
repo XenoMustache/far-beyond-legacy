@@ -1,5 +1,7 @@
 /// @desc Update
 // Get directives
+// TODO Pirates attack civillians
+// TODO Civillians flee players and pirates
 switch (ai_state) {
 	case ai_directive.wander:
 		if (!target_exist) {

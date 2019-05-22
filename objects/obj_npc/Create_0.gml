@@ -1,6 +1,7 @@
 /// @desc Initialize NPC
 // Unused Defaults
 is_moving = false;
+hit = false;
 target_exist = false;
 target_x = pointer_null;
 target_y = pointer_null;

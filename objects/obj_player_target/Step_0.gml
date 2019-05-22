@@ -16,8 +16,8 @@ if (spd > max_speed) {
 	y_speed = lengthdir_y(max_speed, dir);
 }
 // Friction
-if (x_input == 0) x_speed = lerp(x_speed, 0, 0.05);
-if (y_input == 0) y_speed = lerp(y_speed, 0, 0.05);
+if (x_input == 0) x_speed = lerp(x_speed, 0, 1);
+if (y_input == 0) y_speed = lerp(y_speed, 0, 1);
 // Movement
 x += x_speed;
 y += y_speed;
