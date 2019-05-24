@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "5ea4ce20-00ef-4337-980e-f844f3119267",
+            "Value": {
+                "id": "75684f88-ac5f-486c-90a9-9c39c072159b",
+                "resourcePath": "scripts\\npc_attack\\npc_attack.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5ef0897a-2227-43f8-8b68-13819a239158",
             "Value": {
                 "id": "94b569c7-23e9-4e4f-87ad-5cd89b808969",
@@ -403,7 +411,8 @@
         "da7519c0-ba75-4e58-bc33-4f48c98e0ec8",
         "e7a59738-f7fb-4d06-8bd2-f1ba13d24290",
         "67b6da5d-2d57-4cff-891d-f07fa9d9c7a5",
-        "9b4108cd-ac67-4792-82fc-71874b6a1665"
+        "9b4108cd-ac67-4792-82fc-71874b6a1665",
+        "5ea4ce20-00ef-4337-980e-f844f3119267"
     ],
     "tutorial": ""
 }

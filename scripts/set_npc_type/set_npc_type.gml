@@ -13,6 +13,8 @@ switch (npc_type) {
 		rotation_speed = 0.05;
 		ship_hull_max = 100;
 		ship_hull = ship_hull_max;
+		attack_type = attack_types.shoot;
+		npc_faction = factions.pirate;
 		attack_speed = 1;
 		dmg = 25;
 		shield = 0;
@@ -25,12 +27,14 @@ switch (npc_type) {
 		ai_state = ai_directive.wander;
 		spd = 2;
 		rotation_speed = 0.02;
-		ship_hull_max = 200;
+		ship_hull_max = 400;
 		ship_hull = ship_hull_max;
-		attack_speed = 0;
-		dmg = 0;
+		attack_type = attack_types.heal_other;
+		npc_faction = factions.pirate;
+		attack_speed = 0.5;
+		dmg = 4;
 		shield = 0;
-		bullet_speed = 40;
+		bullet_speed = 0;
 		damage_cooldown = 0.5;
 		accuracy = 0;
 	break;
@@ -41,6 +45,7 @@ switch (npc_type) {
 		rotation_speed = 0.05;
 		ship_hull_max = 100;
 		ship_hull = ship_hull_max;
+		npc_faction = factions.civ;
 		attack_speed = 0;
 		dmg = 0;
 		shield = 0;

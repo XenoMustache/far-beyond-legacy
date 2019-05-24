@@ -1,2 +1,2 @@
-/// @desc Bullet Cooldown
+/// @desc Attack Cooldown
 can_shoot = true;
