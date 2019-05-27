@@ -1,13 +1,13 @@
 /// @arg0 attack_type
 // Register attack types
-enum attack_types {
+enum npc_attack_types {
 	shoot,
 	heal_other
 }
 var attack_type = argument0;
 if (can_shoot) {
 	switch (attack_type) {
-		case attack_types.shoot:
+		case npc_attack_types.shoot:
 			with (instance_create_depth(x + lengthdir_x(15, image_angle), y + lengthdir_y(15, image_angle), 0, obj_bullet)) {
 				sprite_index = registry.spr_bullets;
 				image_index = 1;
@@ -24,7 +24,7 @@ if (can_shoot) {
 			can_shoot = false;
 			alarm[1] = room_speed / attack_speed;
 		break;
-		case attack_types.heal_other:
+		case npc_attack_types.heal_other:
 			can_shoot = false;
 			alarm[1] = room_speed / attack_speed;
 		break;
