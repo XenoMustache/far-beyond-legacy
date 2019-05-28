@@ -2,7 +2,7 @@
 // Get directives
 // TODO Pirates attack civillians
 // TODO Civillians flee players and pirates
-// TODO Boss health regen behvaior
+// TODO Boss heal other behvaior
 switch (ai_state) {
 	case ai_directive.wander:
 		if (!target_exist) {
@@ -26,7 +26,7 @@ switch (ai_state) {
 		if (distance_to_point(target_x, target_y) < 128) speed = 0;
 		if (distance_to_object(obj_player_ship) < 512) ai_state = ai_directive.wander;
 		npc_attack(attack_type);
-		if (ship_hull <= 25) {ai_state = ai_directive.flee;}
+		if (ship_hull <= 25) ai_state = ai_directive.flee;
 		// TODO Add retreat behavior in place of flee behavior for pirates
 	break;
 	case ai_directive.flee:
@@ -38,13 +38,15 @@ switch (ai_state) {
 			speed = spd + 2;
 		} else ai_state = ai_directive.wander;
 	break;
+	case ai_directive.defend:
+		// TODO Defend directive
+	break;
 }
 // TODO Pirate shield capabilies
 // Manage health
 if (ship_hull <= 0) instance_destroy();
 health_percent = (ship_hull / ship_hull_max) * 100;
 // Essential movement
-if (target_exist)
-	image_angle -= angle_difference(image_angle, point_direction(x, y, target_x, target_y)) * rotation_speed;
+if (target_exist) image_angle -= angle_difference(image_angle, point_direction(x, y, target_x, target_y)) * rotation_speed; 
 else image_angle = image_angle;
 if (speed != 0) is_moving = true; else is_moving = false;

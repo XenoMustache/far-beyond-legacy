@@ -4,6 +4,7 @@ npc_type = argument0;
 enum npc_types {
 	pirate_test,
 	pirate_boss,
+	pirate_defense_drone,
 	civ_test
 }
 switch (npc_type) {
@@ -22,7 +23,6 @@ switch (npc_type) {
 		damage_cooldown = 0.5;
 		accuracy = 0.5;
 	break;
-	// TODO pirate boss
 	case npc_types.pirate_boss:
 		ai_state = ai_directive.wander;
 		spd = 2;
@@ -39,6 +39,19 @@ switch (npc_type) {
 		accuracy = 0;
 	break;
 	// TODO pirate defense drone
+	case npc_types.pirate_defense_drone:
+		ai_state = ai_directive.defend;
+		spd = 4;
+		rotation_speed = 0.5;
+		ship_hull_max = 200;
+		ship_hull = ship_hull_max;
+		npc_faction = factions.pirate;
+		attack_speed = 50;
+		shield = 0;
+		bullet_speed = 40;
+		damage_cooldown = 0.5;
+		accuracy = 0.75;
+	break;
 	case npc_types.civ_test:
 		ai_state = ai_directive.wander;
 		spd = 3;

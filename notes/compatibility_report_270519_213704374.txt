@@ -1,0 +1,43 @@
+Converting GML script: ${project_dir}\scripts\evaluate\evaluate.gml
+Error: variable 'variable_instance_get' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description Evaluate(variable,value,operator)/// @param variable
+/// @param value
+/// @param operator
+
+Converting GML script: ${project_dir}\scripts\instance_nth_furthest\instance_nth_furthest.gml
+Converted description /// @description instance_nth_furthest(x,y,obj,n)/// @param x
+/// @param y
+/// @param obj
+/// @param n
+
+Converting GML script: ${project_dir}\scripts\instance_nth_nearest\instance_nth_nearest.gml
+Converted description /// @description instance_nth_nearest(x,y,obj,n)/// @param x
+/// @param y
+/// @param obj
+/// @param n
+
+Converting GML script: ${project_dir}\scripts\instance_xth_furthest\instance_xth_furthest.gml
+Error: variable 'variable_instance_exists' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description instance_xth_furthest(x,y,obj,n,variable,value)/// @param x
+/// @param y
+/// @param obj
+/// @param n
+/// @param variable
+/// @param value
+
+Converting GML script: ${project_dir}\scripts\instance_xth_nearest\instance_xth_nearest.gml
+Error: variable 'variable_instance_exists' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description instance_xth_nearest(x,y,obj,n,variable,value,operator)/// @param x
+/// @param y
+/// @param obj
+/// @param n
+/// @param variable
+/// @param value
+/// @param operator
+
+Converting GML script: ${project_dir}\scripts\instance_xth_number\instance_xth_number.gml
+Error: variable 'variable_instance_exists' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description instance_xth_number(obj,variable,value,operator)/// @param obj
+/// @param variable
+/// @param value
+/// @param operator

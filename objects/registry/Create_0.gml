@@ -3,9 +3,10 @@
 randomize();
 // Load game settings
 load_settings();
-// Set game flags
-//global.debug_show_extra_data = true;
-window_set_caption("Far Beyond Pre-ALPHA Protoype 0.1");
+// Set game data
+global.git_tag = "proto-pre-alpha-v0.1"
+global.debug_show_extra_data = true;
+window_set_caption("Far Beyond " + global.git_tag);
 // Register External Assets
 spr_small_ships = sprite_add("assets/textures/small_ships.png", 3, true, false, 16, 16);
 spr_small_ships_pirate = sprite_add("assets/textures/small_ships_pirate.png", 2, true, false, 16, 16);

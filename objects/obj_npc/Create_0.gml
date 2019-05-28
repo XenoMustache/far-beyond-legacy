@@ -22,5 +22,6 @@ enum factions {
 enum ai_directive {
 	wander,
 	attack,
-	flee
+	flee,
+	defend
 }
