@@ -1,12 +1,14 @@
 /// @desc Initialize Game
 // Randomize game values
 randomize();
-// Load game settings
-load_settings();
 // Set game data
-global.git_tag = "proto-pre-alpha-v0.1"
+global.git_tag = "proto-pre-alpha-v0.2";
+global.default_display_width = 1024;
+global.default_display_height = 768;
 global.debug_show_extra_data = true;
 window_set_caption("Far Beyond " + global.git_tag);
+// Load game settings
+load_settings();
 // Register External Assets
 spr_small_ships = sprite_add("assets/textures/small_ships.png", 3, true, false, 16, 16);
 spr_small_ships_pirate = sprite_add("assets/textures/small_ships_pirate.png", 2, true, false, 16, 16);

@@ -2,8 +2,8 @@
 // Initialize views and camera
 view_enabled = true;
 view_set_visible(0, true);
-view_default_width = 1024;
-view_default_height = 768;
+view_default_width = global.display_width;
+view_default_height = global.display_height;
 camera_target = obj_player_ship;
 // Manage game window
 window_scale = 1;

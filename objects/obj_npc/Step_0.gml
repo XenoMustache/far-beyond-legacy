@@ -26,7 +26,8 @@ switch (ai_state) {
 		if (distance_to_point(target_x, target_y) < 128) speed = 0;
 		if (distance_to_object(obj_player_ship) < 512) ai_state = ai_directive.wander;
 		npc_attack(attack_type);
-		if (ship_hull <= 25) ai_state = ai_directive.flee;
+		if(npc_type != npc_types.pirate_defense_drone)
+			if (ship_hull <= 25) ai_state = ai_directive.flee;
 		// TODO Add retreat behavior in place of flee behavior for pirates
 	break;
 	case ai_directive.flee:
@@ -36,10 +37,23 @@ switch (ai_state) {
 			direction = playerdirection + 180;
 			image_angle = direction;
 			speed = spd + 2;
-		} else ai_state = ai_directive.wander;
+		} else if (npc_type == npc_types.pirate_defense_drone)
+			ai_state = ai_directive.defend;	
+		else ai_state = ai_directive.wander;
 	break;
 	case ai_directive.defend:
-		// TODO Defend directive
+		if (!target_exist) {
+			target_exist = true;
+			target_x = random_range(owner.x + 128, owner.x - 128);
+			target_y = random_range(owner.y + 128, owner.y - 128);
+		}
+		move_towards_point(target_x, target_y, spd / 2);
+		if (distance_to_point(target_x, target_y) < 64) {
+			speed = 0;
+				if (alarm[0] = -1) alarm[0] = room_speed * 5;
+		}
+		if (npc_faction == factions.pirate)
+			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
 	break;
 }
 // TODO Pirate shield capabilies

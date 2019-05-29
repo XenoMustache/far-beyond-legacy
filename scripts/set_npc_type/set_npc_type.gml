@@ -29,7 +29,7 @@ switch (npc_type) {
 		rotation_speed = 0.02;
 		ship_hull_max = 400;
 		ship_hull = ship_hull_max;
-		attack_type = npc_attack_types.heal_other;
+		attack_type = npc_attack_types.create_drones;
 		npc_faction = factions.pirate;
 		attack_speed = 0.5;
 		dmg = 4;
@@ -45,8 +45,10 @@ switch (npc_type) {
 		rotation_speed = 0.5;
 		ship_hull_max = 200;
 		ship_hull = ship_hull_max;
+		attack_type = npc_attack_types.shoot;
 		npc_faction = factions.pirate;
-		attack_speed = 50;
+		attack_speed = 1;
+		dmg = 25;
 		shield = 0;
 		bullet_speed = 40;
 		damage_cooldown = 0.5;
