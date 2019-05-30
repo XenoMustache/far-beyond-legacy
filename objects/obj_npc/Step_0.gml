@@ -58,7 +58,6 @@ switch (ai_state) {
 			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
 	break;
 }
-// TODO Pirate shield capabilies
 // Manage health
 if (ship_hull <= 0) instance_destroy();
 if (shield <= 0) has_shield = false;

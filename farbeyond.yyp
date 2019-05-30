@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "32816e40-6dc3-436a-8e73-5b018302cbc2",
+            "Value": {
+                "id": "35c7fb54-136b-4db4-b136-be0a2d2795d7",
+                "resourcePath": "notes\\readme.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "339c64b4-bc33-4b8a-a6ee-589276d4d9c1",
             "Value": {
                 "id": "e8a7ae06-19ad-43ef-b555-dee65ade2c1d",
