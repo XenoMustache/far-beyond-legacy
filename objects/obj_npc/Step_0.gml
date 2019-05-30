@@ -42,7 +42,7 @@ switch (ai_state) {
 		else ai_state = ai_directive.wander;
 	break;
 	case ai_directive.defend:
-		if (owner = undefined) 
+		if (owner == undefined) 
 			instance_destroy();
 		if (!target_exist) {
 			target_exist = true;

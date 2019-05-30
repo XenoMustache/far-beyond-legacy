@@ -14,7 +14,7 @@ if (can_shoot) {
 				image_xscale = 2;
 				image_yscale = 2;
 				speed = obj_player_ship.bullet_speed;
-				direction = other.image_angle + random_range(25 * obj_npc.accuracy, -25 * obj_npc.accuracy);
+				direction = other.image_angle + random_range(25 * obj_player_ship.accuracy, -25 * obj_player_ship.accuracy);
 				image_angle = direction;
 				bullet_type = bullet_types.player;
 				hit_bullet = choose(true, true, true, false);
