@@ -8,6 +8,7 @@ target_x = pointer_null;
 target_y = pointer_null;
 health_percent = pointer_null;
 accuracy = pointer_null;
+can_rechage_shield = false;
 // Vital Defaults
 image_angle = 90;
 can_shoot = true;

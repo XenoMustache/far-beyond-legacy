@@ -27,10 +27,11 @@ if (can_shoot) {
 		break;
 		case npc_attack_types.create_drones:
 			if (spawn_amount != 0) {
+				bossId = id;
 				with (instance_create_depth(x + random_range(32, 128), y + random_range(32, 128), 0, obj_npc)) {
 					set_npc_type(npc_types.pirate_defense_drone);
-					owner = other.id;
 					health_percent = 100;
+					owner = other.bossId;
 				}
 				spawn_amount--;
 			}

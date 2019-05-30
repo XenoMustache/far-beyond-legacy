@@ -42,6 +42,8 @@ switch (ai_state) {
 		else ai_state = ai_directive.wander;
 	break;
 	case ai_directive.defend:
+		if (owner = undefined) 
+			instance_destroy();
 		if (!target_exist) {
 			target_exist = true;
 			target_x = random_range(owner.x + 128, owner.x - 128);
@@ -59,7 +61,14 @@ switch (ai_state) {
 // TODO Pirate shield capabilies
 // Manage health
 if (ship_hull <= 0) instance_destroy();
+if (shield <= 0) has_shield = false;
+if (can_rechage_shield) {
+	has_shield = true;
+	shield += recharge_rate;
+}
+if (shield >= shield_max) can_rechage_shield = false;
 health_percent = (ship_hull / ship_hull_max) * 100;
+shield_percent = (shield / shield_max) * 100;
 // Essential movement
 if (target_exist) image_angle -= angle_difference(image_angle, point_direction(x, y, target_x, target_y)) * rotation_speed; 
 else image_angle = image_angle;

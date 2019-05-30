@@ -18,10 +18,13 @@ switch (npc_type) {
 		npc_faction = factions.pirate;
 		attack_speed = 1;
 		dmg = 25;
+		has_shield = false;
 		shield = 0;
+		shield_max = 0;
 		bullet_speed = 40;
 		damage_cooldown = 0.5;
 		accuracy = 0.5;
+		shield_percent = 0;
 	break;
 	case npc_types.pirate_boss:
 		ai_state = ai_directive.wander;
@@ -33,11 +36,14 @@ switch (npc_type) {
 		npc_faction = factions.pirate;
 		attack_speed = 0.5;
 		dmg = 4;
+		has_shield = false;
 		shield = 0;
+		shield_max = 0;
 		bullet_speed = 0;
 		damage_cooldown = 0.5;
 		accuracy = 0;
 		spawn_amount = dmg;
+		shield_percent = 0;
 	break;
 	case npc_types.pirate_defense_drone:
 		ai_state = ai_directive.defend;
@@ -49,10 +55,13 @@ switch (npc_type) {
 		npc_faction = factions.pirate;
 		attack_speed = 1;
 		dmg = 25;
+		has_shield = false;
 		shield = 0;
+		shield_max = 0;
 		bullet_speed = 40;
 		damage_cooldown = 0.5;
 		accuracy = 0.75;
+		shield_percent = 0;
 	break;
 	case npc_types.civ_test:
 		ai_state = ai_directive.wander;
@@ -63,10 +72,13 @@ switch (npc_type) {
 		npc_faction = factions.civ;
 		attack_speed = 0;
 		dmg = 0;
+		has_shield = false;
 		shield = 0;
+		shield_max = 0;
 		bullet_speed = 0;
 		damage_cooldown = 0.5;
 		accuracy = 0;
+		shield_percent = 0;
 	break;
 	// TODO civ defense drone
 }
