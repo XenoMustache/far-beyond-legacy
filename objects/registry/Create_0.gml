@@ -5,7 +5,7 @@ randomize();
 global.git_tag = "proto-pre-alpha-v0.2";
 global.default_display_width = 1024;
 global.default_display_height = 768;
-global.debug_show_extra_data = true;
+global.debug_show_extra_data = false;
 window_set_caption("Far Beyond " + global.git_tag);
 // Load game settings
 load_settings();
