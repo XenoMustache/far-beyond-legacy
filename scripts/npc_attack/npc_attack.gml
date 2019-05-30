@@ -19,7 +19,7 @@ if (can_shoot) {
 				direction = other.image_angle + random_range(25 * obj_npc.accuracy, -25 * obj_npc.accuracy);
 				image_angle = direction;
 				bullet_type = bullet_types.pirate;
-				hit_bullet = choose(true, false);
+				hit_bullet = weighted_chance(obj_npc.accuracy);
 				bullet_damage = obj_npc.dmg;
 			}
 			can_shoot = false;
