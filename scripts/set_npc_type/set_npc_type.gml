@@ -37,8 +37,8 @@ switch (npc_type) {
 		bullet_speed = 0;
 		damage_cooldown = 0.5;
 		accuracy = 0;
+		spawn_amount = dmg;
 	break;
-	// TODO pirate defense drone
 	case npc_types.pirate_defense_drone:
 		ai_state = ai_directive.defend;
 		spd = 4;

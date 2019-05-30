@@ -26,21 +26,13 @@ if (can_shoot) {
 			alarm[1] = room_speed / attack_speed;
 		break;
 		case npc_attack_types.create_drones:
-			var spawn_amount_max = dmg;
-			var spawn_amount = spawn_amount_max;
-			for (i = 0; i < instance_number(obj_npc); i++) {
-				with (obj_npc) {
-					if (npc_type == npc_types.pirate_defense_drone) {
-						if (owner == other.id) {
-							spawn_amount -= 1;
-						}
-					}
+			if (spawn_amount != 0) {
+				with (instance_create_depth(x + random_range(32, 128), y + random_range(32, 128), 0, obj_npc)) {
+					set_npc_type(npc_types.pirate_defense_drone);
+					owner = other.id;
+					health_percent = 100;
 				}
-			}
-			with (instance_create_depth(x + random_range(32, 128), y + random_range(32, 128), 0, obj_npc)) {
-				set_npc_type(npc_types.pirate_defense_drone);
-				owner = other.id;
-				health_percent = 100;
+				spawn_amount--;
 			}
 			can_shoot = false;
 			alarm[1] = room_speed / attack_speed;
