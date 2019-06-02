@@ -3,6 +3,11 @@
 // TODO Pirates attack civillians
 // TODO Civillians flee players and pirates
 // TODO Boss heal other behvaior
+if (npc_type == npc_types.pirate_defense_drone) {
+	if (owner.x == undefined || owner.y == undefined)
+		var owner_exists = false;
+	else owner_exists = true;
+}
 switch (ai_state) {
 	case ai_directive.wander:
 		if (!target_exist) {
@@ -54,8 +59,10 @@ switch (ai_state) {
 			instance_destroy();
 		if (!target_exist) {
 			target_exist = true;
-			target_x = random_range(owner.x + 128, owner.x - 128);
-			target_y = random_range(owner.y + 128, owner.y - 128);
+			if (owner_exists) {
+				target_x = random_range(owner.x + 128, owner.x - 128);
+				target_y = random_range(owner.y + 128, owner.y - 128);
+			}
 		}
 		move_towards_point(target_x, target_y, spd / 2);
 		if (distance_to_point(target_x, target_y) < 64) {
@@ -64,7 +71,9 @@ switch (ai_state) {
 		}
 		if (npc_faction == factions.pirate)
 			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
-		if (distance_to_object(owner) > 128) ai_state = ai_directive.seek_owner;
+		if (owner_exists)
+			if (distance_to_object(owner) > 288) ai_state = ai_directive.defend;
+		else ai_state = ai_directive.seek_player;
 	break;
 	case ai_directive.seek_player:
 		target_exist = true;
@@ -77,19 +86,6 @@ switch (ai_state) {
 		}
 		if (npc_faction == factions.pirate)
 			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
-	break;
-	case ai_directive.seek_owner:
-		target_exist = true;
-		target_x = owner.x;
-		target_y = owner.y;
-		move_towards_point(target_x, target_y, spd);
-		if (distance_to_point(target_x, target_y) < 64) {
-			speed = 0;
-				if (alarm[0] = -1) alarm[0] = room_speed * 5;
-		}
-		if (npc_faction == factions.pirate)
-			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
-		if (distance_to_object(owner) < 128) ai_state = ai_directive.defend;
 	break;
 }
 // Manage health
