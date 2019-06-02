@@ -24,9 +24,15 @@ switch (ai_state) {
 		target_y = obj_player_ship.y;
 		move_towards_point(target_x, target_y, spd);
 		if (distance_to_point(target_x, target_y) < 128) speed = 0;
-		if (distance_to_object(obj_player_ship) < 512) ai_state = ai_directive.wander;
+		if (distance_to_object(obj_player_ship) < 512)
+			if (npc_type == npc_types.pirate_test)
+				ai_state = ai_directive.wander;
+			else if (npc_type == npc_types.pirate_defense_drone)
+				ai_state = ai_directive.defend;
+			else if (npc_type == npc_types.pirate_boss)
+				ai_state = ai_directive.seek_player;
 		npc_attack(attack_type);
-		if(npc_type != npc_types.pirate_defense_drone)
+		if(npc_type != npc_types.pirate_defense_drone || npc_type != npc_types.pirate_boss)
 			if (ship_hull <= 25) ai_state = ai_directive.flee;
 		// TODO Add retreat behavior in place of flee behavior for pirates
 	break;
@@ -39,6 +45,8 @@ switch (ai_state) {
 			speed = spd + 2;
 		} else if (npc_type == npc_types.pirate_defense_drone)
 			ai_state = ai_directive.defend;	
+		else if (npc_type == npc_types.pirate_boss)
+			ai_state = ai_directive.seek_player;
 		else ai_state = ai_directive.wander;
 	break;
 	case ai_directive.defend:
@@ -56,6 +64,32 @@ switch (ai_state) {
 		}
 		if (npc_faction == factions.pirate)
 			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
+		if (distance_to_object(owner) > 128) ai_state = ai_directive.seek_owner;
+	break;
+	case ai_directive.seek_player:
+		target_exist = true;
+		target_x = obj_player_ship.x;
+		target_y = obj_player_ship.y;
+		move_towards_point(target_x, target_y, spd);
+		if (distance_to_point(target_x, target_y) < 64) {
+			speed = 0;
+				if (alarm[0] = -1) alarm[0] = room_speed * 5;
+		}
+		if (npc_faction == factions.pirate)
+			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
+	break;
+	case ai_directive.seek_owner:
+		target_exist = true;
+		target_x = owner.x;
+		target_y = owner.y;
+		move_towards_point(target_x, target_y, spd);
+		if (distance_to_point(target_x, target_y) < 64) {
+			speed = 0;
+				if (alarm[0] = -1) alarm[0] = room_speed * 5;
+		}
+		if (npc_faction == factions.pirate)
+			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
+		if (distance_to_object(owner) < 128) ai_state = ai_directive.defend;
 	break;
 }
 // Manage health

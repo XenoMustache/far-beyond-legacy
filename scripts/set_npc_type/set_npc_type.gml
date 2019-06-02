@@ -28,7 +28,7 @@ switch (npc_type) {
 		shield_percent = 0;
 	break;
 	case npc_types.pirate_boss:
-		ai_state = ai_directive.wander;
+		ai_state = ai_directive.seek_player;
 		spd = 2;
 		rotation_speed = 0.02;
 		ship_hull_max = 400;

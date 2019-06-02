@@ -24,5 +24,7 @@ enum ai_directive {
 	wander,
 	attack,
 	flee,
-	defend
+	defend,
+	seek_player,
+	seek_owner
 }
