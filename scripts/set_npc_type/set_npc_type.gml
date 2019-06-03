@@ -47,8 +47,8 @@ switch (npc_type) {
 		shield_percent = 0;
 	break;
 	case npc_types.pirate_defense_drone:
-		ai_state = ai_directive.defend;
-		spd = 4;
+		ai_state = ai_directive.attack;
+		spd = 3;
 		rotation_speed = 0.5;
 		ship_hull_max = 200;
 		ship_hull = ship_hull_max;
@@ -83,7 +83,7 @@ switch (npc_type) {
 	break;
 	// TODO civ defense drone
 	case npc_types.civ_defense_drone:
-		ai_state = ai_directive.defend;
+		ai_state = ai_directive.attack;
 		spd = 4;
 		rotation_speed = 0.5;
 		ship_hull_max = 200;

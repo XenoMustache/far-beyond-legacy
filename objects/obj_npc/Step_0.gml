@@ -4,9 +4,9 @@
 // TODO Civillians flee players and pirates
 // TODO Boss heal other behvaior
 if (npc_type == npc_types.pirate_defense_drone) {
-	if (owner.x == undefined || owner.y == undefined)
-		var owner_exists = false;
-	else owner_exists = true;
+	if (owner != undefined || owner != pointer_null)
+		var owner_exists = true;
+	else owner_exists = false;
 }
 switch (ai_state) {
 	case ai_directive.wander:
@@ -25,6 +25,7 @@ switch (ai_state) {
 	break;
 	case ai_directive.attack:
 		alarm[0] = -1;
+		target_exist = true;
 		target_x = obj_player_ship.x;
 		target_y = obj_player_ship.y;
 		move_towards_point(target_x, target_y, spd);
@@ -33,7 +34,7 @@ switch (ai_state) {
 			if (npc_type == npc_types.pirate_test)
 				ai_state = ai_directive.wander;
 			else if (npc_type == npc_types.pirate_defense_drone)
-				ai_state = ai_directive.defend;
+				ai_state = ai_directive.attack;
 			else if (npc_type == npc_types.pirate_boss)
 				ai_state = ai_directive.seek_player;
 		npc_attack(attack_type);
@@ -49,31 +50,10 @@ switch (ai_state) {
 			image_angle = direction;
 			speed = spd + 2;
 		} else if (npc_type == npc_types.pirate_defense_drone)
-			ai_state = ai_directive.defend;	
+			ai_state = ai_directive.attack;	
 		else if (npc_type == npc_types.pirate_boss)
 			ai_state = ai_directive.seek_player;
 		else ai_state = ai_directive.wander;
-	break;
-	case ai_directive.defend:
-		if (owner == undefined) 
-			instance_destroy();
-		if (!target_exist) {
-			target_exist = true;
-			if (owner_exists) {
-				target_x = random_range(owner.x + 128, owner.x - 128);
-				target_y = random_range(owner.y + 128, owner.y - 128);
-			}
-		}
-		move_towards_point(target_x, target_y, spd / 2);
-		if (distance_to_point(target_x, target_y) < 64) {
-			speed = 0;
-				if (alarm[0] = -1) alarm[0] = room_speed * 5;
-		}
-		if (npc_faction == factions.pirate)
-			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
-		if (owner_exists)
-			if (distance_to_object(owner) > 288) ai_state = ai_directive.defend;
-		else ai_state = ai_directive.seek_player;
 	break;
 	case ai_directive.seek_player:
 		target_exist = true;
