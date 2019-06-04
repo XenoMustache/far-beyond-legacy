@@ -3,11 +3,6 @@
 // TODO Pirates attack civillians
 // TODO Civillians flee players and pirates
 // TODO Boss heal other behvaior
-if (npc_type == npc_types.pirate_defense_drone) {
-	if (owner != undefined || owner != pointer_null)
-		var owner_exists = true;
-	else owner_exists = false;
-}
 switch (ai_state) {
 	case ai_directive.wander:
 		if (!target_exist) {
@@ -31,14 +26,11 @@ switch (ai_state) {
 		move_towards_point(target_x, target_y, spd);
 		if (distance_to_point(target_x, target_y) < 128) speed = 0;
 		if (distance_to_object(obj_player_ship) < 512)
-			if (npc_type == npc_types.pirate_test)
-				ai_state = ai_directive.wander;
-			else if (npc_type == npc_types.pirate_defense_drone)
-				ai_state = ai_directive.attack;
-			else if (npc_type == npc_types.pirate_boss)
-				ai_state = ai_directive.seek_player;
+			if (npc_type == npc_types.pirate_test) ai_state = ai_directive.wander;
+			else if (npc_type == npc_types.pirate_defense_drone) ai_state = ai_directive.attack;
+			else if (npc_type == npc_types.pirate_boss) ai_state = ai_directive.seek_player;
 		npc_attack(attack_type);
-		if(npc_type != npc_types.pirate_defense_drone || npc_type != npc_types.pirate_boss)
+		if (npc_type != npc_types.pirate_defense_drone || npc_type != npc_types.pirate_boss)
 			if (ship_hull <= 25) ai_state = ai_directive.flee;
 		// TODO Add retreat behavior in place of flee behavior for pirates
 	break;
@@ -49,10 +41,8 @@ switch (ai_state) {
 			direction = playerdirection + 180;
 			image_angle = direction;
 			speed = spd + 2;
-		} else if (npc_type == npc_types.pirate_defense_drone)
-			ai_state = ai_directive.attack;	
-		else if (npc_type == npc_types.pirate_boss)
-			ai_state = ai_directive.seek_player;
+		} else if (npc_type == npc_types.pirate_defense_drone) ai_state = ai_directive.attack;	
+		else if (npc_type == npc_types.pirate_boss) ai_state = ai_directive.seek_player;
 		else ai_state = ai_directive.wander;
 	break;
 	case ai_directive.seek_player:

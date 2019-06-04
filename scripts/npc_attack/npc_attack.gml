@@ -15,23 +15,21 @@ if (can_shoot) {
 				image_speed = 0;
 				image_xscale = 2;
 				image_yscale = 2;
-				speed = obj_npc.bullet_speed;
+				speed = other.bullet_speed;
 				direction = other.image_angle + random_range(25 * obj_npc.accuracy, -25 * obj_npc.accuracy);
 				image_angle = direction;
 				bullet_type = bullet_types.pirate;
-				hit_bullet = weighted_chance(obj_npc.accuracy);
-				bullet_damage = obj_npc.dmg;
+				hit_bullet = weighted_chance(other.accuracy);
+				bullet_damage = other.dmg;
 			}
 			can_shoot = false;
 			alarm[1] = room_speed / attack_speed;
 		break;
 		case npc_attack_types.create_drones:
 			if (spawn_amount != 0) {
-				bossId = id;
 				with (instance_create_depth(x + random_range(32, 128), y + random_range(32, 128), 0, obj_npc)) {
 					set_npc_type(npc_types.pirate_defense_drone);
 					health_percent = 100;
-					owner = other.bossId;
 				}
 				spawn_amount--;
 			}

@@ -22,8 +22,8 @@ switch (npc_type) {
 		has_shield = false;
 		shield = 0;
 		shield_max = 0;
-		bullet_speed = 40;
 		damage_cooldown = 0.5;
+		bullet_speed = 40;
 		accuracy = 0.5;
 		shield_percent = 0;
 	break;
@@ -36,12 +36,12 @@ switch (npc_type) {
 		attack_type = npc_attack_types.create_drones;
 		npc_faction = factions.pirate;
 		attack_speed = 0.5;
-		dmg = 4;
+		dmg = 0;
 		has_shield = false;
 		shield = 0;
 		shield_max = 0;
-		bullet_speed = 0;
 		damage_cooldown = 0.5;
+		bullet_speed = 40;
 		accuracy = 0;
 		spawn_amount = dmg;
 		shield_percent = 0;
@@ -59,8 +59,8 @@ switch (npc_type) {
 		has_shield = false;
 		shield = 0;
 		shield_max = 0;
-		bullet_speed = 40;
 		damage_cooldown = 0.5;
+		bullet_speed = 40;
 		accuracy = 0.75;
 		shield_percent = 0;
 	break;
@@ -76,8 +76,8 @@ switch (npc_type) {
 		has_shield = false;
 		shield = 0;
 		shield_max = 0;
-		bullet_speed = 0;
 		damage_cooldown = 0.5;
+		bullet_speed = 40;
 		accuracy = 0;
 		shield_percent = 0;
 	break;
@@ -95,8 +95,8 @@ switch (npc_type) {
 		has_shield = false;
 		shield = 0;
 		shield_max = 0;
-		bullet_speed = 40;
 		damage_cooldown = 0.5;
+		bullet_speed = 40;
 		accuracy = 0.75;
 		shield_percent = 0;
 	break;

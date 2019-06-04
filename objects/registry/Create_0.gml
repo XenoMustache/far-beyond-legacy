@@ -40,9 +40,9 @@ for (i = 0; i < 30; i++) {
 		npc_faction = factions.civ;
 	}
 }
-with (instance_create_depth(obj_player_ship.x, obj_player_ship.y + 60, 0, obj_npc)) {
-	set_npc_type(npc_types.pirate_boss);
-	npc_faction = factions.pirate;
-}
+//with (instance_create_depth(obj_player_ship.x, obj_player_ship.y + 60, 0, obj_npc)) {
+//	set_npc_type(npc_types.pirate_boss);
+//	npc_faction = factions.pirate;
+//}
 // TODO Chat system
 // TODO Mesasge/dialogue boxes
