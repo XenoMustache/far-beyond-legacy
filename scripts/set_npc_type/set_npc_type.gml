@@ -36,7 +36,7 @@ switch (npc_type) {
 		attack_type = npc_attack_types.create_drones;
 		npc_faction = factions.pirate;
 		attack_speed = 0.5;
-		dmg = 0;
+		dmg = 4;
 		has_shield = false;
 		shield = 0;
 		shield_max = 0;

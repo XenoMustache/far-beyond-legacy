@@ -27,7 +27,7 @@ if (can_shoot) {
 		break;
 		case npc_attack_types.create_drones:
 			if (spawn_amount != 0) {
-				with (instance_create_depth(x + random_range(32, 128), y + random_range(32, 128), 0, obj_npc)) {
+				with (instance_create_depth(x + random_range(-128, 128), y + random_range(-128, 128), 0, obj_npc)) {
 					set_npc_type(npc_types.pirate_defense_drone);
 					health_percent = 100;
 				}
