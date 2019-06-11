@@ -135,19 +135,19 @@
             }
         },
         {
+            "Key": "2adfa2bf-108e-42ed-97a7-9c5218053263",
+            "Value": {
+                "id": "bef4bc7c-fca2-4619-9a4e-8e8c77a8fcd0",
+                "resourcePath": "datafiles_yy\\readme.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "2f7de01e-1c50-4e21-b6bf-cd8a70a29011",
             "Value": {
                 "id": "f07c24a1-6a88-4fad-b168-8a93ef0c4447",
                 "resourcePath": "sprites\\spr_test_player\\spr_test_player.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "32816e40-6dc3-436a-8e73-5b018302cbc2",
-            "Value": {
-                "id": "35c7fb54-136b-4db4-b136-be0a2d2795d7",
-                "resourcePath": "notes\\readme.yy",
-                "resourceType": "GMNotes"
             }
         },
         {

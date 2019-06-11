@@ -11,6 +11,13 @@ Space - Fire Projectile
 ####################
 Changelog
 ####################
+proto-pre-alpha-v0.3:
+
+Major optimizations made to the game and AI.
+Added Pirate Boss to gamespace.
+Healthbars now displayed on HUD.
+Defense drones added to the game.
+####################
 proto-pre-alpha-v0.2:
 
 Various changes to many of the graphics shown ingame.
