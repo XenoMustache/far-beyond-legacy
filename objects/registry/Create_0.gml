@@ -6,6 +6,7 @@ global.git_tag = "proto-pre-alpha-v0.3";
 global.default_display_width = 1024;
 global.default_display_height = 768;
 global.debug_show_extra_data = false;
+global.player_lives = 3;
 window_set_caption("Far Beyond " + global.git_tag);
 // Load game settings
 load_settings();

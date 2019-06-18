@@ -16,7 +16,19 @@ if (target_x != pointer_null && target_y != pointer_null) {
 // Check movement
 if (speed != 0) is_moving = true; else is_moving = false;
 // Manage health and shields
-if (ship_hull <= 0) room_restart();
+if (ship_hull <= 0){
+	if (global.player_lives <= 0) 
+		room_restart();
+	else {
+		global.player_lives--;
+		ship_hull = ship_hull_max;
+		shield = shield_max;
+		x = room_width / 2;
+		y = room_height / 2;
+		obj_player_target.x = x;
+		obj_player_target.y = y;
+	}
+}
 if (shield <= 0) has_shield = false;
 if (can_rechage_shield) {
 	has_shield = true;

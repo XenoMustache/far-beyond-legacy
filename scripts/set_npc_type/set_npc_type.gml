@@ -47,7 +47,7 @@ switch (npc_type) {
 		shield_percent = 0;
 	break;
 	case npc_types.pirate_defense_drone:
-		ai_state = ai_directive.attack;
+		ai_state = ai_directive.seek_player;
 		spd = 3;
 		rotation_speed = 0.5;
 		ship_hull_max = 200;

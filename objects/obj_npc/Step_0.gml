@@ -27,11 +27,18 @@ switch (ai_state) {
 		if (distance_to_point(target_x, target_y) < 128) speed = 0;
 		if (distance_to_object(obj_player_ship) < 512)
 			if (npc_type == npc_types.pirate_test) ai_state = ai_directive.wander;
-			else if (npc_type == npc_types.pirate_defense_drone) ai_state = ai_directive.attack;
+			else if (npc_type == npc_types.pirate_defense_drone) ai_state = ai_directive.seek_player;
 			else if (npc_type == npc_types.pirate_boss) ai_state = ai_directive.seek_player;
 		npc_attack(attack_type);
 		if (npc_type != npc_types.pirate_defense_drone || npc_type != npc_types.pirate_boss)
 			if (ship_hull <= 25) ai_state = ai_directive.flee;
+		if (obj_player_ship.ship_hull <= 0) {
+			if (npc_type == npc_types.pirate_test)
+				ai_state = ai_directive.wander;			
+			else if (npc_type == npc_types.pirate_boss || npc_type == npc_types.pirate_defense_drone)
+				ai_state = ai_directive.seek_player;
+		}
+				
 		// TODO Add retreat behavior in place of flee behavior for pirates
 	break;
 	case ai_directive.flee:
