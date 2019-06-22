@@ -12,7 +12,7 @@ window_set_caption("Far Beyond " + global.git_tag);
 load_settings();
 // Register External Assets
 spr_small_ships = sprite_add("assets/textures/small_ships.png", 3, true, false, 16, 16);
-spr_small_ships_pirate = sprite_add("assets/textures/small_ships_pirate.png", 2, true, false, 16, 16);
+spr_small_ships_pirate = sprite_add("assets/textures/small_ships_pirate.png", 3, true, false, 16, 16);
 spr_bullets = sprite_add("assets/textures/bullets.png", 2, false, false, 16, 16);
 spr_backgrounds = sprite_add("assets/textures/background.png", 1, false, false, 128, 128);
 // Create objects

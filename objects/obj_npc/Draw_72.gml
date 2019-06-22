@@ -3,20 +3,20 @@
 switch (npc_type) {
 	case npc_types.pirate_test:
 		sprite_index = registry.spr_small_ships_pirate;
-		image_index = 0;
+		image_index = 1;
 		image_speed = 0;
 		image_xscale = 3;
 		image_yscale = 3;
 	break;
 	case npc_types.pirate_boss:
 		sprite_index = registry.spr_small_ships_pirate;
-		image_index = 1;
+		image_index = 0;
 		image_speed = 0;
 		image_xscale = 3;
 		image_yscale = 3;
 	break;
 	case npc_types.pirate_defense_drone:
-		sprite_index = registry.spr_small_ships;
+		sprite_index = registry.spr_small_ships_pirate;
 		image_index = 2;
 		image_speed = 0;
 		image_xscale = 3;
