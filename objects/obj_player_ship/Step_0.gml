@@ -1,17 +1,23 @@
 /// @desc Update
+var window_height_center = window_get_height() / 2;
+var window_width_center = window_get_width() / 2;
 // Set target
-target_x = obj_player_target.x;
-target_y = obj_player_target.y;
+if (control_handler.mouse_locked) {
+	window_mouse_set(clamp(window_mouse_get_x(), window_width_center, window_width_center + 360), window_height_center);
+	var mouse_direction = point_distance(window_width_center, window_height_center, window_mouse_get_x(), window_mouse_get_y());
+	if (window_mouse_get_x() > (window_width_center + 360))
+		window_mouse_set(window_width_center, window_height_center)
+	if (window_mouse_get_x() < (window_width_center))
+		window_mouse_set(window_width_center + 360, window_height_center)
+}
 // Get input
 if (keyboard_check(vk_space) && can_shoot == true) {
 		player_attack(player_attack_types.shoot);
 }
 // Move player
-if (target_x != pointer_null && target_y != pointer_null) {
-	if (point_distance(x, y, target_x, target_y) > spd) 
-	    move_towards_point(target_x, target_y, spd);
-	else speed = 0;
-	image_angle -= angle_difference(image_angle, point_direction(x, y, target_x, target_y)) * rotation_speed;
+if (control_handler.mouse_locked) {
+	image_angle = -mouse_direction;
+	direction = -mouse_direction;
 }
 // Check movement
 if (speed != 0) is_moving = true; else is_moving = false;
@@ -25,10 +31,9 @@ if (ship_hull <= 0){
 		shield = shield_max;
 		x = room_width / 2;
 		y = room_height / 2;
-		obj_player_target.x = x;
-		obj_player_target.y = y;
 	}
 }
+if (move) speed = spd else speed = 0;
 if (shield <= 0) has_shield = false;
 if (can_rechage_shield) {
 	has_shield = true;

@@ -24,5 +24,4 @@ recharge_cooldown = 2;
 recharge_rate = 0.5;
 health_percent = pointer_null;
 shield_percent = pointer_null;
-target_x = pointer_null;
-target_y = pointer_null;
+move = false;

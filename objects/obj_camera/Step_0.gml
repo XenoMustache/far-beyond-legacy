@@ -20,3 +20,4 @@ view_set_hport(0, view_height);
 // Window fallback
 if (window_has_focus()) 
 	surface_resize(application_surface, view_wport[0], view_hport[0]);
+if (control_handler.mouse_locked) window_set_cursor(cr_none) else window_set_cursor(cr_default);
