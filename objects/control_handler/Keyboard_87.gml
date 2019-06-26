@@ -1,2 +1,2 @@
 /// @desc Control player movement
-obj_player_ship.move = true;
+if (mouse_locked) obj_player_ship.move = true;

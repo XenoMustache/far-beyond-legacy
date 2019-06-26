@@ -31,7 +31,9 @@ if (can_shoot) {
 					set_npc_type(npc_types.pirate_defense_drone);
 					npc_faction = factions.pirate;
 					health_percent = 100;
+					parent_id = other.id;
 				}
+				global.enemies_remaining++;
 				spawn_amount--;
 			}
 			can_shoot = false;

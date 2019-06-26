@@ -8,6 +8,7 @@ global.default_display_height = 768;
 global.debug_show_extra_data = false;
 global.player_lives = 3;
 global.console_open = false;
+global.enemies_remaining = 0;
 window_set_caption("Far Beyond " + global.git_tag);
 // Load game settings
 load_settings();
@@ -36,6 +37,7 @@ for (i = 0; i < 10; i++) {
 	with (instance_create_depth(posX, posY, 0, obj_npc)) {
 		set_npc_type(npc_types.pirate_test);
 		npc_faction = factions.pirate;
+		global.enemies_remaining++;
 	}
 }
 for (i = 0; i < 30; i++) {
@@ -49,6 +51,7 @@ for (i = 0; i < 30; i++) {
 with (instance_create_depth(room_height / 2, 500, 0, obj_npc)) {
 	set_npc_type(npc_types.pirate_boss);
 	npc_faction = factions.pirate;
+	global.enemies_remaining++;
 }
 // TODO Chat system
 // TODO Mesasge/dialogue boxes

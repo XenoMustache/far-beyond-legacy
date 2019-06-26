@@ -33,6 +33,7 @@ switch (ai_state) {
 		if (npc_type != npc_types.pirate_defense_drone || npc_type != npc_types.pirate_boss)
 			if (ship_hull <= 25) ai_state = ai_directive.flee;
 		if (obj_player_ship.ship_hull <= 0) {
+			target_exist = false;
 			if (npc_type == npc_types.pirate_test)
 				ai_state = ai_directive.wander;			
 			else if (npc_type == npc_types.pirate_boss || npc_type == npc_types.pirate_defense_drone)
@@ -56,13 +57,18 @@ switch (ai_state) {
 		target_x = obj_player_ship.x;
 		target_y = obj_player_ship.y;
 		move_towards_point(target_x, target_y, spd);
-		if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
+		if (distance_to_point(target_x, target_y) < 128) ai_state = ai_directive.attack;
 		if (distance_to_point(target_x, target_y) < 64)
 			speed = 0;
 	break;
 }
 // Manage health
-if (ship_hull <= 0) instance_destroy();
+if (ship_hull <= 0) {
+	if (npc_type == npc_types.pirate_defense_drone)
+		if (instance_exists(parent_id)) parent_id.spawn_amount++;
+	if (npc_faction == factions.pirate) global.enemies_remaining--;
+	instance_destroy();
+}
 if (shield <= 0) has_shield = false;
 if (can_rechage_shield) {
 	has_shield = true;
