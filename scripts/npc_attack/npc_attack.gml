@@ -29,6 +29,7 @@ if (can_shoot) {
 			if (spawn_amount != 0) {
 				with (instance_create_depth(x + random_range(-128, 128), y + random_range(-128, 128), 0, obj_npc)) {
 					set_npc_type(npc_types.pirate_defense_drone);
+					npc_faction = factions.pirate;
 					health_percent = 100;
 				}
 				spawn_amount--;
