@@ -3,8 +3,8 @@
 randomize();
 // Set game data
 global.git_tag = "proto-pre-alpha-v0.4";
-global.default_display_width = 1024;
-global.default_display_height = 768;
+global.default_display_width = 0;
+global.default_display_height = 0;
 global.debug_show_extra_data = false;
 global.player_lives = 3;
 global.console_open = false;

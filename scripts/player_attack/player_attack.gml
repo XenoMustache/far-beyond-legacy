@@ -21,7 +21,9 @@ if (can_shoot) {
 				bullet_dmg = obj_player_ship.bullet_damage;
 			}
 			can_shoot = false;
-			audio_play_sound(snd_laser, 5, false);
+			var sound = audio_emitter_create();
+			audio_emitter_gain(sound, global.volume_effect);
+			audio_play_sound_on(sound, snd_laser, false, 5);
 			alarm[0] = room_speed / attack_speed;
 		break;
 	}

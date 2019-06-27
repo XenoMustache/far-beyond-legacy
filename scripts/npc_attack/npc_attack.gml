@@ -21,8 +21,10 @@ if (can_shoot) {
 				bullet_type = bullet_types.pirate;
 				hit_bullet = weighted_chance(other.accuracy);
 				bullet_damage = other.dmg;
-				audio_play_sound(snd_laser, 10, false);
 			}
+			var sound = audio_emitter_create();
+			audio_emitter_gain(sound, global.volume_effect);
+			audio_play_sound_on(sound, snd_laser, false, 10);
 			can_shoot = false;
 			alarm[1] = room_speed / attack_speed;
 		break;
