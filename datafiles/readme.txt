@@ -6,7 +6,7 @@ F1 - Enter/Leave fullscreen
 Game:
 ESC - Exit Game
 F2 - Restart Game
-WASD/ARROWS - Move Player
+W - Move Player Forward
 Space - Fire Projectile
 ####################
 Changelog

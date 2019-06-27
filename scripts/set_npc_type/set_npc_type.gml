@@ -81,7 +81,7 @@ switch (npc_type) {
 		accuracy = 0;
 		shield_percent = 0;
 	break;
-	// TODO civ defense drone
+	// TODO civ defense drone - LATER RELEASE
 	case npc_types.civ_defense_drone:
 		ai_state = ai_directive.attack;
 		spd = 4;

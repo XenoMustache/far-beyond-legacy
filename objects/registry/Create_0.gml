@@ -13,10 +13,12 @@ window_set_caption("Far Beyond " + global.git_tag);
 // Load game settings
 load_settings();
 // Register External Assets
-spr_small_ships = sprite_add("assets/textures/small_ships.png", 3, true, false, 16, 16);
-spr_small_ships_pirate = sprite_add("assets/textures/small_ships_pirate.png", 3, true, false, 16, 16);
+spr_small_ships = sprite_add("assets/textures/small_ships.png", 3, false, false, 16, 16);
+spr_small_ships_pirate = sprite_add("assets/textures/small_ships_pirate.png", 3, false, false, 16, 16);
 spr_bullets = sprite_add("assets/textures/bullets.png", 2, false, false, 16, 16);
 spr_backgrounds = sprite_add("assets/textures/background.png", 1, false, false, 128, 128);
+// TODO Pirate drops - NEXT RELEASE
+//spr_power_up = sprite_add("assets/textures/capsule.png", 2, false, false, 8, 8);
 // Create objects
 instance_create_depth(room_width / 2, room_height / 2, 0, obj_player_ship);
 instance_create_depth(obj_player_ship.x, obj_player_ship.y, 0, obj_camera);
@@ -48,10 +50,10 @@ for (i = 0; i < 30; i++) {
 		npc_faction = factions.civ;
 	}
 }
-with (instance_create_depth(room_height / 2, 500, 0, obj_npc)) {
+with (instance_create_depth(random_range(128, room_width - 128), random_range(128, room_height - 128) , 0, obj_npc)) {
 	set_npc_type(npc_types.pirate_boss);
 	npc_faction = factions.pirate;
 	global.enemies_remaining++;
 }
-// TODO Chat system
-// TODO Mesasge/dialogue boxes
+// TODO Chat system - LATER RELEASE
+// TODO Mesasge/dialogue boxes - THIS RELEASE

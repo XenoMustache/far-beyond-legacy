@@ -1,8 +1,7 @@
 /// @desc Update
 // Get directives
-// TODO Pirates attack civillians
-// TODO Civillians flee players and pirates
-// TODO Boss heal other behvaior
+// TODO Pirates attack civillians - NEXT RELEASE
+// TODO Civillians flee players and pirates - NEXT RELEASE
 switch (ai_state) {
 	case ai_directive.wander:
 		if (!target_exist) {
@@ -39,7 +38,6 @@ switch (ai_state) {
 			else if (npc_type == npc_types.pirate_boss || npc_type == npc_types.pirate_defense_drone)
 				ai_state = ai_directive.seek_player;
 		}
-		// TODO Add retreat behavior in place of flee behavior for pirates
 	break;
 	case ai_directive.flee:
 		can_shoot = false;

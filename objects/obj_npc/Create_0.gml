@@ -1,6 +1,5 @@
 /// @desc Initialize NPC
 // Unused Defaults
-// TODO Fix data instance transfer issue
 is_moving = false;
 hit = false;
 target_exist = false;
