@@ -21,6 +21,7 @@ if (can_shoot) {
 				bullet_type = bullet_types.pirate;
 				hit_bullet = weighted_chance(other.accuracy);
 				bullet_damage = other.dmg;
+				audio_play_sound(snd_laser, 10, false);
 			}
 			can_shoot = false;
 			alarm[1] = room_speed / attack_speed;

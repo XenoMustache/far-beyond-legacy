@@ -21,6 +21,7 @@ if (can_shoot) {
 				bullet_dmg = obj_player_ship.bullet_damage;
 			}
 			can_shoot = false;
+			audio_play_sound(snd_laser, 5, false);
 			alarm[0] = room_speed / attack_speed;
 		break;
 	}
