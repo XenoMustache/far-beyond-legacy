@@ -3,12 +3,15 @@ var window_height_center = window_get_height() / 2;
 var window_width_center = window_get_width() / 2;
 // Set target
 if (control_handler.mouse_locked) {
-	window_mouse_set(clamp(window_mouse_get_x(), window_width_center, window_width_center + 360), window_height_center);
+	if (window_mouse_get_x() > (window_width_center + 360)) {
+		window_mouse_set(window_width_center, window_height_center);
+		wraps++;
+	}
+	if (window_mouse_get_x() < (window_width_center)) {
+		window_mouse_set(window_width_center + 360, window_height_center);
+		wraps--;
+	}
 	var mouse_direction = point_distance(window_width_center, window_height_center, window_mouse_get_x(), window_mouse_get_y());
-	if (window_mouse_get_x() > (window_width_center + 360))
-		window_mouse_set(window_width_center, window_height_center)
-	if (window_mouse_get_x() < (window_width_center))
-		window_mouse_set(window_width_center + 360, window_height_center)
 }
 // Get input
 if (keyboard_check(vk_space) && can_shoot == true) {
@@ -16,8 +19,9 @@ if (keyboard_check(vk_space) && can_shoot == true) {
 }
 // Move player
 if (control_handler.mouse_locked) {
-	image_angle = -mouse_direction;
-	direction = -mouse_direction;
+	// TODO Fix mouse stutter - LATER RELEASE
+	image_angle -= (mouse_direction + wraps * 360 + image_angle) * rotation_speed;
+	direction = image_angle;
 }
 // Check movement
 if (speed != 0) is_moving = true; else is_moving = false;
