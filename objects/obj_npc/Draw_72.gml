@@ -24,7 +24,7 @@ switch (npc_type) {
 	break;
 	case npc_types.civ_test:
 		sprite_index = registry.spr_small_ships;
-		image_index = 1;
+		image_index = civ_choice;
 		image_speed = 0;
 		image_xscale = 3;
 		image_yscale = 3;

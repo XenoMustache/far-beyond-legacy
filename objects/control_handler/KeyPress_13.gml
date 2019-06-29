@@ -1,5 +1,5 @@
 /// @desc Execute command/finalize input
-// TODO Command args - THIS RELEASE
+// TODO Command args - NEXT RELEASE
 if (global.console_open) {
 	execute_command(keyboard_string, 0, 0, 0);
 	keyboard_string = "";

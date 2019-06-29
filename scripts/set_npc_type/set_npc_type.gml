@@ -80,6 +80,7 @@ switch (npc_type) {
 		bullet_speed = 40;
 		accuracy = 0;
 		shield_percent = 0;
+		civ_choice = choose(1, 3, 4, 5);
 	break;
 	// TODO civ defense drone - LATER RELEASE
 	case npc_types.civ_defense_drone:

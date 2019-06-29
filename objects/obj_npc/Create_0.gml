@@ -26,3 +26,4 @@ enum ai_directive {
 	flee,
 	seek_player
 }
+// Create Shield

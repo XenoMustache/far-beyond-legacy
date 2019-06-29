@@ -12,11 +12,16 @@ global.enemies_remaining = 0;
 window_set_caption("Far Beyond " + global.git_tag);
 // Load game settings
 load_settings();
+// Play music
+var music = audio_emitter_create();
+audio_emitter_gain(music, global.volume_music);
+audio_play_sound_on(music, snd_3SFU, true, 1);
 // Register External Assets
 spr_small_ships = sprite_add("assets/textures/small_ships.png", 6, false, false, 16, 16);
 spr_small_ships_pirate = sprite_add("assets/textures/small_ships_pirate.png", 3, false, false, 16, 16);
 spr_bullets = sprite_add("assets/textures/bullets.png", 2, false, false, 16, 16);
 spr_backgrounds = sprite_add("assets/textures/background.png", 1, false, false, 128, 128);
+spr_effects = sprite_add("assets/textures/effects.png", 1, false, false, 16, 16);
 // TODO Pirate drops - NEXT RELEASE
 //spr_power_up = sprite_add("assets/textures/capsule.png", 2, false, false, 8, 8);
 // Create objects
@@ -56,4 +61,4 @@ with (instance_create_depth(random_range(128, room_width - 128), random_range(12
 	global.enemies_remaining++;
 }
 // TODO Chat system - LATER RELEASE
-// TODO Mesasge/dialogue boxes - THIS RELEASE
+// TODO Mesasge/dialogue boxes - NEXT RELEASE

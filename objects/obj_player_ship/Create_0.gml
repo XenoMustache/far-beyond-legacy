@@ -26,3 +26,4 @@ health_percent = pointer_null;
 shield_percent = pointer_null;
 move = false;
 wraps = 0;
+instance_create_depth(x, y, -1, obj_shield_render);

@@ -18,7 +18,7 @@ draw_healthbar(view_width / 2, 9, (view_width / 2) + 96, 17, obj_player_ship.shi
 draw_healthbar(view_width / 2, 9, (view_width / 2) - 96, 17, obj_player_ship.shield_percent, c_shield_back, c_shield, c_shield, 0, true, false);
 draw_set_alpha(1);
 // Draw Console
-// TODO Console - THIS RELEASE
+// TODO Finish Console - NEXT RELEASE
 if (global.console_open) {
 	draw_set_color(c_black);
 	draw_set_alpha(0.5);
