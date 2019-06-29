@@ -3,15 +3,17 @@ var window_height_center = window_get_height() / 2;
 var window_width_center = window_get_width() / 2;
 // Set target
 if (control_handler.mouse_locked) {
+	var mouse_direction = point_distance(window_width_center, window_height_center, window_mouse_get_x(), window_mouse_get_y());
 	if (window_mouse_get_x() > (window_width_center + 360)) {
 		window_mouse_set(window_width_center, window_height_center);
+		mouse_direction = 0;
 		wraps++;
 	}
 	if (window_mouse_get_x() < (window_width_center)) {
 		window_mouse_set(window_width_center + 360, window_height_center);
+		mouse_direction = 360;
 		wraps--;
 	}
-	var mouse_direction = point_distance(window_width_center, window_height_center, window_mouse_get_x(), window_mouse_get_y());
 }
 // Get input
 if (keyboard_check(vk_space) && can_shoot == true) {
@@ -19,16 +21,15 @@ if (keyboard_check(vk_space) && can_shoot == true) {
 }
 // Move player
 if (control_handler.mouse_locked) {
-	// TODO Fix mouse stutter - LATER RELEASE
 	image_angle -= (mouse_direction + wraps * 360 + image_angle) * rotation_speed;
+	show_debug_message(string(mouse_direction));
 	direction = image_angle;
 }
 // Check movement
-if (speed != 0) is_moving = true; else is_moving = false;
+if (speed != 0) is_moving = true else is_moving = false;
 // Manage health and shields
-if (ship_hull <= 0){
-	if (global.player_lives <= 0) 
-		room_restart();
+if (ship_hull <= 0) {
+	if (global.player_lives <= 0) room_restart();
 	else {
 		global.player_lives--;
 		ship_hull = ship_hull_max;
