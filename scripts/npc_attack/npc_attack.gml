@@ -23,7 +23,7 @@ if (can_shoot) {
 				bullet_damage = other.dmg;
 			}
 			var sound = audio_emitter_create();
-			audio_emitter_gain(sound, global.volume_effect);
+			audio_emitter_gain(sound, global.volume_effect - 0.04);
 			audio_play_sound_on(sound, snd_laser, false, 10);
 			can_shoot = false;
 			alarm[1] = room_speed / attack_speed;

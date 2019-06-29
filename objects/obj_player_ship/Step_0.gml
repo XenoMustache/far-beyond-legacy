@@ -22,7 +22,6 @@ if (keyboard_check(vk_space) && can_shoot == true) {
 // Move player
 if (control_handler.mouse_locked) {
 	image_angle -= (mouse_direction + wraps * 360 + image_angle) * rotation_speed;
-	show_debug_message(string(mouse_direction));
 	direction = image_angle;
 }
 // Check movement
