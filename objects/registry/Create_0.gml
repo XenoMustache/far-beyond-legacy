@@ -15,6 +15,7 @@ load_settings();
 // Play music
 var music = audio_emitter_create();
 audio_emitter_gain(music, global.volume_music);
+audio_stop_sound(snd_3SFU);
 audio_play_sound_on(music, snd_3SFU, true, 1);
 // Register External Assets
 spr_small_ships = sprite_add("assets/textures/small_ships.png", 6, false, false, 16, 16);
