@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "043a2e17-5957-4dc8-b79e-b0b8038fd9e6",
+            "Value": {
+                "id": "e4d833a5-a6e5-4a02-8cfe-c3e9517e1ccf",
+                "resourcePath": "scripts\\create_button\\create_button.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "04d9f560-e9d6-4813-acc0-7846e2ce3068",
             "Value": {
                 "id": "6ad4dd27-1502-464f-a022-eaa4957b6fec",
@@ -199,6 +207,14 @@
             }
         },
         {
+            "Key": "4528163f-5b57-4fad-876c-261635cc2239",
+            "Value": {
+                "id": "fd99661c-2a81-4fd3-b3e0-533ac1dbb36b",
+                "resourcePath": "fonts\\fnt_ui_title\\fnt_ui_title.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "458c45a0-f3b6-403d-a4bb-e90082908a16",
             "Value": {
                 "id": "11185874-0546-4129-92a5-af976835a897",
@@ -220,6 +236,14 @@
                 "id": "58ccbcf3-42d2-4d8c-8102-bf2c96c04314",
                 "resourcePath": "fonts\\fnt_ui\\fnt_ui.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "4f6e5469-35c3-464b-b6c9-7e0c7d79f3b0",
+            "Value": {
+                "id": "76418cca-fe88-4f62-8772-c3aae1e9f682",
+                "resourcePath": "scripts\\create_message\\create_message.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -471,6 +495,14 @@
             }
         },
         {
+            "Key": "cad6908a-cdc8-4b7a-a88b-74bc955b774c",
+            "Value": {
+                "id": "0a816e1c-d51a-4f17-85f4-15843a60a155",
+                "resourcePath": "objects\\obj_button\\obj_button.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "9ca87722-6bf4-456a-a6e9-7a90cc4301bf",
@@ -581,7 +613,9 @@
         "98986856-4a31-41b3-bad7-0aee5b45f391",
         "62dbea68-4202-41c8-a8d9-720f116268a7",
         "36ff6796-9b95-4252-b48e-ba7e224b758f",
-        "04d9f560-e9d6-4813-acc0-7846e2ce3068"
+        "04d9f560-e9d6-4813-acc0-7846e2ce3068",
+        "4f6e5469-35c3-464b-b6c9-7e0c7d79f3b0",
+        "043a2e17-5957-4dc8-b79e-b0b8038fd9e6"
     ],
     "tutorial": ""
 }

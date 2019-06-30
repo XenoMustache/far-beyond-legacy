@@ -13,9 +13,9 @@ window_set_caption("Far Beyond " + global.git_tag);
 // Load game settings
 load_settings();
 // Play music
+audio_stop_all();
 var music = audio_emitter_create();
 audio_emitter_gain(music, global.volume_music);
-audio_stop_sound(snd_3SFU);
 audio_play_sound_on(music, snd_3SFU, true, 1);
 // Register External Assets
 spr_small_ships = sprite_add("assets/textures/small_ships.png", 6, false, false, 16, 16);
