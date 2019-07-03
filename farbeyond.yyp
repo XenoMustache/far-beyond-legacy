@@ -351,6 +351,22 @@
             }
         },
         {
+            "Key": "812b0784-29be-4123-9d92-fb5c14af1b9e",
+            "Value": {
+                "id": "71c92a91-eb67-4176-9e37-af5ab96415d5",
+                "resourcePath": "datafiles_yy\\assets\\textures\\obstacles_foreground.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "8331bc30-7a2a-4591-91f0-9f07a378c5db",
+            "Value": {
+                "id": "3a52a23a-73af-4d49-9bed-40e6e1198fef",
+                "resourcePath": "datafiles_yy\\assets\\textures\\FarBeyond.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "8443a413-0d23-4c7f-be99-6fef1941a103",
             "Value": {
                 "id": "d127ae13-8b6e-4559-a8e6-7df3e5bb90fa",
@@ -476,6 +492,14 @@
                 "id": "f9351167-94a6-42cc-b7ed-c822b13fe796",
                 "resourcePath": "objects\\registry\\registry.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b72c370f-0e66-4ab8-b131-5553131e602a",
+            "Value": {
+                "id": "39c55403-55f4-4cbe-bfd4-a88c02ca33ca",
+                "resourcePath": "datafiles_yy\\assets\\textures\\obstacles_background.png.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
