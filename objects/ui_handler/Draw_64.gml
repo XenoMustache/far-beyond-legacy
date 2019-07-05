@@ -3,8 +3,8 @@ var view_width = camera_get_view_width(view_camera[0]);
 var view_height = camera_get_view_height(view_camera[0]);
 var c_shield = make_color_rgb(85,172,238);
 var c_shield_back = make_color_rgb(41,131,199);
-var c_health = make_color_rgb(153,102,255);
-var c_health_back = make_color_rgb(100,55,190);
+var c_health = make_color_rgb(235,118,35);
+var c_health_back = make_color_rgb(214,63,22);
 // Display HUD
 draw_set_alpha(0.7);
 draw_set_color(c_white);
