@@ -23,6 +23,7 @@ spr_small_ships_pirate = sprite_add("assets/textures/small_ships_pirate.png", 3,
 spr_bullets = sprite_add("assets/textures/bullets.png", 2, false, false, 16, 16);
 spr_backgrounds = sprite_add("assets/textures/background.png", 1, false, false, 128, 128);
 spr_effects = sprite_add("assets/textures/effects.png", 1, false, false, 16, 16);
+spr_capsule = sprite_add("assets/textures/capsule.png", 2, false, false, 8, 8);
 // TODO Pirate drops - NEXT RELEASE
 //spr_power_up = sprite_add("assets/textures/capsule.png", 2, false, false, 8, 8);
 // Create objects

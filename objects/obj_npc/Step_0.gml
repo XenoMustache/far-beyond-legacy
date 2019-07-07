@@ -66,6 +66,11 @@ if (ship_hull <= 0) {
 	if (npc_type == npc_types.pirate_defense_drone)
 		if (instance_exists(parent_id)) parent_id.spawn_amount++;
 	if (npc_faction == factions.pirate) global.enemies_remaining--;
+	if (npc_type == npc_types.pirate_test) {
+		var pirate_drop = weighted_chance(1);
+		if (pirate_drop) var loot_drop = instance_create_depth(x, y, 0, obj_loot);
+		loot_drop.loot = loot_types.sm_hp;
+	}
 	instance_destroy();
 }
 if (shield <= 0) has_shield = false;

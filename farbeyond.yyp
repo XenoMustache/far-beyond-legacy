@@ -407,6 +407,14 @@
             }
         },
         {
+            "Key": "93687e76-83e4-4bb8-ad0d-2f8ef812fecd",
+            "Value": {
+                "id": "33b2d9f0-83bc-4a66-ba51-5e008afd2fcc",
+                "resourcePath": "datafiles_yy\\assets\\textures\\capsule.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "9497fd91-c0fe-45ac-b66a-8e7779abbd05",
             "Value": {
                 "id": "b8a8e1a3-7fb5-4a2c-82c3-1ca14516063f",
@@ -450,7 +458,7 @@
             "Key": "a8cfa1f9-0c96-40f9-ba91-4d706f31f138",
             "Value": {
                 "id": "fc7802cb-cb0b-4e71-abfd-49fd8b8038ef",
-                "resourcePath": "objects\\obj_shield_render\\obj_shield_render.yy",
+                "resourcePath": "objects\\obj_effect_renderer\\obj_effect_renderer.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -620,6 +628,14 @@
                 "id": "8102834e-a640-44f9-b799-104086645347",
                 "resourcePath": "datafiles_yy\\assets\\textures\\small_ships.png.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "fc7b36dd-6fdd-4591-957b-2364d9174523",
+            "Value": {
+                "id": "2c4cf411-6293-4ab0-9f8a-7474199f9844",
+                "resourcePath": "objects\\obj_loot\\obj_loot.yy",
+                "resourceType": "GMObject"
             }
         }
     ],

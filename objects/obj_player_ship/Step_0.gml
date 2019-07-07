@@ -43,6 +43,7 @@ if (can_rechage_shield) {
 	has_shield = true;
 	shield += recharge_rate;
 }
+if (ship_hull > ship_hull_max) ship_hull = ship_hull_max;
 if (shield >= shield_max) can_rechage_shield = false;
 health_percent = (ship_hull / ship_hull_max) * 100;
 shield_percent = (shield / shield_max) * 100;
