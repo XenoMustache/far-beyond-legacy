@@ -9,6 +9,7 @@ global.debug_show_extra_data = false;
 global.player_lives = 3;
 global.console_open = false;
 global.enemies_remaining = 0;
+global.god_mode = false;
 window_set_caption("Far Beyond " + global.git_tag);
 // Load game settings
 load_settings();

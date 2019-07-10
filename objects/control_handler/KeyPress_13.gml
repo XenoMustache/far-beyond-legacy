@@ -1,6 +1,17 @@
 // TODO Command args - NEXT RELEASE
 if (global.console_open) {
-	execute_command(string_letters(cmd), string_letters(param1), string_letters(param2), string_letters(param3));
+	if (!has_cmd) { 
+		cmd = keyboard_string;
+	} else if (!has_param1) {
+		param1 = keyboard_string;
+	} else if (!has_param2) {
+		param2 = keyboard_string;
+		has_param2 = true;
+	} else if (!has_param3) {
+		param3 = keyboard_string;
+	}
+	show_debug_message(cmd + " " + param1 + " " + param2 + " " + param3);
+	execute_command(string_lettersdigits(cmd), string_lettersdigits(param1), string_lettersdigits(param2), string_lettersdigits(param3));
 	keyboard_string = "";
 	ui_handler.console_output += ui_handler.command_exec + ui_handler.command_feedback + "\n";
 	cmd = "";
