@@ -18,3 +18,4 @@ view_set_hport(0, window_get_height());
 // Window fallback
 if (window_has_focus()) surface_resize(application_surface, window_get_width(), window_get_height());
 if (control_handler.mouse_locked) window_set_cursor(cr_none) else window_set_cursor(cr_default);
+display_set_gui_size(global.display_width, global.display_height);
