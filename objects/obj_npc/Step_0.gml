@@ -52,6 +52,7 @@ switch (ai_state) {
 		else ai_state = ai_directive.wander;
 	break;
 	case ai_directive.seek_player:
+	if (instance_exists(obj_player_ship)) {
 		target_exist = true;
 		target_x = obj_player_ship.x;
 		target_y = obj_player_ship.y;
@@ -59,6 +60,7 @@ switch (ai_state) {
 		if (distance_to_point(target_x, target_y) < 128) ai_state = ai_directive.attack;
 		if (distance_to_point(target_x, target_y) < 64)
 			speed = 0;
+	} else {ai_state = ai_directive.seek_player;}
 	break;
 }
 // Manage health

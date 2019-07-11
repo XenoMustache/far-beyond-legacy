@@ -1,4 +1,3 @@
-// TODO Command args - NEXT RELEASE
 if (global.console_open) {
 	if (!has_cmd) { 
 		cmd = keyboard_string;

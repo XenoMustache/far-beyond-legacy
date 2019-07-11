@@ -1,8 +1,7 @@
-/// @desc Initialize Game
 // Randomize game values
 randomize();
 // Set game data
-global.git_tag = "proto-pre-alpha-v0.4";
+global.git_tag = "proto-pre-alpha-v0.5";
 global.default_display_width = 1024;
 global.default_display_height = 768;
 global.debug_show_extra_data = false;
@@ -27,8 +26,10 @@ spr_effects = sprite_add("assets/textures/effects.png", 1, false, false, 16, 16)
 spr_capsule = sprite_add("assets/textures/capsule.png", 2, false, false, 8, 8);
 //spr_power_up = sprite_add("assets/textures/capsule.png", 2, false, false, 8, 8);
 // Create objects
-instance_create_depth(room_width / 2, room_height / 2, 0, obj_player_ship);
-instance_create_depth(obj_player_ship.x, obj_player_ship.y, 0, obj_camera);
+player_spawn = instance_create_depth(room_width / 2, room_height / 2, 0, obj_event_point);
+player_spawn.point_type = point_types.player_spawn;
+player_spawn.trigger = true
+instance_create_depth(player_spawn.x, player_spawn.y, 0, obj_camera);
 instance_create_depth(0, 0, 0, control_handler);
 instance_create_depth(0, 0, 0, ui_handler);
 // Create background

@@ -2,6 +2,7 @@
 // TODO NPC disposition system - NEXT RELEASE
 // TODO Player energy system - LATER RELEASE
 // TODO Add control schemes - LATER RELEASE
+obj_camera.camera_target = id;
 image_angle = 90;
 ship_hull_max = 100;
 ship_hull = ship_hull_max;
@@ -22,9 +23,10 @@ has_shield = true;
 can_rechage_shield = false;
 recharge_cooldown = 2;
 recharge_rate = 0.5;
-health_percent = pointer_null;
-shield_percent = pointer_null;
+health_percent = 100;
+shield_percent = 100;
 move = false;
 wraps = 0;
+ui_handler.player_exists = true;
 var shield_render = instance_create_depth(x, y, -1, obj_effect_renderer);
 shield_render.effect = effects.shield;

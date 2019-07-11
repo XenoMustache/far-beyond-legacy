@@ -4,7 +4,7 @@ if (other.bullet_type == bullet_types.pirate) {
 		if (can_take_damage) {
 			if (has_shield) {
 				var taken_damage = other.bullet_damage;
-				if(shield >= taken_damage) {
+				if (shield >= taken_damage) {
 					shield -= other.bullet_damage;
 					can_rechage_shield = false;
 				} else {

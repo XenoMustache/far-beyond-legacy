@@ -455,6 +455,14 @@
             }
         },
         {
+            "Key": "9b983ecd-493d-4f27-9cff-51b0e12d0966",
+            "Value": {
+                "id": "e5bf386d-b194-4079-b321-04ee6314c8eb",
+                "resourcePath": "objects\\obj_event_point\\obj_event_point.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a8cfa1f9-0c96-40f9-ba91-4d706f31f138",
             "Value": {
                 "id": "fc7802cb-cb0b-4e71-abfd-49fd8b8038ef",
