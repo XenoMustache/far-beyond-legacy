@@ -399,6 +399,14 @@
             }
         },
         {
+            "Key": "8d4858f1-8d25-46bb-bfe3-e34fe158a03c",
+            "Value": {
+                "id": "246c5bf5-711c-4945-b0f0-6347eb9735ca",
+                "resourcePath": "objects\\obj_message_box\\obj_message_box.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8f629a8a-3828-455b-af86-c9bcdf0a64d1",
             "Value": {
                 "id": "58e66fb5-539c-47a2-adb6-9a7e83a8212a",
@@ -492,6 +500,14 @@
                 "id": "5a08b208-efc5-41ac-a908-f63b243f07be",
                 "resourcePath": "views\\ad4e2a2d-f2d1-496f-a290-a581f876d2d8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "adee0314-e4d9-4085-89f7-5c97d0f746cf",
+            "Value": {
+                "id": "881385f8-dc8d-43fd-be1a-cbef9e930652",
+                "resourcePath": "datafiles_yy\\assets\\textures\\sm_button.png.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

@@ -11,8 +11,9 @@ draw_set_color(c_white);
 draw_set_font(fnt_ui);
 draw_set_halign(fa_center);
 if (player_exists) {
-	draw_text(view_width / 2, 20, "LIVES: " + string(global.player_lives));
-	draw_text(view_width / 2, view_height - 22, "ENEMIES REMAINING:" + string(global.enemies_remaining));
+	draw_set_valign(fa_middle);
+	draw_text(view_width / 2, 35, "LIVES: " + string(global.player_lives));
+	draw_text(view_width / 2, view_height - 5, "ENEMIES REMAINING:" + string(global.enemies_remaining));
 	draw_healthbar(view_width / 2, 0, (view_width / 2) + 128, 8, obj_player_ship.health_percent, c_health_back, c_health, c_health, 0, true, false);
 	draw_healthbar(view_width / 2, 0, (view_width / 2) - 128, 8, obj_player_ship.health_percent, c_health_back, c_health, c_health, 0, true, false);
 	draw_healthbar(view_width / 2, 9, (view_width / 2) + 96, 17, obj_player_ship.shield_percent, c_shield_back, c_shield, c_shield, 0, true, false);

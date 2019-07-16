@@ -1,0 +1,1 @@
+//if (instance_exists(test_button)) if test_button.button_clicked instance_destroy(test_button);

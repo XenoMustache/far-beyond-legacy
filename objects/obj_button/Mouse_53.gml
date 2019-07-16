@@ -1,5 +1,6 @@
 /// @desc Get button clicked on
-if (mouse_hover) {
+if (mouse_hover) { 
 	button_clicked = true;
 	show_debug_message("click");
+	alarm[0] = 1;
 }

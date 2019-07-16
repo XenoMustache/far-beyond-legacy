@@ -13,7 +13,8 @@
         "812b0784-29be-4123-9d92-fb5c14af1b9e",
         "b72c370f-0e66-4ab8-b131-5553131e602a",
         "8331bc30-7a2a-4591-91f0-9f07a378c5db",
-        "93687e76-83e4-4bb8-ad0d-2f8ef812fecd"
+        "93687e76-83e4-4bb8-ad0d-2f8ef812fecd",
+        "adee0314-e4d9-4085-89f7-5c97d0f746cf"
     ],
     "filterType": "GMIncludedFile",
     "folderName": "textures",
