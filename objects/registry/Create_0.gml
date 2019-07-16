@@ -17,9 +17,9 @@ audio_stop_all();
 var music = audio_emitter_create();
 audio_emitter_gain(music, global.volume_music);
 audio_play_sound_on(music, snd_3SFU, true, 1);
-//var start_message = create_message();
-//start_message.message_type = "message_start";
-//test_button = create_button(1, 1, "Hello World!", global.display_width / 2, global.display_height / 2);
+start_message = create_message();
+start_message.message_type = "message_start";
+message_button = create_button(1, 1, "Close", global.display_width / 2, (global.display_height / 2) + 80);
 // Register External Assets
 spr_small_ships = sprite_add("assets/textures/small_ships.png", 6, false, false, 16, 16);
 spr_small_ships_pirate = sprite_add("assets/textures/small_ships_pirate.png", 3, false, false, 16, 16);

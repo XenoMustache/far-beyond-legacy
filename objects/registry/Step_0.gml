@@ -1,1 +1,5 @@
-//if (instance_exists(test_button)) if test_button.button_clicked instance_destroy(test_button);
+if (instance_exists(message_button))
+	if (message_button.button_clicked) {
+		instance_destroy(start_message);
+		instance_destroy(message_button);
+	}
