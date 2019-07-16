@@ -32,7 +32,6 @@ spr_sm_button = sprite_add("assets/textures/sm_button.png", 1, false, false, 80,
 // Create objects
 player_spawn = instance_create_depth(room_width / 2, room_height / 2, 0, obj_event_point);
 player_spawn.point_type = point_types.player_spawn;
-player_spawn.trigger = true;
 instance_create_depth(player_spawn.x, player_spawn.y, 0, obj_camera);
 instance_create_depth(0, 0, 0, control_handler);
 instance_create_depth(0, 0, 0, ui_handler);
