@@ -1,4 +1,3 @@
-/// @desc Init button
 button_x_scale = 1;
 button_y_scale = 1;
 button_width = 80 * button_x_scale;

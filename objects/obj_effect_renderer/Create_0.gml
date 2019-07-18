@@ -2,5 +2,6 @@
 effect = pointer_null;
 enum effects {
 	shield,
-	capsule
+	capsule,
+	logo
 }

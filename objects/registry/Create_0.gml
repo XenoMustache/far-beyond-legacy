@@ -17,11 +17,17 @@ spr_backgrounds = sprite_add("assets/textures/background.png", 1, false, false, 
 spr_effects = sprite_add("assets/textures/effects.png", 1, false, false, 16, 16);
 spr_capsule = sprite_add("assets/textures/capsule.png", 2, false, false, 8, 8);
 spr_sm_button = sprite_add("assets/textures/sm_button.png", 1, false, false, 80, 15);
+spr_logo = sprite_add("assets/textures/logo.png", 1, false, false, 112, 16);
 switch (registry_type) {
 	case 0:
 		audio_stop_all();
 		var menu_music = audio_emitter_create();
 		audio_emitter_gain(menu_music, global.volume_music);
+		button_play = create_button(1, 1, "Play", 200, global.display_height - 50);
+		button_settings = create_button(1, 1, "Settings", global.display_width / 2, global.default_display_height - 50);
+		button_quit = create_button(1, 1, "Quit", global.default_display_width - 200, global.default_display_height - 50);
+		var logo = instance_create_depth(global.display_width / 2, global.display_height / 2, 0, obj_effect_renderer);
+		logo.effect = effects.logo;
 	break;
 	case 1:
 		audio_stop_all();

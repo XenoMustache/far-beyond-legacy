@@ -20,4 +20,11 @@ switch (effect) {
 		image_xscale = 3;
 		image_yscale = 3;
 	break;
+	case effects.logo:
+		sprite_index = registry.spr_logo;
+		image_index = 1;
+		image_speed = 0;
+		image_xscale = 3;
+		image_yscale = 3;
+	break;
 }

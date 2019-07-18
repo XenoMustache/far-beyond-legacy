@@ -1,4 +1,3 @@
-/// @desc Draw button
 draw_set_font(fnt_ui);
 if (mouse_hover) {
 	draw_sprite_ext(registry.spr_sm_button, 0, button_x, button_y, button_x_scale, button_y_scale, image_angle, image_blend, image_alpha);
