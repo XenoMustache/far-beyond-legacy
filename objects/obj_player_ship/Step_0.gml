@@ -3,6 +3,7 @@ var window_height_center = global.default_display_width / 2;
 var window_width_center = global.default_display_height / 2;
 // Set target
 if (control_handler.mouse_locked) {
+	window_mouse_set(clamp(window_mouse_get_x(), window_width_center, window_width_center + 360), window_height_center);
 	var mouse_direction = point_distance(window_width_center, window_height_center, window_mouse_get_x(), window_mouse_get_y());
 	if (window_mouse_get_x() > (window_width_center + 360)) {
 		window_mouse_set(window_width_center, window_height_center);
