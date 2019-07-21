@@ -1,3 +1,4 @@
+// TODO Changelog - NEXT RELEASE
 randomize();
 global.git_tag = "proto-pre-alpha-v0.5";
 global.default_display_width = 1024;
@@ -20,11 +21,16 @@ spr_sm_button = sprite_add("assets/textures/sm_button.png", 1, false, false, 80,
 spr_logo = sprite_add("assets/textures/logo.png", 1, false, false, 112, 16);
 switch (registry_type) {
 	case 0:
+		show_settings = false;
+		subtitle = "P   R   O   T   O   T   Y   P   E";
+		draw_set_halign(fa_middle);
 		c_rainbow = make_color_hsv((get_timer()) mod 255,255,255);
-		disclaimer = create_message();
-		disclaimer.message_type = "disclaimer";
-		buttons_exist = false;
-		alarm[1] = room_speed * 10;
+		if (global.show_notice) {
+			disclaimer = create_message();
+			disclaimer.message_type = "disclaimer";
+			buttons_exist = false;
+			alarm[1] = room_speed * 10;
+		} else alarm[1] = 1;
 	break;
 	case 1:
 		audio_stop_all();
@@ -43,19 +49,19 @@ switch (registry_type) {
 		background_layer = layer_get_id("Background");
 		background_1 = layer_background_get_id(background_layer);
 		layer_background_sprite(background_1, spr_backgrounds);
-		//with (instance_create_depth(room_width / 2, room_height / 2, 0, obj_npc)) {
-		//		set_npc_type(npc_types.pirate_test);
-		//		npc_faction = factions.pirate;
-		//}
-		//for (i = 0; i < 10; i++) {
-		//	posX = random_range(0 + 16, room_height - 16);
-		//	posY = random_range(0 + 16, room_height - 16);
-		//	with (instance_create_depth(posX, posY, 0, obj_npc)) {
-		//		set_npc_type(npc_types.pirate_test);
-		//		npc_faction = factions.pirate;
-		//		global.enemies_remaining++;
-		//	}
-		//}
+		with (instance_create_depth(room_width / 2, room_height / 2, 0, obj_npc)) {
+				set_npc_type(npc_types.pirate_test);
+				npc_faction = factions.pirate;
+		}
+		for (i = 0; i < 10; i++) {
+			posX = random_range(0 + 16, room_height - 16);
+			posY = random_range(0 + 16, room_height - 16);
+			with (instance_create_depth(posX, posY, 0, obj_npc)) {
+				set_npc_type(npc_types.pirate_test);
+				npc_faction = factions.pirate;
+				global.enemies_remaining++;
+			}
+		}
 		for (i = 0; i < 30; i++) {
 		posX = random_range(0 + 16, room_height - 16);
 		posY = random_range(0 + 16, room_height - 16);
@@ -64,11 +70,11 @@ switch (registry_type) {
 				npc_faction = factions.civ;
 			}
 		}
-		//with (instance_create_depth(random_range(128, room_width - 128), random_range(128, room_height - 128) , 0, obj_npc)) {
-		//	set_npc_type(npc_types.pirate_boss);
-		//	npc_faction = factions.pirate;
-		//	global.enemies_remaining++;
-		//}
+		with (instance_create_depth(random_range(128, room_width - 128), random_range(128, room_height - 128) , 0, obj_npc)) {
+			set_npc_type(npc_types.pirate_boss);
+			npc_faction = factions.pirate;
+			global.enemies_remaining++;
+		}
 	break;
 }
 // TODO Chat system - LATER RELEASE

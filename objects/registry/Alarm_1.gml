@@ -1,6 +1,5 @@
-instance_destroy(disclaimer);
+if (global.show_notice) instance_destroy(disclaimer);
 buttons_exist = true;
-c_rainbow = make_color_hsv((get_timer()) mod 255,255,255);
 audio_stop_all();
 var menu_music = audio_emitter_create();
 audio_emitter_gain(menu_music, global.volume_music);
