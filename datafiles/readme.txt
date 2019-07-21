@@ -1,3 +1,5 @@
+NOTE: Readme will be removed in next release in favor of an ingame changelog.
+
 Controls
 ####################
 Graphics:
@@ -11,6 +13,19 @@ TAB - Toggle Cursor Lock
 Space - Fire Projectile
 ####################
 Changelog
+####################
+proto-pre-alpha-v0.5:
+
+Added message boxes and buttons.
+Added menu screen.
+Fixed audio issues.
+Player will not spawn until close button is clicked.
+Console variables added.
+Added new console commands.
+Fixes to graphics.
+New types of civillians.
+Menu music setting (currently unused).
+Many bugs were harmed in the making of this release.
 ####################
 proto-pre-alpha-v0.4:
 
