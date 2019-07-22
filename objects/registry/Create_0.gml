@@ -8,6 +8,8 @@ global.player_lives = 3;
 global.console_open = false;
 global.enemies_remaining = 0;
 global.god_mode = false;
+global.civ_disposition = 50;
+global.pirate_disposition = -100;
 window_set_caption("Far Beyond " + global.git_tag);
 load_settings();
 audio_stop_all();

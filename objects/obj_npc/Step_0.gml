@@ -15,8 +15,20 @@ switch (ai_state) {
 			speed = 0;
 				if (alarm[0] = -1) alarm[0] = room_speed * 5;
 		}
-		if (npc_faction == factions.pirate)
+		if (npc_faction == factions.civ && global.civ_disposition < 0)
+				if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.flee; 
+		if (npc_faction == factions.pirate && global.pirate_disposition < 0)
 			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
+		if (npc_faction == factions.pirate) {
+			with (instance_nearest_notme(x, y, obj_npc)) {
+				if (npc_faction == factions.civ) {
+					other.civ_target = id;
+					other.target_x = x;
+					other.target_y = y;
+					other.ai_state = ai_directive.attack_civ;
+				}
+			}
+		}
 	break;
 	case ai_directive.attack:
 		alarm[0] = -1;
@@ -61,6 +73,24 @@ switch (ai_state) {
 		if (distance_to_point(target_x, target_y) < 64)
 			speed = 0;
 	} else {ai_state = ai_directive.seek_player;}
+	break;
+	case ai_directive.attack_civ:
+		alarm[0] = -1;
+		move_towards_point(target_x, target_y, spd);
+		if (distance_to_point(target_x, target_y) < 128) speed = 0;
+		if (distance_to_object(civ_target) < 512)
+			if (npc_type == npc_types.pirate_test) ai_state = ai_directive.wander;
+			else if (npc_type == npc_types.pirate_defense_drone || npc_type == npc_types.pirate_boss) 
+				ai_state = ai_directive.seek_player;
+		npc_attack(attack_type);
+		if (!instance_exists(civ_target)) {
+			civ_target = noone;
+			target_exist = false;
+			if (npc_type == npc_types.pirate_test)
+				ai_state = ai_directive.wander;			
+			else if (npc_type == npc_types.pirate_boss || npc_type == npc_types.pirate_defense_drone)
+				ai_state = ai_directive.seek_player;
+		}
 	break;
 }
 // Manage health

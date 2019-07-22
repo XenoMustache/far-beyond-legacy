@@ -9,6 +9,7 @@ target_y = pointer_null;
 health_percent = pointer_null;
 accuracy = pointer_null;
 can_rechage_shield = false;
+civ_target = noone;
 // Vital Defaults
 image_angle = 90;
 can_shoot = true;
@@ -24,6 +25,8 @@ enum ai_directive {
 	wander,
 	attack,
 	flee,
-	seek_player
+	seek_player,
+	flee_pirate,
+	attack_civ
 }
 // Create Shield

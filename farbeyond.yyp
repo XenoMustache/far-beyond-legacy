@@ -399,14 +399,6 @@
             }
         },
         {
-            "Key": "96d57016-50dc-4f2b-a5ac-22d76e7f8793",
-            "Value": {
-                "id": "d07c26d3-4c2f-4dce-9c28-fd779b66ba3a",
-                "resourcePath": "extensions\\instance_nearest_ext\\instance_nearest_ext.yy",
-                "resourceType": "GMExtension"
-            }
-        },
-        {
             "Key": "9b4108cd-ac67-4792-82fc-71874b6a1665",
             "Value": {
                 "id": "b65d79c3-4bf5-4a0d-a759-78b2983a6d26",
@@ -471,14 +463,6 @@
             }
         },
         {
-            "Key": "b34350c3-3a5a-49a5-bd70-56641aac5b63",
-            "Value": {
-                "id": "487a0d11-9910-4d56-a3e8-67dd4904ac25",
-                "resourcePath": "notes\\compatibility_report_270519_213704374.yy",
-                "resourceType": "GMNotes"
-            }
-        },
-        {
             "Key": "b64beee1-33ed-4100-affd-1deef0ffae03",
             "Value": {
                 "id": "f9351167-94a6-42cc-b7ed-c822b13fe796",
@@ -492,6 +476,14 @@
                 "id": "39c55403-55f4-4cbe-bfd4-a88c02ca33ca",
                 "resourcePath": "datafiles_yy\\assets\\textures\\obstacles_background.png.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "bdcb3d2e-052a-4d38-93e6-f1e320926c21",
+            "Value": {
+                "id": "62dc2355-cbeb-4168-8add-892025428873",
+                "resourcePath": "scripts\\instance_nearest_notme\\instance_nearest_notme.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -575,6 +567,14 @@
             }
         },
         {
+            "Key": "ebb8edff-2db7-49e4-a9ef-f8f862fc7872",
+            "Value": {
+                "id": "af414d2e-c2f7-466e-93e6-99f9f2283e46",
+                "resourcePath": "extensions\\window_command_hook\\window_command_hook.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "edea1b52-5091-47cb-9ed2-732d572c53c4",
             "Value": {
                 "id": "5bbf5d5a-85d1-4ced-a8e8-8195b7f71fbd",
@@ -634,7 +634,8 @@
         "04d9f560-e9d6-4813-acc0-7846e2ce3068",
         "4f6e5469-35c3-464b-b6c9-7e0c7d79f3b0",
         "043a2e17-5957-4dc8-b79e-b0b8038fd9e6",
-        "b05e9a79-9135-49ee-92a5-d750acdb99cb"
+        "b05e9a79-9135-49ee-92a5-d750acdb99cb",
+        "bdcb3d2e-052a-4d38-93e6-f1e320926c21"
     ],
     "tutorial": ""
 }
