@@ -10,3 +10,4 @@ enum bullet_types {
 	pirate,
 	civillian
 }
+spd = pointer_null;

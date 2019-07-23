@@ -1,4 +1,5 @@
 /// @desc Update
+if (global.game_paused) { speed = 0; exit;}
 var window_height_center = global.default_display_width / 2;
 var window_width_center = global.default_display_height / 2;
 // Set target

@@ -1,5 +1,6 @@
 /// @desc Update
 // Set destruction data according to bullet type
+if (global.game_paused) {speed = 0; exit;} else speed = spd;
 switch (bullet_type) {
 	case bullet_types.player:
 		if (hit_bullet)

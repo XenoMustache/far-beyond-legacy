@@ -1,8 +1,8 @@
 /// @desc Update
 // Get directives
-// TODO Pirates attack civillians - NEXT RELEASE
 // TODO Civillians flee players and pirates - NEXT RELEASE
 // TODO Update NPC movement - LATER RELEASE
+if (global.game_paused) { speed = 0; exit;}
 switch (ai_state) {
 	case ai_directive.wander:
 		if (!target_exist) {

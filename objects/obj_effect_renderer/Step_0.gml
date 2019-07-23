@@ -1,4 +1,5 @@
 /// @desc Render Shield
+if (global.game_paused) exit;
 switch (effect) {
 	case effects.shield:
 		var shield_alpha = obj_player_ship.shield * 0.02;

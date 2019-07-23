@@ -24,6 +24,7 @@ switch (registry_type) {
 			instance_destroy(message_button);
 			player_spawn.trigger = true;
 			control_handler.mouse_locked = true;
+			global.game_paused = false;
 		}
 	}
 	break;

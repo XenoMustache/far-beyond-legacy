@@ -1,6 +1,6 @@
 // TODO Changelog - NEXT RELEASE
 randomize();
-global.git_tag = "proto-pre-alpha-v0.5";
+global.git_tag = "proto-pre-alpha-v0.6";
 global.default_display_width = 1024;
 global.default_display_height = 768;
 global.debug_show_extra_data = false;
@@ -10,6 +10,7 @@ global.enemies_remaining = 0;
 global.god_mode = false;
 global.civ_disposition = 50;
 global.pirate_disposition = -100;
+global.game_paused = false;
 window_set_caption("Far Beyond " + global.git_tag);
 load_settings();
 audio_stop_all();
@@ -36,6 +37,7 @@ switch (registry_type) {
 	break;
 	case 1:
 		audio_stop_all();
+		global.game_paused = true;
 		var music = audio_emitter_create();
 		audio_emitter_gain(music, global.volume_music);
 		audio_play_sound_on(music, snd_3SFU, true, 1);
@@ -51,17 +53,13 @@ switch (registry_type) {
 		background_layer = layer_get_id("Background");
 		background_1 = layer_background_get_id(background_layer);
 		layer_background_sprite(background_1, spr_backgrounds);
-		with (instance_create_depth(room_width / 2, room_height / 2, 0, obj_npc)) {
-				set_npc_type(npc_types.pirate_test);
-				npc_faction = factions.pirate;
-		}
 		for (i = 0; i < 10; i++) {
 			posX = random_range(0 + 16, room_height - 16);
 			posY = random_range(0 + 16, room_height - 16);
 			with (instance_create_depth(posX, posY, 0, obj_npc)) {
 				set_npc_type(npc_types.pirate_test);
 				npc_faction = factions.pirate;
-				global.enemies_remaining++;
+				global.enemies_remaining ++;
 			}
 		}
 		for (i = 0; i < 30; i++) {
