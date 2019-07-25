@@ -1,0 +1,1 @@
+// TODO Meteors and other obstacles

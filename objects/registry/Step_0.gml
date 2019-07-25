@@ -1,3 +1,4 @@
+// TODO Settings Menu
 switch (registry_type) {
 	case 0:
 		if(buttons_exist) {

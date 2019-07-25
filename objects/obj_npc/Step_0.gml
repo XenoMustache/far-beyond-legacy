@@ -1,6 +1,6 @@
 /// @desc Update
 // Get directives
-// TODO Civillians flee players and pirates - NEXT RELEASE
+// TODO Fix jerky Pirate target finding
 // TODO Update NPC movement - LATER RELEASE
 if (global.game_paused) { speed = 0; exit;}
 switch (ai_state) {
@@ -17,9 +17,7 @@ switch (ai_state) {
 		}
 		if (npc_faction == factions.civ && global.civ_disposition < 0)
 				if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.flee; 
-		if (npc_faction == factions.pirate && global.pirate_disposition < 0)
-			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
-		if (npc_faction == factions.pirate) {
+		if (npc_faction == factions.pirate && !distance_to_object(obj_player_ship) < 128) {
 			with (instance_nearest_notme(x, y, obj_npc)) {
 				if (npc_faction == factions.civ) {
 					other.civ_target = id;
@@ -28,6 +26,8 @@ switch (ai_state) {
 					other.ai_state = ai_directive.attack_civ;
 				}
 			}
+		if (npc_faction == factions.pirate && global.pirate_disposition < 0)
+			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
 		}
 	break;
 	case ai_directive.attack:
@@ -82,6 +82,7 @@ switch (ai_state) {
 			if (npc_type == npc_types.pirate_test) ai_state = ai_directive.wander;
 			else if (npc_type == npc_types.pirate_defense_drone || npc_type == npc_types.pirate_boss) 
 				ai_state = ai_directive.seek_player;
+			else if (distance_to_object(obj_player_ship) < 128 && global.pirate_disposition < 0) ai_state = ai_directive.attack;
 		npc_attack(attack_type);
 		if (!instance_exists(civ_target)) {
 			civ_target = noone;
@@ -91,6 +92,9 @@ switch (ai_state) {
 			else if (npc_type == npc_types.pirate_boss || npc_type == npc_types.pirate_defense_drone)
 				ai_state = ai_directive.seek_player;
 		}
+	break;
+	case ai_directive.flee_pirate:
+	// TODO Civillians flee pirates - NEXT RELEASE
 	break;
 }
 // Manage health

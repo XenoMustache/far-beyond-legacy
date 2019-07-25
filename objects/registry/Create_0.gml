@@ -1,4 +1,8 @@
 // TODO Changelog - NEXT RELEASE
+// TODO Tile grid based ships
+// TODO Player Character
+// TODO Attack emitter object
+// TODO Dynamic attack damage / critical attacks
 randomize();
 global.git_tag = "proto-pre-alpha-v0.6";
 global.default_display_width = 1024;
