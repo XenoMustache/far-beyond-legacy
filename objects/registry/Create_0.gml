@@ -3,6 +3,7 @@
 // TODO Player Character
 // TODO Attack emitter object
 // TODO Dynamic attack damage / critical attacks
+// Pirate waves and dynamic spawnpoints
 randomize();
 global.git_tag = "proto-pre-alpha-v0.6";
 global.default_display_width = 1024;

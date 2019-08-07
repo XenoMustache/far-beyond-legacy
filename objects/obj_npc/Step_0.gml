@@ -1,6 +1,5 @@
 /// @desc Update
 // Get directives
-// TODO Fix jerky Pirate target finding
 // TODO Update NPC movement - LATER RELEASE
 if (global.game_paused) { speed = 0; exit;}
 switch (ai_state) {
@@ -17,18 +16,17 @@ switch (ai_state) {
 		}
 		if (npc_faction == factions.civ && global.civ_disposition < 0)
 				if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.flee; 
-		if (npc_faction == factions.pirate && !distance_to_object(obj_player_ship) < 128) {
+		if (npc_faction == factions.pirate && distance_to_object(obj_player_ship) > 128) {
 			with (instance_nearest_notme(x, y, obj_npc)) {
-				if (npc_faction == factions.civ) {
+				if (npc_faction == factions.civ && distance_to_object(other) < 128) {
 					other.civ_target = id;
 					other.target_x = x;
 					other.target_y = y;
 					other.ai_state = ai_directive.attack_civ;
 				}
 			}
-		if (npc_faction == factions.pirate && global.pirate_disposition < 0)
-			if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
-		}
+		} else if (npc_faction == factions.pirate && global.pirate_disposition < 0)
+				if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
 	break;
 	case ai_directive.attack:
 		alarm[0] = -1;
