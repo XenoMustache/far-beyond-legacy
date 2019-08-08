@@ -48,12 +48,12 @@ switch (registry_type) {
 		audio_play_sound_on(music, snd_3SFU, true, 1);
 		start_message = create_message();
 		start_message.message_type = "message_start";
-		message_button = create_button(1, 1, "Close", global.display_width / 2, (global.display_height / 2) + 80);
+		message_button = create_button(1, 1, "Close", display_get_gui_width() / 2, (display_get_gui_height() / 2));
 		player_spawn = instance_create_depth(room_width / 2, room_height / 2, 0, obj_event_point);
 		player_spawn.point_type = point_types.player_spawn;
-		instance_create_depth(player_spawn.x, player_spawn.y, 0, obj_camera);
 		instance_create_depth(0, 0, 0, control_handler);
 		instance_create_depth(0, 0, 0, ui_handler);
+		instance_create_depth(room_width / 2, room_height / 2, 0, obj_camera_controller);
 		control_handler.mouse_locked = false;
 		background_layer = layer_get_id("Background");
 		background_1 = layer_background_get_id(background_layer);

@@ -1,6 +1,6 @@
 var c_header = make_color_rgb(29,29,29);
-var window_width = global.display_width;
-var window_height = global.display_height;
+var window_width = display_get_gui_width();
+var window_height = display_get_gui_height();
 var width;
 var height;
 var title;

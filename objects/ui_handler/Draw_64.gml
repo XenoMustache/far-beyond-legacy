@@ -1,6 +1,6 @@
 // Manage all UI elements
-var view_width = global.display_width;
-var view_height = global.display_height;
+var view_width = display_get_gui_width();
+var view_height = display_get_gui_height();
 var c_shield = make_color_rgb(85,172,238);
 var c_shield_back = make_color_rgb(41,131,199);
 var c_health = make_color_rgb(235,118,35);

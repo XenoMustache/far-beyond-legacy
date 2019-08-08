@@ -1,7 +1,7 @@
 /// @desc Update
 if (global.game_paused) { speed = 0; exit;}
-var window_height_center = global.default_display_width / 2;
-var window_width_center = global.default_display_height / 2;
+var window_height_center = display_get_gui_width() / 2;
+var window_width_center = display_get_gui_height() / 2;
 // Set target
 if (control_handler.mouse_locked) {
 	window_mouse_set(clamp(window_mouse_get_x(), window_width_center, window_width_center + 360), window_height_center);
