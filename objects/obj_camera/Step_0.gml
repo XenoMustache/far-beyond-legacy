@@ -17,7 +17,6 @@
 //view_set_hport(0, global.display_height);
 //// Window fallback
 //if (window_has_focus()) surface_resize(application_surface, global.display_width, global.display_height);
-if (control_handler.mouse_locked) window_set_cursor(cr_none) else window_set_cursor(cr_default);
 //display_set_gui_size(global.display_width, global.display_height);
 if(keyboard_check_pressed(ord("Z")))
 {

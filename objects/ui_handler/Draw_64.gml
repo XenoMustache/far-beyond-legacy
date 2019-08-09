@@ -1,4 +1,5 @@
 // Manage all UI elements
+if (control_handler.mouse_locked) window_set_cursor(cr_none) else window_set_cursor(cr_default);
 var view_width = display_get_gui_width();
 var view_height = display_get_gui_height();
 var c_shield = make_color_rgb(85,172,238);
