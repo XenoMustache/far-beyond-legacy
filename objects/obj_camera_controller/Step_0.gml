@@ -16,8 +16,8 @@ __view_set( e__VW.WView, 0, obj_camera.ideal_width/view_zoom );
 __view_set( e__VW.HView, 0, obj_camera.ideal_height/view_zoom );
 
 //Center on player
-__view_set( e__VW.XView, 0, x-__view_get( e__VW.WView, 0 )/2-10 );
-__view_set( e__VW.YView, 0, y-__view_get( e__VW.HView, 0 )/2-10 );
+__view_set( e__VW.XView, 0, x-__view_get( e__VW.WView, 0 )/2);
+__view_set( e__VW.YView, 0, y-__view_get( e__VW.HView, 0 )/2 );
 
 //clamp to room
 __view_set( e__VW.XView, 0, clamp(__view_get( e__VW.XView, 0 ),0,room_width-__view_get( e__VW.WView, 0 )) );

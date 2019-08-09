@@ -1,2 +1,0 @@
-//simple performance draw out!
-draw_text_colour(argument0,argument1,string_hash_to_newline("real FPS:"+string(fps_real)+"##Room Speed: "+string(fps)+"##mouse Y: "+string(mouse_x)+"##mouse Y: "+string(mouse_y)+"##Window_Size: "+string(window_get_width())+","+string(window_get_height())+"##"+string(__background_get( e__BG.VSpeed, 2 ))+","+string(__background_get( e__BG.VSpeed, 3 ))+","+string(__background_get( e__BG.VSpeed, 4 ))+","+string(__background_get( e__BG.VSpeed, 5 ))+","+string(__background_get( e__BG.VSpeed, 6 ))),c_white,c_white,c_white,c_white,1);

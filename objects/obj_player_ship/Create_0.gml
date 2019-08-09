@@ -1,7 +1,7 @@
 /// @desc Initalize Player
 // TODO NPC disposition system - NEXT RELEASE
 // TODO Player energy system - LATER RELEASE
-// TODO Add control schemes - LATER RELEASE
+// TODO Redo player control
 image_angle = 90;
 ship_hull_max = 100;
 ship_hull = ship_hull_max;
