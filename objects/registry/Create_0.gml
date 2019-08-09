@@ -6,8 +6,6 @@
 // Pirate waves and dynamic spawnpoints
 randomize();
 global.git_tag = "proto-pre-alpha-v0.6";
-global.default_display_width = 1024;
-global.default_display_height = 768;
 global.debug_show_extra_data = false;
 global.player_lives = 3;
 global.console_open = false;
@@ -27,6 +25,9 @@ spr_effects = sprite_add("assets/textures/effects.png", 1, false, false, 16, 16)
 spr_capsule = sprite_add("assets/textures/capsule.png", 2, false, false, 8, 8);
 spr_sm_button = sprite_add("assets/textures/sm_button.png", 1, false, false, 80, 15);
 spr_logo = sprite_add("assets/textures/logo.png", 1, false, false, 112, 16);
+spr_status_bar = sprite_add("assets/textures/status_bar.png", 1, false, false, 34, 16);
+spr_health_filled = sprite_add("assets/textures/health_filled.png", 1, false, false, 29, 4);
+spr_shield_filled = sprite_add("assets/textures/shield_filled.png", 1, false, false, 26, 3);
 switch (registry_type) {
 	case 0:
 		show_settings = false;
@@ -67,19 +68,19 @@ switch (registry_type) {
 				global.enemies_remaining ++;
 			}
 		}
-		for (i = 0; i < 30; i++) {
-		posX = random_range(0 + 16, room_height - 16);
-		posY = random_range(0 + 16, room_height - 16);
-		with (instance_create_depth(posX, posY, 0, obj_npc)) {
-				set_npc_type(npc_types.civ_test);
-				npc_faction = factions.civ;
-			}
-		}
-		with (instance_create_depth(random_range(128, room_width - 128), random_range(128, room_height - 128) , 0, obj_npc)) {
-			set_npc_type(npc_types.pirate_boss);
-			npc_faction = factions.pirate;
-			global.enemies_remaining++;
-		}
+		//for (i = 0; i < 30; i++) {
+		//posX = random_range(0 + 16, room_height - 16);
+		//posY = random_range(0 + 16, room_height - 16);
+		//with (instance_create_depth(posX, posY, 0, obj_npc)) {
+		//		set_npc_type(npc_types.civ_test);
+		//		npc_faction = factions.civ;
+		//	}
+		//}
+		//with (instance_create_depth(random_range(128, room_width - 128), random_range(128, room_height - 128) , 0, obj_npc)) {
+		//	set_npc_type(npc_types.pirate_boss);
+		//	npc_faction = factions.pirate;
+		//	global.enemies_remaining++;
+		//}
 	break;
 }
 // TODO Chat system - LATER RELEASE

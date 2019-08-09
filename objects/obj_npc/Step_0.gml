@@ -56,7 +56,7 @@ switch (ai_state) {
 			playerdirection = point_direction(x,y, obj_player_ship.x, obj_player_ship.y);
 			direction = playerdirection + 180;
 			image_angle = direction;
-			speed = spd + 1;
+			speed = spd + 0.5;
 		} else if (npc_type == npc_types.pirate_defense_drone) ai_state = ai_directive.attack;	
 		else if (npc_type == npc_types.pirate_boss) ai_state = ai_directive.seek_player;
 		else ai_state = ai_directive.wander;

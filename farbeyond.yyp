@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "02ad96dd-0797-4667-b0f6-550a1e173e1a",
+            "Value": {
+                "id": "40efca1a-3adf-4b8c-9805-068576f5de94",
+                "resourcePath": "datafiles_yy\\assets\\textures\\shield_filled.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "03ad3aab-4db0-4eb6-ade8-335a3c7c4686",
             "Value": {
                 "id": "6242fbba-06a9-4c4c-8932-7501b38be737",
@@ -95,6 +103,14 @@
             }
         },
         {
+            "Key": "1195cb38-b87c-4dd2-a458-7a5b2b400369",
+            "Value": {
+                "id": "338d9c4a-9745-4d30-9f2b-d876cb3bec63",
+                "resourcePath": "scripts\\@__init_background\\__init_background.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "13182298-16e8-4df6-9a67-6a8856c13d0c",
             "Value": {
                 "id": "f8a54534-ee6d-4fec-bb34-816491129c92",
@@ -124,6 +140,14 @@
                 "id": "1885251e-d729-4bb4-86f4-823abbba0b30",
                 "resourcePath": "views\\1c7b37d4-a49b-43a5-9a45-fe8a4098deac.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "1e9635cb-5144-4811-9a34-af0fc2f8fadf",
+            "Value": {
+                "id": "ae0b9f47-9fb5-4a26-8383-4bef77ed37f8",
+                "resourcePath": "scripts\\Feryx_starfield_create_MULTIColor\\Feryx_starfield_create_MULTIColor.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -159,6 +183,22 @@
             }
         },
         {
+            "Key": "263f808d-cab0-467b-a551-4908ffe21cb3",
+            "Value": {
+                "id": "874d4b85-f081-4ea4-9b27-7e7576bb997f",
+                "resourcePath": "scripts\\Feryx_starfield_Speed\\Feryx_starfield_Speed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "27facdf4-8da7-4589-9b5a-69d66e27e227",
+            "Value": {
+                "id": "0a091933-78b1-4fda-85a9-c92737961efe",
+                "resourcePath": "scripts\\@__background_set_element\\__background_set_element.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2adfa2bf-108e-42ed-97a7-9c5218053263",
             "Value": {
                 "id": "bef4bc7c-fca2-4619-9a4e-8e8c77a8fcd0",
@@ -172,6 +212,14 @@
                 "id": "f07c24a1-6a88-4fad-b168-8a93ef0c4447",
                 "resourcePath": "sprites\\spr_test_player\\spr_test_player.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "32c358ef-d57f-4c0a-8b0f-bba12fe635f1",
+            "Value": {
+                "id": "41167fd5-c042-4e65-86b3-ec8ab3c7b3a9",
+                "resourcePath": "views\\32c358ef-d57f-4c0a-8b0f-bba12fe635f1.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -199,6 +247,22 @@
             }
         },
         {
+            "Key": "39fe5d21-e3d1-4c6a-bfb3-1ddb307fdb20",
+            "Value": {
+                "id": "b7681348-fce1-4634-a493-8ff37f66b8ee",
+                "resourcePath": "extensions\\Parallax_3D_Starfield\\Parallax_3D_Starfield.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
+            "Key": "3a72b076-6e3e-4f63-b06e-3b16eb5e8b9d",
+            "Value": {
+                "id": "f2ab4f75-3c8c-46a3-b7bb-598a0bd47b88",
+                "resourcePath": "scripts\\@__background_get_element\\__background_get_element.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3afbf708-2c5d-4f3a-baf2-3bdc9c9360cf",
             "Value": {
                 "id": "9cde6a0a-58be-4011-9f7c-e8440dd43e67",
@@ -212,6 +276,30 @@
                 "id": "c209ea48-5dec-422a-8081-cf134cd8f167",
                 "resourcePath": "views\\3d211d25-fb10-45cf-baa4-12aefff4722a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3f0d69e7-22d3-457f-bbd4-7ca8e51aa9d2",
+            "Value": {
+                "id": "36bad32d-9b75-4a14-8ab9-c63180b54701",
+                "resourcePath": "scripts\\@__init_action\\__init_action.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3fdd8e9f-8fdb-4104-a4a4-9f0aebd1c9b2",
+            "Value": {
+                "id": "a33956bd-2d0b-4f7d-98a9-63147550764b",
+                "resourcePath": "datafiles_yy\\assets\\textures\\status_bar.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "43348186-a5e6-4855-bff7-f1c1aa9338fd",
+            "Value": {
+                "id": "f8ce9ba6-b04c-42bf-83c5-827cd0e97dc2",
+                "resourcePath": "datafiles_yy\\assets\\textures\\health_filled.png.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -275,6 +363,22 @@
             "Value": {
                 "id": "76418cca-fe88-4f62-8772-c3aae1e9f682",
                 "resourcePath": "scripts\\create_message\\create_message.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5558f5a3-0b6f-485d-a45e-a03e45091337",
+            "Value": {
+                "id": "5989fd6c-bf0a-4c0e-97b2-6b6e5f953089",
+                "resourcePath": "scripts\\@action_restart_game\\action_restart_game.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5b3babb2-9df5-4163-bbab-3a61714c699b",
+            "Value": {
+                "id": "0995b8cc-3f7e-43f0-b940-82c76f2bf838",
+                "resourcePath": "scripts\\Feryx_starfield_create_Color_different\\Feryx_starfield_create_Color_different.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -351,6 +455,14 @@
             }
         },
         {
+            "Key": "69b4f7db-0a99-4081-9790-d99f951ac823",
+            "Value": {
+                "id": "bba392fd-cab6-49d0-b00d-67c4f6af0413",
+                "resourcePath": "views\\69b4f7db-0a99-4081-9790-d99f951ac823.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "6eb7c47f-a7d9-4254-82ab-42a23210f64f",
             "Value": {
                 "id": "b0bbab3c-bf10-42f6-abc9-9137673ef3d8",
@@ -367,6 +479,14 @@
             }
         },
         {
+            "Key": "743a8e4b-c895-4025-b3ac-617a10068eb5",
+            "Value": {
+                "id": "834b0a96-fa1a-40fe-a4d0-8439fa05fedf",
+                "resourcePath": "views\\743a8e4b-c895-4025-b3ac-617a10068eb5.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7a80aa40-aa27-43a5-8104-fc98289e0ca3",
             "Value": {
                 "id": "a3ebd8a4-0cea-4e71-a659-8d1afb861140",
@@ -380,6 +500,14 @@
                 "id": "71c92a91-eb67-4176-9e37-af5ab96415d5",
                 "resourcePath": "datafiles_yy\\assets\\textures\\obstacles_foreground.png.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "81d956b4-1c57-4abd-935a-64998d00b109",
+            "Value": {
+                "id": "58f101a7-250d-4adc-b6ca-3bfee0a028e2",
+                "resourcePath": "scripts\\@__init_global1\\__init_global1.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -415,6 +543,14 @@
             }
         },
         {
+            "Key": "8b5557a3-fa78-41ac-9bf6-e39c33c0c1c5",
+            "Value": {
+                "id": "738e8e8e-c7a4-435f-8c09-a40dc6eb5cb7",
+                "resourcePath": "scripts\\Feryx_starfield_stepp\\Feryx_starfield_stepp.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8d3b19bc-bfbf-4a6b-8f4b-c4b9426adad6",
             "Value": {
                 "id": "b79f813e-27f8-475d-9bc4-3486c22bbba1",
@@ -428,6 +564,14 @@
                 "id": "246c5bf5-711c-4945-b0f0-6347eb9735ca",
                 "resourcePath": "objects\\obj_message_box\\obj_message_box.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8e7b7d83-e8a0-4a10-a259-62bc3a8050af",
+            "Value": {
+                "id": "63035466-4e83-442d-88a0-757e41070578",
+                "resourcePath": "scripts\\Feryx_Star_Create\\Feryx_Star_Create.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -463,6 +607,14 @@
             }
         },
         {
+            "Key": "99d785db-ed81-4599-96b6-28319823cac8",
+            "Value": {
+                "id": "12b90b05-d16d-43f8-8d60-bc31ea17e875",
+                "resourcePath": "scripts\\Feryx_starfield_create\\Feryx_starfield_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9acc5a72-25a1-47b0-853b-1575a13ad8ec",
             "Value": {
                 "id": "e47f7d31-9052-4d1e-bf4b-74c287fd6bbf",
@@ -487,11 +639,27 @@
             }
         },
         {
+            "Key": "9f81c632-483c-45ed-88a9-236a195a0f2e",
+            "Value": {
+                "id": "100bd4b6-62ea-4f1c-a4c4-9013a52820ff",
+                "resourcePath": "scripts\\Feryx_Star_STEPP\\Feryx_Star_STEPP.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a3baad6a-5768-464d-b838-02382a64ac9d",
             "Value": {
                 "id": "cf4c143f-4d75-475e-8e9d-2fd6f0dbe8db",
                 "resourcePath": "objects\\obj_compound_data\\obj_compound_data.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a3c4c549-ecb5-44a4-a06d-e3f038b4f92a",
+            "Value": {
+                "id": "608dcba4-0777-437f-80e3-291908f07f29",
+                "resourcePath": "views\\a3c4c549-ecb5-44a4-a06d-e3f038b4f92a.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -519,6 +687,22 @@
             }
         },
         {
+            "Key": "a9c8daa6-699d-4fff-95f8-9d0a4b138443",
+            "Value": {
+                "id": "37d9d6ad-6e93-4572-a0f9-2acc92ce1fbf",
+                "resourcePath": "scripts\\@__background_set_internal\\__background_set_internal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "aa2ad58f-a1b6-4778-9e39-1ada4d5a184a",
+            "Value": {
+                "id": "83de0003-82dd-4611-b8ff-d696d5804a7d",
+                "resourcePath": "scripts\\@__background_set\\__background_set.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ad3cbc5e-7b98-4a77-8320-a0fb9c8b760c",
             "Value": {
                 "id": "3a97a136-48f2-433f-a159-cb9a6f007031",
@@ -540,6 +724,14 @@
                 "id": "881385f8-dc8d-43fd-be1a-cbef9e930652",
                 "resourcePath": "datafiles_yy\\assets\\textures\\sm_button.png.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "ae32e37b-6d84-4425-8114-c958ec7b1bfa",
+            "Value": {
+                "id": "0603d4de-f9c2-4ec0-8158-29f872e5d52e",
+                "resourcePath": "scripts\\@action_current_room\\action_current_room.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -567,6 +759,14 @@
             }
         },
         {
+            "Key": "b70fb07a-df4b-44bb-9ae4-9d6219da4965",
+            "Value": {
+                "id": "5e521e64-d909-4e4e-aed3-235404f3c78a",
+                "resourcePath": "scripts\\Feryx_starfield_freeMemory\\Feryx_starfield_freeMemory.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b72c370f-0e66-4ab8-b131-5553131e602a",
             "Value": {
                 "id": "39c55403-55f4-4cbe-bfd4-a88c02ca33ca",
@@ -579,6 +779,14 @@
             "Value": {
                 "id": "62dc2355-cbeb-4168-8add-892025428873",
                 "resourcePath": "scripts\\instance_nearest_notme\\instance_nearest_notme.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bfb36c91-733e-4b6b-bcf9-3bc93193e81f",
+            "Value": {
+                "id": "afd4b29f-8e77-4e49-b3ac-1477a1f0144a",
+                "resourcePath": "scripts\\@background_delete\\background_delete.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -615,6 +823,14 @@
             }
         },
         {
+            "Key": "cd4961f9-076a-468b-9f73-b4475c0742d5",
+            "Value": {
+                "id": "85014263-fc96-4728-be13-723b50fc186b",
+                "resourcePath": "scripts\\@__background_get_internal\\__background_get_internal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d18292b0-d7bf-48e4-ac39-53caa75ee10a",
             "Value": {
                 "id": "01a09169-602b-491b-b024-190a3beaf5d1",
@@ -623,10 +839,42 @@
             }
         },
         {
+            "Key": "d34771c1-e352-4b55-9424-237b342a60d4",
+            "Value": {
+                "id": "b1b2e245-5c13-4ca0-ac0f-5cb145e2a356",
+                "resourcePath": "scripts\\@__background_get\\__background_get.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d49aaa27-5d57-4ab8-8323-1b009769557f",
+            "Value": {
+                "id": "2542eeac-6ec4-4b11-b756-53bb95d550d2",
+                "resourcePath": "scripts\\Feryx_Performance\\Feryx_Performance.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d6a80b05-1ceb-45e5-9dea-d8d62b760844",
+            "Value": {
+                "id": "f90d4589-4d38-4273-9055-2e5ee39d20cb",
+                "resourcePath": "views\\d6a80b05-1ceb-45e5-9dea-d8d62b760844.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "da7519c0-ba75-4e58-bc33-4f48c98e0ec8",
             "Value": {
                 "id": "54228f11-5628-4435-9b88-c411a80ccaca",
                 "resourcePath": "scripts\\round_n\\round_n.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "dd22a2c9-d0a8-47ff-b90e-00f825df43d3",
+            "Value": {
+                "id": "b0e573dc-f05b-411f-ad1d-654900a79906",
+                "resourcePath": "scripts\\Feryx_starfield_Rand\\Feryx_starfield_Rand.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -644,6 +892,14 @@
                 "id": "54a987be-fe52-4cf3-83e0-aadabbe6d8b2",
                 "resourcePath": "views\\dd71bc47-9572-413a-ab11-4788486c012c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e0f9db0f-1477-4573-8bc0-e3d26582e44e",
+            "Value": {
+                "id": "7d94d169-97f1-4d33-adb0-91399c55973d",
+                "resourcePath": "scripts\\Feryx_starfield_create_SPRITE\\Feryx_starfield_create_SPRITE.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -717,6 +973,14 @@
                 "resourcePath": "objects\\obj_loot\\obj_loot.yy",
                 "resourceType": "GMObject"
             }
+        },
+        {
+            "Key": "fd725bcd-09b2-4ba3-9142-cc8ca55046b2",
+            "Value": {
+                "id": "04d16246-4d78-45ef-bc3a-f69ba62a5403",
+                "resourcePath": "scripts\\@background_create_from_surface\\background_create_from_surface.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
@@ -738,7 +1002,31 @@
         "47ccc7e0-8d38-41ba-9056-01bad2f6cb7b",
         "73c06923-d3b7-4455-b1a6-762d4e9f799a",
         "337d352e-4e67-497a-9bf9-3122b47236fd",
-        "10d2419d-98b0-4ea2-8cc3-6baf4b0108c0"
+        "10d2419d-98b0-4ea2-8cc3-6baf4b0108c0",
+        "99d785db-ed81-4599-96b6-28319823cac8",
+        "e0f9db0f-1477-4573-8bc0-e3d26582e44e",
+        "5b3babb2-9df5-4163-bbab-3a61714c699b",
+        "1e9635cb-5144-4811-9a34-af0fc2f8fadf",
+        "8b5557a3-fa78-41ac-9bf6-e39c33c0c1c5",
+        "d49aaa27-5d57-4ab8-8323-1b009769557f",
+        "263f808d-cab0-467b-a551-4908ffe21cb3",
+        "b70fb07a-df4b-44bb-9ae4-9d6219da4965",
+        "dd22a2c9-d0a8-47ff-b90e-00f825df43d3",
+        "8e7b7d83-e8a0-4a10-a259-62bc3a8050af",
+        "9f81c632-483c-45ed-88a9-236a195a0f2e",
+        "ae32e37b-6d84-4425-8114-c958ec7b1bfa",
+        "5558f5a3-0b6f-485d-a45e-a03e45091337",
+        "3f0d69e7-22d3-457f-bbd4-7ca8e51aa9d2",
+        "fd725bcd-09b2-4ba3-9142-cc8ca55046b2",
+        "bfb36c91-733e-4b6b-bcf9-3bc93193e81f",
+        "d34771c1-e352-4b55-9424-237b342a60d4",
+        "3a72b076-6e3e-4f63-b06e-3b16eb5e8b9d",
+        "cd4961f9-076a-468b-9f73-b4475c0742d5",
+        "aa2ad58f-a1b6-4778-9e39-1ada4d5a184a",
+        "27facdf4-8da7-4589-9b5a-69d66e27e227",
+        "a9c8daa6-699d-4fff-95f8-9d0a4b138443",
+        "1195cb38-b87c-4dd2-a458-7a5b2b400369",
+        "81d956b4-1c57-4abd-935a-64998d00b109"
     ],
     "tutorial": ""
 }

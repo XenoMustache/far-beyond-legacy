@@ -8,8 +8,8 @@ switch (effect) {
 		sprite_index = registry.spr_effects;
 		image_index = 0;
 		image_speed = 0;
-		image_xscale = 3;
-		image_yscale = 3;
+		image_xscale = 2;
+		image_yscale = 2;
 		image_alpha = shield_alpha;
 	break;
 	case effects.capsule:
@@ -18,14 +18,14 @@ switch (effect) {
 		sprite_index = registry.spr_capsule;
 		image_index = 1;
 		image_speed = 0;
-		image_xscale = 3;
-		image_yscale = 3;
+		image_xscale = 2;
+		image_yscale = 2;
 	break;
 	case effects.logo:
 		sprite_index = registry.spr_logo;
 		image_index = 1;
 		image_speed = 0;
 		image_xscale = 3;
-		image_yscale = 3;
+		image_yscale = 4;
 	break;
 }

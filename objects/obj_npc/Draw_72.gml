@@ -5,29 +5,29 @@ switch (npc_type) {
 		sprite_index = registry.spr_small_ships_pirate;
 		image_index = 1;
 		image_speed = 0;
-		image_xscale = 3;
-		image_yscale = 3;
+		image_xscale = 2;
+		image_yscale = 2;
 	break;
 	case npc_types.pirate_boss:
 		sprite_index = registry.spr_small_ships_pirate;
 		image_index = 0;
 		image_speed = 0;
-		image_xscale = 3;
-		image_yscale = 3;
+		image_xscale = 2;
+		image_yscale = 2;
 	break;
 	case npc_types.pirate_defense_drone:
 		sprite_index = registry.spr_small_ships_pirate;
 		image_index = 2;
 		image_speed = 0;
-		image_xscale = 3;
-		image_yscale = 3;
+		image_xscale = 2;
+		image_yscale = 2;
 	break;
 	case npc_types.civ_test:
 		sprite_index = registry.spr_small_ships;
 		image_index = civ_choice;
 		image_speed = 0;
-		image_xscale = 3;
-		image_yscale = 3;
+		image_xscale = 2;
+		image_yscale = 2;
 	break;
 }
 // Set collision mask

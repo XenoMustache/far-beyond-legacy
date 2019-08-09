@@ -11,8 +11,8 @@ enum npc_types {
 switch (npc_type) {
 	case npc_types.pirate_test:
 		ai_state = ai_directive.wander;
-		spd = 4;
-		rotation_speed = 0.05;
+		spd = 2;
+		rotation_speed = 0.025;
 		ship_hull_max = 100;
 		ship_hull = ship_hull_max;
 		attack_type = npc_attack_types.shoot;
@@ -29,8 +29,8 @@ switch (npc_type) {
 	break;
 	case npc_types.pirate_boss:
 		ai_state = ai_directive.seek_player;
-		spd = 2;
-		rotation_speed = 0.02;
+		spd = 1;
+		rotation_speed = 0.01;
 		ship_hull_max = 400;
 		ship_hull = ship_hull_max;
 		attack_type = npc_attack_types.create_drones;
@@ -48,8 +48,8 @@ switch (npc_type) {
 	break;
 	case npc_types.pirate_defense_drone:
 		ai_state = ai_directive.seek_player;
-		spd = 3;
-		rotation_speed = 0.5;
+		spd = 1.5;
+		rotation_speed = 0.25;
 		ship_hull_max = 200;
 		ship_hull = ship_hull_max;
 		attack_type = npc_attack_types.shoot;
@@ -66,8 +66,8 @@ switch (npc_type) {
 	break;
 	case npc_types.civ_test:
 		ai_state = ai_directive.wander;
-		spd = 3;
-		rotation_speed = 0.05;
+		spd = 1.5;
+		rotation_speed = 0.025;
 		ship_hull_max = 100;
 		ship_hull = ship_hull_max;
 		npc_faction = factions.civ;
@@ -85,8 +85,8 @@ switch (npc_type) {
 	// TODO civ defense drone - LATER RELEASE
 	case npc_types.civ_defense_drone:
 		ai_state = ai_directive.attack;
-		spd = 4;
-		rotation_speed = 0.5;
+		spd = 2;
+		rotation_speed = 0.25;
 		ship_hull_max = 200;
 		ship_hull = ship_hull_max;
 		attack_type = npc_attack_types.shoot;

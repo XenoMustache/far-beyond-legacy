@@ -2,13 +2,12 @@
 // TODO NPC disposition system - NEXT RELEASE
 // TODO Player energy system - LATER RELEASE
 // TODO Add control schemes - LATER RELEASE
-obj_camera.camera_target = id;
 image_angle = 90;
 ship_hull_max = 100;
 ship_hull = ship_hull_max;
 shield_max = 50;
 shield = shield_max;
-spd = 4;
+spd = 3;
 rotation_speed = 0.05 * global.player_sensitivity;
 is_moving = false;
 can_take_damage = true;
