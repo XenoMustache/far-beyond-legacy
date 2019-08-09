@@ -10,6 +10,8 @@ health_percent = pointer_null;
 accuracy = pointer_null;
 can_rechage_shield = false;
 civ_target = noone;
+health_percent = 100;
+shield_percent = 100;
 // Vital Defaults
 image_angle = 90;
 can_shoot = true;

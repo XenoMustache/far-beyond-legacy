@@ -10,3 +10,5 @@ if (hit) {
 } else {
     draw_self();
 }
+draw_set_color(make_color_rgb(85,172,238));
+draw_circle(x, y, 75, true);

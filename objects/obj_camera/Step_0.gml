@@ -11,3 +11,5 @@ if(keyboard_check_pressed(ord("Z")))
   surface_resize(application_surface,ideal_width*zoom,ideal_height*zoom);
   alarm[0]=1;
 }
+if (window_get_fullscreen())
+	zoom = max_zoom;

@@ -24,16 +24,14 @@ draw_set_alpha(1);
 // Draw Console
 if (global.console_open) {
 	draw_set_color(c_black);
-	draw_set_alpha(0.5);
-	draw_rectangle(0, 0, view_width, (view_height / 2) - 128, false);
-	draw_set_alpha(0.7);
+	draw_rectangle(0, 0, view_width, (view_height / 2) - 64, false);
 	draw_set_color(c_white);
 	draw_set_font(fnt_console);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_bottom);
-	draw_text_ext(8, (view_height / 2) - 170, console_output, 14, view_width - 128);
+	draw_text_ext(8, (view_height / 2) - 105, console_output, 14, view_width - 128);
 	draw_set_valign(fa_top);
-	draw_text(8, (view_height / 2) - 150, ">: " + string (control_handler.cmd) + string(control_handler.param1) + string(control_handler.param2) + string(control_handler.param3) + string(keyboard_string) + "█");
+	draw_text(8, (view_height / 2) - 90, ">: " + string (control_handler.cmd) + string(control_handler.param1) + string(control_handler.param2) + string(control_handler.param3) + string(keyboard_string) + "█");
 	keyboard_string = string_copy(keyboard_string, 1, 60);
 	draw_set_alpha(1);
 }

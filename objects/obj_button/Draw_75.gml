@@ -11,3 +11,7 @@ if (mouse_hover) {
 	draw_set_valign(fa_middle);
 	draw_text(button_x, button_y + 5, string(button_text));
 }
+if (global.debug_show_extra_data) {
+	draw_set_color(c_green);
+	draw_rectangle(button_x - (button_width / 2), button_y - (button_height / 2), button_x + (button_width / 2), button_y + (button_height / 2), true);	
+}

@@ -11,8 +11,8 @@ if (can_shoot) {
 				sprite_index = registry.spr_bullets;
 				image_index = 0;
 				image_speed = 0;
-				image_xscale = 2;
-				image_yscale = 2;
+				image_xscale = 1;
+				image_yscale = 1;
 				spd = obj_player_ship.bullet_speed;
 				direction = other.image_angle + random_range(25 * obj_player_ship.accuracy, -25 * obj_player_ship.accuracy);
 				image_angle = direction;
