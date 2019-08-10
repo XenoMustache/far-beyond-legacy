@@ -7,18 +7,22 @@ var c_shield_back = make_color_rgb(41,131,199);
 var c_health = make_color_rgb(235,118,35);
 var c_health_back = make_color_rgb(214,63,22);
 // Display HUD
-draw_set_alpha(0.7);
+draw_set_alpha(1);
 draw_set_color(c_white);
 draw_set_font(fnt_ui);
-draw_set_halign(fa_center);
 if (player_exists) {
+	draw_set_halign(fa_right);
+	draw_sprite_ext(registry.spr_status_bar, 0, 106, 52, 3, 3, image_angle, c_white, 1);
+	draw_sprite_ext(registry.spr_health_filled, 0, 28, 10, (obj_player_ship.ship_hull / obj_player_ship.ship_hull_max)*3, 3, image_angle, c_white, 1);
+	draw_sprite_ext(registry.spr_shield_filled, 0, 28, 31, (obj_player_ship.shield / obj_player_ship.shield_max)*3, 3, image_angle, c_white, 1);
+	draw_set_halign(fa_left);
 	draw_set_valign(fa_middle);
-	draw_text(view_width / 2, 35, "LIVES: " + string(global.player_lives));
-	draw_text(view_width / 2, view_height - 5, "ENEMIES REMAINING:" + string(global.enemies_remaining));
-	draw_healthbar(view_width / 2, 0, (view_width / 2) + 128, 8, obj_player_ship.health_percent, c_health_back, c_health, c_health, 0, true, false);
-	draw_healthbar(view_width / 2, 0, (view_width / 2) - 128, 8, obj_player_ship.health_percent, c_health_back, c_health, c_health, 0, true, false);
-	draw_healthbar(view_width / 2, 9, (view_width / 2) + 96, 17, obj_player_ship.shield_percent, c_shield_back, c_shield, c_shield, 0, true, false);
-	draw_healthbar(view_width / 2, 9, (view_width / 2) - 96, 17, obj_player_ship.shield_percent, c_shield_back, c_shield, c_shield, 0, true, false);
+	draw_text(5, 70, "HOSTILES:" + string(global.enemies_remaining));
+	draw_text(5, 90, "LIVES: " + string(global.player_lives));
+	//draw_healthbar(view_width / 2, 0, (view_width / 2) + 128, 8, obj_player_ship.health_percent, c_health_back, c_health, c_health, 0, true, false);
+	//draw_healthbar(view_width / 2, 0, (view_width / 2) - 128, 8, obj_player_ship.health_percent, c_health_back, c_health, c_health, 0, true, false);
+	//draw_healthbar(view_width / 2, 9, (view_width / 2) + 96, 17, obj_player_ship.shield_percent, c_shield_back, c_shield, c_shield, 0, true, false);
+	//draw_healthbar(view_width / 2, 9, (view_width / 2) - 96, 17, obj_player_ship.shield_percent, c_shield_back, c_shield, c_shield, 0, true, false);
 }
 draw_set_alpha(1);
 // Draw Console

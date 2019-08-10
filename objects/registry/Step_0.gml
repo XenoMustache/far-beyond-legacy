@@ -11,7 +11,7 @@ switch (registry_type) {
 				subtitle = "";
 				settings_box = create_message();
 				settings_box.message_type = "feature_unavailable";
-				button1 = create_button("Close", (display_get_gui_width() / 2), (display_get_gui_height() / 2) + 80, 1);
+				button1 = create_button("Close", (display_get_gui_width() / 2), (display_get_gui_height() / 2) + 80, 1, false, c_rainbow);
 				instance_destroy(button_settings);
 				instance_deactivate_object(button_quit);
 				instance_deactivate_object(button_changelog);

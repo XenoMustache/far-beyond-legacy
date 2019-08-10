@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_attack_point",
     "eventList": [
-        
+        {
+            "id": "034e4470-85f8-48b2-be0a-3ed760bb8c42",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "a96f2e10-b8b0-475b-b737-2c161f21fafc"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

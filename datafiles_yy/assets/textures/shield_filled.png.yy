@@ -1,5 +1,5 @@
 {
-    "id": "02ad96dd-0797-4667-b0f6-550a1e173e1a",
+    "id": "f3d2bf38-6043-495f-82a9-f538c163407e",
     "modelName": "GMIncludedFile",
     "mvc": "1.0",
     "name": "shield_filled.png",

@@ -31,14 +31,6 @@
     },
     "resources": [
         {
-            "Key": "02ad96dd-0797-4667-b0f6-550a1e173e1a",
-            "Value": {
-                "id": "40efca1a-3adf-4b8c-9805-068576f5de94",
-                "resourcePath": "datafiles_yy\\assets\\textures\\shield_filled.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "03ad3aab-4db0-4eb6-ade8-335a3c7c4686",
             "Value": {
                 "id": "6242fbba-06a9-4c4c-8932-7501b38be737",
@@ -724,6 +716,14 @@
                 "id": "513cf343-c332-4f7d-b18c-1ea847e1acab",
                 "resourcePath": "scripts\\execute_command\\execute_command.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f3d2bf38-6043-495f-82a9-f538c163407e",
+            "Value": {
+                "id": "84d253d4-0248-4a7a-a5b5-942af1a92fe1",
+                "resourcePath": "datafiles_yy\\assets\\textures\\shield_filled.png.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

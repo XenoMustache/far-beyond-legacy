@@ -6,3 +6,5 @@ button_x = pointer_null;
 button_y = pointer_null;
 mouse_hover = false;
 button_clicked = false;
+show_button = true;
+text_offset_color = c_black;
