@@ -1,7 +1,6 @@
-button_x_scale = 1;
-button_y_scale = 1;
-button_width = 80 * button_x_scale;
-button_height = 30 * button_y_scale;
+size = 1;
+button_width = (120 * size);
+button_height = (30);
 button_text = pointer_null;
 button_x = pointer_null;
 button_y = pointer_null;

@@ -647,6 +647,14 @@
             }
         },
         {
+            "Key": "da4700a1-50bc-4943-b655-881ab808d3b6",
+            "Value": {
+                "id": "0d2e23b7-e450-4a6d-94a0-db2e79cc373b",
+                "resourcePath": "datafiles_yy\\assets\\textures\\med_button.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "da7519c0-ba75-4e58-bc33-4f48c98e0ec8",
             "Value": {
                 "id": "54228f11-5628-4435-9b88-c411a80ccaca",

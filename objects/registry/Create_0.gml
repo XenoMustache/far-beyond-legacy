@@ -16,7 +16,6 @@ global.pirate_disposition = -100;
 global.game_paused = false;
 window_set_caption("Far Beyond " + global.git_tag);
 audio_stop_all();
-load_settings();
 spr_small_ships = sprite_add("assets/textures/small_ships.png", 6, false, false, 16, 16);
 spr_small_ships_pirate = sprite_add("assets/textures/small_ships_pirate.png", 3, false, false, 16, 16);
 spr_bullets = sprite_add("assets/textures/bullets.png", 2, false, false, 16, 16);
@@ -24,12 +23,14 @@ spr_backgrounds = sprite_add("assets/textures/background.png", 1, false, false, 
 spr_effects = sprite_add("assets/textures/effects.png", 1, false, false, 16, 16);
 spr_capsule = sprite_add("assets/textures/capsule.png", 2, false, false, 8, 8);
 spr_sm_button = sprite_add("assets/textures/sm_button.png", 1, false, false, 80, 15);
+spr_med_button = sprite_add("assets/textures/med_button.png", 1, false, false, 160, 15);
 spr_logo = sprite_add("assets/textures/logo.png", 1, false, false, 112, 16);
 spr_status_bar = sprite_add("assets/textures/status_bar.png", 1, false, false, 34, 16);
 spr_health_filled = sprite_add("assets/textures/health_filled.png", 1, false, false, 29, 4);
 spr_shield_filled = sprite_add("assets/textures/shield_filled.png", 1, false, false, 26, 3);
 switch (registry_type) {
 	case 0:
+		load_settings();
 		show_settings = false;
 		subtitle = "P   R   O   T   O   T   Y   P   E";
 		draw_set_halign(fa_middle);
@@ -49,7 +50,7 @@ switch (registry_type) {
 		audio_play_sound_on(music, snd_3SFU, true, 1);
 		start_message = create_message();
 		start_message.message_type = "message_start";
-		message_button = create_button(1, 1, "Close", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80);
+		message_button = create_button("Close", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80, 1);
 		player_spawn = instance_create_depth(room_width / 2, room_height / 2, 0, obj_event_point);
 		player_spawn.point_type = point_types.player_spawn;
 		instance_create_depth(0, 0, 0, control_handler);
