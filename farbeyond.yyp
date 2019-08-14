@@ -591,6 +591,14 @@
             }
         },
         {
+            "Key": "bd3ed282-0e7e-4389-97ed-a62c8f2c9ab1",
+            "Value": {
+                "id": "35a48465-3290-4d9e-b58f-f9e268ff501d",
+                "resourcePath": "scripts\\create_obstacle\\create_obstacle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bdcb3d2e-052a-4d38-93e6-f1e320926c21",
             "Value": {
                 "id": "62dc2355-cbeb-4168-8add-892025428873",
@@ -762,6 +770,7 @@
         "04d9f560-e9d6-4813-acc0-7846e2ce3068",
         "4f6e5469-35c3-464b-b6c9-7e0c7d79f3b0",
         "043a2e17-5957-4dc8-b79e-b0b8038fd9e6",
+        "bd3ed282-0e7e-4389-97ed-a62c8f2c9ab1",
         "b05e9a79-9135-49ee-92a5-d750acdb99cb",
         "bdcb3d2e-052a-4d38-93e6-f1e320926c21",
         "9acc5a72-25a1-47b0-853b-1575a13ad8ec",

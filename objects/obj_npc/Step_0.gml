@@ -9,9 +9,9 @@ switch (ai_state) {
 			target_x = random_range(128, room_width - 128);
 			target_y = random_range(128, room_height - 128);
 		}
-		move_towards_point(target_x, target_y, spd / 2);
+		speed = lerp(speed, spd / 2, 0.05);
 		if (distance_to_point(target_x, target_y) < 64) {
-			speed = 0;
+			speed = lerp(speed, 0, 0.04);
 				if (alarm[0] = -1) alarm[0] = room_speed * 5;
 		}
 		if (npc_faction == factions.civ && global.civ_disposition < 0)
@@ -33,8 +33,8 @@ switch (ai_state) {
 		target_exist = true;
 		target_x = obj_player_ship.x;
 		target_y = obj_player_ship.y;
-		move_towards_point(target_x, target_y, spd);
-		if (distance_to_point(target_x, target_y) < 128) speed = 0;
+		speed = lerp(speed, spd, 0.05);
+		if (distance_to_point(target_x, target_y) < 128) speed = lerp(speed, 0, 0.04);
 		if (distance_to_object(obj_player_ship) < 512)
 			if (npc_type == npc_types.pirate_test) ai_state = ai_directive.wander;
 			else if (npc_type == npc_types.pirate_defense_drone || npc_type == npc_types.pirate_boss) 
@@ -54,9 +54,9 @@ switch (ai_state) {
 		can_shoot = false;
 		if (distance_to_object(obj_player_ship) < 256) {
 			playerdirection = point_direction(x,y, obj_player_ship.x, obj_player_ship.y);
-			direction = playerdirection + 180;
+			direction = lerp(direction, -playerdirection, rotation_speed);
 			image_angle = direction;
-			speed = spd + 0.5;
+			speed = lerp(speed, spd + 0.5, 0.05);
 		} else if (npc_type == npc_types.pirate_defense_drone) ai_state = ai_directive.attack;	
 		else if (npc_type == npc_types.pirate_boss) ai_state = ai_directive.seek_player;
 		else ai_state = ai_directive.wander;
@@ -66,15 +66,15 @@ switch (ai_state) {
 		target_exist = true;
 		target_x = obj_player_ship.x;
 		target_y = obj_player_ship.y;
-		move_towards_point(target_x, target_y, spd);
+		speed = lerp(speed, spd, 0.05);
 		if (distance_to_point(target_x, target_y) < 128) ai_state = ai_directive.attack;
 		if (distance_to_point(target_x, target_y) < 64)
-			speed = 0;
+			speed = lerp(speed, 0, 0.04);
 	} else {ai_state = ai_directive.seek_player;}
 	break;
 	case ai_directive.attack_civ:
 		alarm[0] = -1;
-		move_towards_point(target_x, target_y, spd);
+		speed = lerp(speed, spd + 0.5, 0.05);
 		if (distance_to_point(target_x, target_y) < 128) speed = 0;
 		if (distance_to_object(civ_target) < 512)
 			if (npc_type == npc_types.pirate_test) ai_state = ai_directive.wander;
@@ -121,3 +121,4 @@ shield_percent = (shield / shield_max) * 100;
 if (target_exist) image_angle -= angle_difference(image_angle, point_direction(x, y, target_x, target_y)) * rotation_speed; 
 else image_angle = image_angle;
 if (speed != 0) is_moving = true; else is_moving = false;
+direction = image_angle;

@@ -39,7 +39,7 @@ if (ship_hull <= 0) {
 		y = room_height / 2;
 	}
 }
-if (move) speed = spd else speed = 0;
+if (move) speed = lerp(speed, spd, speedup_spd) else speed = lerp(speed, 0, slowdown_spd);
 if (shield <= 0) has_shield = false;
 if (can_rechage_shield) {
 	has_shield = true;

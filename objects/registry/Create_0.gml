@@ -5,6 +5,7 @@
 // TODO Abilities
 // TODO Replace enum definitions of objects with strings/integers
 // TODO Localization
+// TODO Character customization
 randomize();
 global.git_tag = "proto-pre-alpha-v0.6";
 global.debug_show_extra_data = false;
@@ -29,6 +30,8 @@ spr_logo = sprite_add("assets/textures/logo.png", 1, false, false, 112, 16);
 spr_status_bar = sprite_add("assets/textures/status_bar.png", 1, false, false, 34, 16);
 spr_health_filled = sprite_add("assets/textures/health_filled.png", 1, false, false, 0, 0);
 spr_shield_filled = sprite_add("assets/textures/shield_filled.png", 1, false, false, 0, 0);
+spr_obstacle_fg = sprite_add("asset/textures/obstacles_foreground", 3, false, false, 8, 8);
+spr_obstacle_bg = sprite_add("asset/textures/obstacles_background", 3, false, false, 8, 8);
 switch (registry_type) {
 	case 0:
 		load_settings();

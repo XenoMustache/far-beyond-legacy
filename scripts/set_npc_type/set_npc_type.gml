@@ -12,7 +12,7 @@ switch (npc_type) {
 	case npc_types.pirate_test:
 		ai_state = ai_directive.wander;
 		spd = 2;
-		rotation_speed = 0.025;
+		rotation_speed = 0.035;
 		ship_hull_max = 100;
 		ship_hull = ship_hull_max;
 		attack_type = npc_attack_types.shoot;
@@ -49,7 +49,7 @@ switch (npc_type) {
 	case npc_types.pirate_defense_drone:
 		ai_state = ai_directive.seek_player;
 		spd = 1.5;
-		rotation_speed = 0.25;
+		rotation_speed = 0.04;
 		ship_hull_max = 200;
 		ship_hull = ship_hull_max;
 		attack_type = npc_attack_types.shoot;
@@ -86,7 +86,7 @@ switch (npc_type) {
 	case npc_types.civ_defense_drone:
 		ai_state = ai_directive.attack;
 		spd = 2;
-		rotation_speed = 0.25;
+		rotation_speed = 0.05;
 		ship_hull_max = 200;
 		ship_hull = ship_hull_max;
 		attack_type = npc_attack_types.shoot;
