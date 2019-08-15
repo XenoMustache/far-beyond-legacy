@@ -54,7 +54,7 @@ switch (registry_type) {
 		audio_play_sound_on(music, snd_3SFU, true, 1);
 		start_message = create_message();
 		start_message.message_type = "message_start";
-		message_button = create_button("Close", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80, 1, false, c_gray);
+		message_button = create_button("Close", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80, 120, 30, false, c_gray);
 		player_spawn = instance_create_depth(room_width / 2, room_height / 2, 0, obj_event_point);
 		player_spawn.point_type = point_types.player_spawn;
 		instance_create_depth(0, 0, 0, control_handler);

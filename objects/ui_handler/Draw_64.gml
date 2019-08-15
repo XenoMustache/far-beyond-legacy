@@ -39,3 +39,10 @@ if (global.console_open) {
 	keyboard_string = string_copy(keyboard_string, 1, 60);
 	draw_set_alpha(1);
 }
+if (global.game_paused && show_pause_menu = false) {
+	control_handler.mouse_locked = false;
+	draw_set_font(fnt_ui);
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_text(display_get_gui_width() / 2, 20, "Game Paused");
+}

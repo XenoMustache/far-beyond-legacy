@@ -1,4 +1,3 @@
-button_width = (120 * size);
 if (instance_exists(ui_handler)) {
 	if (!control_handler.mouse_locked)
 		if (point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), button_x*obj_camera.zoom - (button_width / 2)*obj_camera.zoom, button_y*obj_camera.zoom - (button_height / 2)*obj_camera.zoom, button_x*obj_camera.zoom + (button_width / 2)*obj_camera.zoom, button_y*obj_camera.zoom + (button_height / 2)*obj_camera.zoom))

@@ -1,5 +1,6 @@
 /// @desc Init control variables
 mouse_locked = false;
+can_unpause_game = false;
 has_cmd = false;
 has_param1 = false;
 has_param2 = false;

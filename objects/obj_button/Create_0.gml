@@ -1,6 +1,6 @@
 size = 1;
-button_width = (120 * size);
-button_height = (30);
+button_width = pointer_null; //120
+button_height = pointer_null; //30
 button_text = pointer_null;
 button_x = pointer_null;
 button_y = pointer_null;

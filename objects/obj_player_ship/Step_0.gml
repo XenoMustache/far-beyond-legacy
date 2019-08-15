@@ -18,7 +18,7 @@ if (control_handler.mouse_locked) {
 	}
 }
 // Get input
-if (keyboard_check(vk_space) && can_shoot == true && control_handler.mouse_locked) {
+if (mouse_check_button(mb_left) && can_shoot == true && control_handler.mouse_locked) {
 		player_attack(player_attack_types.shoot);
 }
 // Move player
