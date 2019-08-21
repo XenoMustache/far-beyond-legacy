@@ -1,5 +1,5 @@
 draw_set_font(fnt_ui);
-if (mouse_hover) {
+if (mouse_hover || activated_toggle) {
 	if (show_button) {
 		if (size = 1)
 			draw_sprite_ext(registry.spr_sm_button, 0, button_x, button_y, 1, 1, image_angle, image_blend, image_alpha);
