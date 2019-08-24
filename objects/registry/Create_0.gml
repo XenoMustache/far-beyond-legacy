@@ -51,8 +51,7 @@ switch (registry_type) {
 		global.game_paused = true;
 		var music = audio_emitter_create();
 		audio_emitter_gain(music, global.volume_music);
-		if (!global.mute_music || !global.mute_all)
-			audio_play_sound_on(music, snd_3SFU, true, 1);
+		if (!global.mute_music && !global.mute_all) audio_play_sound_on(music, snd_3SFU, true, 1);
 		start_message = create_message();
 		start_message.message_type = "message_start";
 		message_button = create_button("Close", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80, 120, 30, false, c_gray, false);

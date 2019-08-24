@@ -23,8 +23,7 @@ if (can_shoot) {
 			can_shoot = false;
 			var sound = audio_emitter_create();
 			audio_emitter_gain(sound, global.volume_effect);
-			if (!global.mute_all || !global.mute_effects)
-				audio_play_sound_on(sound, snd_laser, false, 5);
+			if (!global.mute_all && !global.mute_effects) audio_play_sound_on(sound, snd_laser, false, 5);
 			alarm[0] = room_speed / attack_speed;
 		break;
 	}
