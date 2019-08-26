@@ -6,6 +6,8 @@
 // TODO Replace enum definitions of objects with strings/integers
 // TODO Localization
 // TODO Character customization
+// TODO Damage log
+// TODO Hazards
 randomize();
 global.git_tag = "proto-pre-alpha-v0.6";
 global.debug_show_extra_data = false;
@@ -57,6 +59,7 @@ switch (registry_type) {
 		message_button = create_button("Close", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80, 120, 30, false, c_gray, false);
 		player_spawn = instance_create_depth(room_width / 2, room_height / 2, 0, obj_event_point);
 		player_spawn.point_type = point_types.player_spawn;
+		asteroid_field = create_hazard("small_asteroid_field", room_width / 2, room_height / 2, "circle", 200, true, 2, 95);
 		instance_create_depth(0, 0, 0, control_handler);
 		instance_create_depth(0, 0, 0, ui_handler);
 		instance_create_depth(room_width / 2, room_height / 2, 0, obj_camera_controller);

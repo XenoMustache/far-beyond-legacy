@@ -1,4 +1,6 @@
 // Manage all UI elements
+// TODO Seperate Health and Shield bars
+// TODO Fix status bar tip scaling
 if (control_handler.mouse_locked) window_set_cursor(cr_none) else window_set_cursor(cr_default);
 var view_width = display_get_gui_width();
 var view_height = display_get_gui_height();

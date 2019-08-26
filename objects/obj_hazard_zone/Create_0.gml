@@ -5,3 +5,4 @@ hazard_radius = pointer_null;
 player_inside = false;
 hazard_checktime = pointer_null;
 hazard_chance = pointer_null;
+hazard_dmg = pointer_null;
