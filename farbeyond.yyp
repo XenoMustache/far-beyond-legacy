@@ -447,6 +447,14 @@
             }
         },
         {
+            "Key": "8de9e8c1-5ec5-49ba-a986-15d83aaa74cc",
+            "Value": {
+                "id": "cadb8707-4cec-4622-b8ec-4a0279978d6c",
+                "resourcePath": "scripts\\create_hazard\\create_hazard.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8f629a8a-3828-455b-af86-c9bcdf0a64d1",
             "Value": {
                 "id": "58e66fb5-539c-47a2-adb6-9a7e83a8212a",
@@ -559,14 +567,6 @@
             }
         },
         {
-            "Key": "b054c3af-4c5b-4aed-a6c1-b8c2f0440bcb",
-            "Value": {
-                "id": "f49f7fb6-efe8-4bb3-877d-4178891907de",
-                "resourcePath": "objects\\obj_obstacle\\obj_obstacle.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "b05e9a79-9135-49ee-92a5-d750acdb99cb",
             "Value": {
                 "id": "3a459c46-1217-49b6-bca1-12873bc0532d",
@@ -588,14 +588,6 @@
                 "id": "39c55403-55f4-4cbe-bfd4-a88c02ca33ca",
                 "resourcePath": "datafiles_yy\\assets\\textures\\obstacles_background.png.yy",
                 "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "bd3ed282-0e7e-4389-97ed-a62c8f2c9ab1",
-            "Value": {
-                "id": "35a48465-3290-4d9e-b58f-f9e268ff501d",
-                "resourcePath": "scripts\\create_obstacle\\create_obstacle.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -757,6 +749,14 @@
                 "resourcePath": "objects\\obj_loot\\obj_loot.yy",
                 "resourceType": "GMObject"
             }
+        },
+        {
+            "Key": "ffb2b8dc-c29f-424a-96e5-314c3c11b898",
+            "Value": {
+                "id": "b1ddbfd4-0425-4163-9eff-3846c5b7becd",
+                "resourcePath": "objects\\obj_hazard_zone\\obj_hazard_zone.yy",
+                "resourceType": "GMObject"
+            }
         }
     ],
     "script_order": [
@@ -770,7 +770,7 @@
         "04d9f560-e9d6-4813-acc0-7846e2ce3068",
         "4f6e5469-35c3-464b-b6c9-7e0c7d79f3b0",
         "043a2e17-5957-4dc8-b79e-b0b8038fd9e6",
-        "bd3ed282-0e7e-4389-97ed-a62c8f2c9ab1",
+        "8de9e8c1-5ec5-49ba-a986-15d83aaa74cc",
         "b05e9a79-9135-49ee-92a5-d750acdb99cb",
         "bdcb3d2e-052a-4d38-93e6-f1e320926c21",
         "9acc5a72-25a1-47b0-853b-1575a13ad8ec",

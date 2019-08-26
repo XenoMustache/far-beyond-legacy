@@ -1,8 +1,8 @@
 {
-    "id": "bd3ed282-0e7e-4389-97ed-a62c8f2c9ab1",
+    "id": "8de9e8c1-5ec5-49ba-a986-15d83aaa74cc",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "create_obstacle",
+    "name": "create_hazard",
     "IsCompatibility": false,
     "IsDnD": false
 }
