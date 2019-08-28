@@ -1,6 +1,6 @@
-/// @desc Update
 // Get directives
-// TODO Update NPC movement - LATER RELEASE
+// TODO Fix NPC stopping issues
+// TODO NPC's interact with hazards
 if (global.game_paused) { speed = 0; exit;}
 switch (ai_state) {
 	case ai_directive.wander:

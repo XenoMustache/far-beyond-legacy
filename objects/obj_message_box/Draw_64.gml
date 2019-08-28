@@ -87,6 +87,8 @@ if (display_message) {
 			draw_set_font(fnt_ui);
 			draw_set_halign(fa_left);
 			draw_text_ext((window_width / 2) - (width / 2) + 4, (window_height / 2) - (height / 2) + 45, string(content), 22, width - 6);
+			draw_set_color(c_header);
+			draw_line_width(200, 95, 200, 485, 2);
 		break;
 		case "changelog":
 			width = display_get_gui_width() - 100;
@@ -112,7 +114,7 @@ if (display_message) {
 			
 		break;
 		case "game_over":
-		
+			
 		break;
 	}
 }
