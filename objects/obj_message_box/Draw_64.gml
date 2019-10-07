@@ -5,6 +5,7 @@ var width;
 var height;
 var title;
 var content;
+depth = 1;
 draw_set_valign(fa_top);
 if (display_message) {
 	switch (message_type) {

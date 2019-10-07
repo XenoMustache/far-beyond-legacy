@@ -42,7 +42,7 @@ if (global.console_open) {
 	draw_set_alpha(1);
 }
 if (global.game_paused && show_pause_menu = false) {
-	control_handler.mouse_locked = false;
+	//control_handler.mouse_locked = false;
 	draw_set_font(fnt_ui);
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);

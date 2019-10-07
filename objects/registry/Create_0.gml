@@ -8,6 +8,7 @@
 // TODO Character customization
 // TODO Damage log
 // TODO Hazards
+var rm = room_get_name(room);
 randomize();
 global.git_tag = "proto-pre-alpha-v0.6-final";
 global.debug_show_extra_data = false;
@@ -32,11 +33,15 @@ spr_logo = sprite_add("assets/textures/logo.png", 1, false, false, 112, 16);
 spr_status_bar = sprite_add("assets/textures/status_bar.png", 1, false, false, 34, 16);
 spr_health_filled = sprite_add("assets/textures/health_filled.png", 1, false, false, 0, 0);
 spr_shield_filled = sprite_add("assets/textures/shield_filled.png", 1, false, false, 0, 0);
-spr_obstacle_fg = sprite_add("asset/textures/obstacles_foreground", 3, false, false, 8, 8);
-spr_obstacle_bg = sprite_add("asset/textures/obstacles_background", 3, false, false, 8, 8);
-switch (registry_type) {
-	case 0:
+//spr_obstacle_fg = sprite_add("asset/textures/obstacles_foreground", 3, false, false, 8, 8);
+//spr_obstacle_bg = sprite_add("asset/textures/obstacles_background", 3, false, false, 8, 8);
+switch (rm) {
+	case "rm_init":
+		instance_create_depth(x, y, depth, obj_camera);
 		load_settings();
+		room_goto_next();
+	break;
+	case "rm_title":
 		show_settings = false;
 		//subtitle = "P   R   O   T   O   T   Y   P   E";
 		draw_set_halign(fa_middle);
@@ -48,7 +53,7 @@ switch (registry_type) {
 			alarm[1] = room_speed * 10;
 		} else alarm[1] = 1;
 	break;
-	case 1:
+	case "rm_sandbox":
 		audio_stop_all();
 		global.game_paused = true;
 		var music = audio_emitter_create();
@@ -59,7 +64,7 @@ switch (registry_type) {
 		message_button = create_button("Close", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80, 120, 30, false, c_gray, false);
 		player_spawn = instance_create_depth(room_width / 2, room_height / 2, 0, obj_event_point);
 		player_spawn.point_type = point_types.player_spawn;
-		asteroid_field = create_hazard("small_asteroid_field", room_width / 2, room_height / 2, "circle", 1500, true, 8, 0.75);
+		//asteroid_field = create_hazard("small_asteroid_field", room_width / 2, room_height / 2, "circle", 1500, true, 8, 0.75);
 		instance_create_depth(0, 0, 0, control_handler);
 		instance_create_depth(0, 0, 0, ui_handler);
 		instance_create_depth(room_width / 2, room_height / 2, 0, obj_camera_controller);
@@ -84,11 +89,11 @@ switch (registry_type) {
 		//		npc_faction = factions.civ;
 		//	}
 		//}
-		//with (instance_create_depth(random_range(128, room_width - 128), random_range(128, room_height - 128) , 0, obj_npc)) {
-		//	set_npc_type(npc_types.pirate_boss);
-		//	npc_faction = factions.pirate;
-		//	global.enemies_remaining++;
-		//}
+		with (instance_create_depth(random_range(128, room_width - 128), random_range(128, room_height - 128) , 0, obj_npc)) {
+			set_npc_type(npc_types.pirate_boss);
+			npc_faction = factions.pirate;
+			global.enemies_remaining++;
+		}
 	break;
 }
 // TODO Chat system - LATER RELEASE

@@ -13,7 +13,7 @@ ini_write_real("Graphics", "fullscreen", is_fullscreen);
 ini_write_real("Audio", "effect_volume", effect_volume);
 ini_write_real("Audio", "music_volume", music_volume);
 ini_write_real("Controls", "sensitivity", player_sensitivity);
-ini_write_real("Misc", "show_notice", show_notice);
+//ini_write_real("Misc", "show_notice", show_notice);
 ini_write_real("Audio", "mute_all_sounds", mute_all_sounds);
 ini_write_real("Audio", "mute_music", mute_music);
 ini_write_real("Audio", "mute_effects", mute_effects);

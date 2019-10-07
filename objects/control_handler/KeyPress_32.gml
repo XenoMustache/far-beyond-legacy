@@ -17,11 +17,3 @@ if (global.console_open) {
 		keyboard_string = "";
 	}
 }
-if (!global.console_open && !global.game_paused && !ui_handler.show_pause_menu) {
-	global.game_paused = true;
-	mouse_locked = false;
-	window_mouse_set(display_get_gui_width() / 2, display_get_gui_height() / 2);
-} else if (can_unpause_game){ 
-	global.game_paused = false;
-	mouse_locked = true;
-}
