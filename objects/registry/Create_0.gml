@@ -10,7 +10,7 @@
 // TODO Hazards
 var rm = room_get_name(room);
 randomize();
-global.git_tag = "proto-pre-alpha-v0.6-final";
+global.git_tag = "proto-pre-alpha-v0.6";
 global.debug_show_extra_data = false;
 global.player_lives = 3;
 global.console_open = false;
@@ -39,10 +39,12 @@ switch (rm) {
 	case "rm_init":
 		instance_create_depth(x, y, depth, obj_camera);
 		load_settings();
+		global.show_notice = false;
 		room_goto_next();
 	break;
 	case "rm_title":
 		show_settings = false;
+		show_changelog = false;
 		//subtitle = "P   R   O   T   O   T   Y   P   E";
 		draw_set_halign(fa_middle);
 		c_rainbow = make_color_hsv((get_timer()) mod 255,255,255);

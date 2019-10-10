@@ -15,9 +15,15 @@ switch (rm) {
 				button1 = create_button("cancel", (display_get_gui_width() - 100), (display_get_gui_height()) - 75, 90, 30, false, c_rainbow, false);
 				button2 = create_button("apply", (display_get_gui_width() - 200), (display_get_gui_height() - 75), 90, 30, false, c_rainbow, false);
 				button_audio = create_button("audio", 90, 120, 90, 30, false, c_rainbow, true);
+				button_audio.does_untoggle = false;
+				button_audio.button_clicked = true;
+				button_audio.activated_toggle = true;
 				button_controls = create_button("controls", 107, 160, 90, 30, false, c_rainbow, true);
-				button_graphics = create_button("graphics", 105, 200, 90, 30, false, c_rainbow, true);
-				button_misc = create_button("misc", 85, 240, 90, 30, false, c_rainbow, true);
+				button_controls.does_untoggle = false;
+				button_graphics = create_button("graphics", 104, 200, 90, 30, false, c_rainbow, true);
+				button_graphics.does_untoggle = false;
+				button_misc = create_button("misc", 84, 240, 90, 30, false, c_rainbow, true);
+				button_misc.does_untoggle = false;
 				instance_destroy(button_settings);
 				instance_deactivate_object(button_quit);
 				instance_deactivate_object(button_changelog);
@@ -25,14 +31,14 @@ switch (rm) {
 			} else alarm[2] = -1;
 			if (button_quit.button_clicked) {game_end();}
 			if (button_changelog.button_clicked) {
-				show_settings = true;
+				show_changelog = true;
 				buttons_exist = false;
 				instance_deactivate_object(obj_effect_renderer);
 				instance_deactivate_object(button_play);
 				subtitle = "";
 				settings_box = create_message();
 				settings_box.message_type = "changelog";
-				button1 = create_button("close", (display_get_gui_width() - 100), (display_get_gui_height()) - 75, 90, 30, false, c_rainbow, false);
+				button_close_changelog = create_button("close", (display_get_gui_width() - 100), (display_get_gui_height()) - 75, 90, 30, false, c_rainbow, false);
 				instance_destroy(button_settings);
 				instance_deactivate_object(button_quit);
 				instance_deactivate_object(button_changelog);
