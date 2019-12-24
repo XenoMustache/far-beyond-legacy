@@ -18,10 +18,8 @@ if(display_height mod ideal_height != 0) {
 	ideal_height=display_height/d;
 }
 //Check for odd numbers
-if(ideal_width & 1)
-	ideal_width++;
-if(ideal_height & 1)
-	ideal_height++;
+if(ideal_width & 1) ideal_width++;
+if(ideal_height & 1) ideal_height++;
 //Calculate Max Zoom
 max_zoom=floor(display_width/ideal_width);  
 for(var i=2; i<=room_last; i++) {

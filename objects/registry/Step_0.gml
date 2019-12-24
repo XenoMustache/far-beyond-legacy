@@ -16,7 +16,6 @@ switch (rm) {
 				button2 = create_button("apply", (display_get_gui_width() - 200), (display_get_gui_height() - 75), 90, 30, false, c_rainbow, false);
 				button_audio = create_button("audio", 90, 120, 90, 30, false, c_rainbow, true);
 				button_audio.does_untoggle = false;
-				button_audio.button_clicked = true;
 				button_audio.activated_toggle = true;
 				button_controls = create_button("controls", 107, 160, 90, 30, false, c_rainbow, true);
 				button_controls.does_untoggle = false;
@@ -28,8 +27,9 @@ switch (rm) {
 				instance_deactivate_object(button_quit);
 				instance_deactivate_object(button_changelog);
 				alarm[2] = 1;
-			} else alarm[2] = -1;
-			if (button_quit.button_clicked) {game_end();}
+			} 
+			else alarm[2] = -1;
+			if (button_quit.button_clicked) game_end();
 			if (button_changelog.button_clicked) {
 				show_changelog = true;
 				buttons_exist = false;
