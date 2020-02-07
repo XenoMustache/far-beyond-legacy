@@ -8,7 +8,7 @@ if (can_shoot) {
 	switch (attack_type) {
 		case npc_attack_types.shoot:
 			with (instance_create_depth(x + lengthdir_x(10, image_angle), y + lengthdir_y(10, image_angle), 0, obj_bullet)) {
-				sprite_index = registry.spr_bullets;
+				sprite_index = spr_bullets;
 				image_index = 0;
 				image_speed = 0;
 				image_xscale = 1;

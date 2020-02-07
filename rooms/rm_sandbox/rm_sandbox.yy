@@ -7,7 +7,7 @@
     "inheritCreationOrder": false,
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
-        "d46c5144-f300-4f7a-ac0a-3aebf2d54589"
+
     ],
     "IsDnD": false,
     "layers": [
@@ -25,7 +25,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_3DC00555","id": "d46c5144-f300-4f7a-ac0a-3aebf2d54589","colour": { "Value": 4294967295 },"creationCodeFile": "InstanceCreationCode_inst_3DC00555.gml","creationCodeType": ".gml","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_3DC00555","objId": "b64beee1-33ed-4100-affd-1deef0ffae03","properties": [{"id": "6b367b32-8f6c-4d92-b6fb-e4363bd92cab","modelName": "GMOverriddenProperty","objectId": "b64beee1-33ed-4100-affd-1deef0ffae03","propertyId": "c9bc456c-d67b-40de-90eb-99435194dbab","mvc": "1.0","value": "1"}],"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 0,"y": 0}
+
             ],
             "layers": [
 

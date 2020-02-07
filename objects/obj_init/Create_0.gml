@@ -1,0 +1,34 @@
+// TODO Changelog - NEXT RELEASE
+// TODO Dynamic attack damage / critical attacks
+// TODO Pirate waves and dynamic spawnpoints
+// TODO Resources
+// TODO Abilities
+// TODO Replace enum definitions of objects with strings/integers
+// TODO Localization
+// TODO Character customization
+// TODO Damage log
+// TODO Hazards
+
+load_settings();
+
+/// @desc Create game initial data
+// Globals
+global.git_tag = "proto-pre-alpha-v0.6";
+global.debug_show_extra_data = false;
+global.player_lives = 3;
+global.console_open = false;
+global.enemies_remaining = 0;
+global.god_mode = false;
+global.civ_disposition = 50;
+global.pirate_disposition = -100;
+global.game_paused = false;
+global.show_notice = false;
+
+// Init
+randomize();
+window_set_caption("Far Beyond " + global.git_tag);
+audio_stop_all();
+instance_create_depth(x, y, depth, obj_camera);
+room_goto_next();
+
+// TODO Chat system - LATER RELEASE

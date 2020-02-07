@@ -2,6 +2,8 @@
 // TODO NPC disposition system - NEXT RELEASE
 // TODO Player energy system - LATER RELEASE
 image_angle = 90;
+alarm[0] = 30;
+
 ship_hull_max = 100;
 ship_hull = ship_hull_max;
 shield_max = 50;
@@ -12,7 +14,6 @@ is_moving = false;
 can_take_damage = true;
 hit = false;
 can_shoot = false;
-alarm[0] = 30;
 attack_speed = 4;
 bullet_speed = 40;
 bullet_damage = 50;
@@ -27,6 +28,7 @@ shield_percent = 100;
 move = false;
 slowdown_spd = 0.04;
 speedup_spd = 0.05;
-ui_handler.player_exists = true;
+obj_ui_handler.player_exists = true;
+
 var shield_render = instance_create_depth(x, y, -1, obj_effect_renderer);
 shield_render.effect = effects.shield;

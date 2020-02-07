@@ -1,5 +1,4 @@
 /// @desc Initialize NPC
-// Unused Defaults
 is_moving = false;
 hit = false;
 target_exist = false;
@@ -12,17 +11,19 @@ can_rechage_shield = false;
 civ_target = noone;
 health_percent = 100;
 shield_percent = 100;
-// Vital Defaults
-image_angle = 90;
 can_shoot = true;
 can_take_damage = true;
+
+image_angle = 90;
+
 // Register NPC Factions
 enum factions {
 	pirate,
 	civ,
 	player
 }
-// Register NPC directives
+
+// Register NPC states
 enum ai_directive {
 	wander,
 	attack,
@@ -31,4 +32,3 @@ enum ai_directive {
 	flee_pirate,
 	attack_civ
 }
-// Create Shield

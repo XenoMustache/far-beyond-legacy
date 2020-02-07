@@ -1,6 +1,6 @@
-size = 1;
-button_width = pointer_null; //120
-button_height = pointer_null; //30
+/// @desc Initialize
+button_width = pointer_null; //120 - Default
+button_height = pointer_null; //30 - Default
 button_text = pointer_null;
 button_x = pointer_null;
 button_y = pointer_null;

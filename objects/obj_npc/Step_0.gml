@@ -1,7 +1,9 @@
-// Get directives
+/// @desc State machine
 // TODO Fix NPC stopping issues
 // TODO NPC's interact with hazards
+// TODO Unspaghettify this code
 if (global.game_paused) { speed = 0; exit;}
+
 switch (ai_state) {
 	case ai_directive.wander:
 		if (!target_exist) {
@@ -27,7 +29,7 @@ switch (ai_state) {
 			}
 		} else if (npc_faction == factions.pirate && global.pirate_disposition < 0)
 				if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
-	break;
+		break;
 	case ai_directive.attack:
 		alarm[0] = -1;
 		target_exist = true;
@@ -49,7 +51,7 @@ switch (ai_state) {
 			else if (npc_type == npc_types.pirate_boss || npc_type == npc_types.pirate_defense_drone)
 				ai_state = ai_directive.seek_player;
 		}
-	break;
+		break;
 	case ai_directive.flee:
 		can_shoot = false;
 		if (distance_to_object(obj_player_ship) < 256) {
@@ -60,7 +62,7 @@ switch (ai_state) {
 		} else if (npc_type == npc_types.pirate_defense_drone) ai_state = ai_directive.attack;	
 		else if (npc_type == npc_types.pirate_boss) ai_state = ai_directive.seek_player;
 		else ai_state = ai_directive.wander;
-	break;
+		break;
 	case ai_directive.seek_player:
 	if (instance_exists(obj_player_ship)) {
 		target_exist = true;
@@ -71,7 +73,7 @@ switch (ai_state) {
 		if (distance_to_point(target_x, target_y) < 64)
 			speed = lerp(speed, 0, 0.04);
 	} else {ai_state = ai_directive.seek_player;}
-	break;
+		break;
 	case ai_directive.attack_civ:
 		alarm[0] = -1;
 		speed = lerp(speed, spd + 0.5, 0.05);
@@ -90,11 +92,12 @@ switch (ai_state) {
 			else if (npc_type == npc_types.pirate_boss || npc_type == npc_types.pirate_defense_drone)
 				ai_state = ai_directive.seek_player;
 		}
-	break;
+		break;
 	case ai_directive.flee_pirate:
 	// TODO Civillians flee pirates - NEXT RELEASE
 	break;
 }
+
 // Manage health
 if (ship_hull <= 0) {
 	if (npc_type == npc_types.pirate_defense_drone)
@@ -109,14 +112,18 @@ if (ship_hull <= 0) {
 	}
 	instance_destroy();
 }
+
 if (shield <= 0) has_shield = false;
+
 if (can_rechage_shield) {
 	has_shield = true;
 	shield += recharge_rate;
 }
+
 if (shield >= shield_max) can_rechage_shield = false;
 health_percent = (ship_hull / ship_hull_max) * 100;
 shield_percent = (shield / shield_max) * 100;
+
 // Essential movement
 if (target_exist) image_angle -= angle_difference(image_angle, point_direction(x, y, target_x, target_y)) * rotation_speed; 
 else image_angle = image_angle;
