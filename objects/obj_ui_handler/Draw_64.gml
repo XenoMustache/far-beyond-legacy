@@ -16,13 +16,17 @@ draw_set_font(fnt_ui);
 if (player_exists) {
 	draw_set_halign(fa_right);
 	
-	draw_sprite_ext(spr_status_bar, 0, 106, 48, 3, 3, image_angle, c_white, 1);
-	draw_sprite_ext(spr_health_filled, 0, 28, 10, (obj_player_ship.ship_hull / obj_player_ship.ship_hull_max)*3, 3, image_angle, c_white, 1);
-	draw_sprite_ext(spr_shield_filled, 0, 28, 31, (obj_player_ship.shield / obj_player_ship.shield_max)*3, 3, image_angle, c_white, 1);
+	//draw_sprite_ext(spr_status_bar, 0, 106, 48, 3, 3, image_angle, c_white, 1);
+	//draw_sprite_ext(spr_health_filled, 0, 28, 10, (obj_player_ship.ship_hull / obj_player_ship.ship_hull_max)*3, 3, image_angle, c_white, 1);
+	//draw_sprite_ext(spr_shield_filled, 0, 28, 31, (obj_player_ship.shield / obj_player_ship.shield_max)*3, 3, image_angle, c_white, 1);
+	
+	// TODO New stats and display UI
 	
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_middle);
 	
+	draw_text(5, 30, "HULL: " + string(obj_player_ship.ship_hull) + "%");
+	draw_text(5, 50, "SHIELD: " + string(floor(obj_player_ship.shield_percent)) + "%");
 	draw_text(5, 70, "HOSTILES: " + string(global.enemies_remaining));
 	draw_text(5, 90, "LIVES: " + string(global.player_lives));
 	

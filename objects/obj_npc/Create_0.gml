@@ -7,6 +7,7 @@ target_x = pointer_null;
 target_y = pointer_null;
 health_percent = pointer_null;
 accuracy = pointer_null;
+hit_chance = pointer_null;
 can_rechage_shield = false;
 civ_target = noone;
 health_percent = 100;

@@ -14,6 +14,7 @@ switch (rm) {
 			disclaimer = create_message();
 			disclaimer.message_type = "disclaimer";
 			buttons_exist = false;
+			
 			alarm[1] = room_speed * 10;
 		} else alarm[1] = 1;
 		break;
@@ -45,6 +46,7 @@ switch (rm) {
 		for (i = 0; i < 10; i++) {
 			posX = random_range(0 + 16, room_height - 16);
 			posY = random_range(0 + 16, room_height - 16);
+			
 			with (instance_create_depth(posX, posY, 0, obj_npc)) {
 				set_npc_type(npc_types.pirate_test);
 				npc_faction = factions.pirate;

@@ -17,7 +17,7 @@ if (can_shoot) {
 				direction = other.image_angle + random_range(25 * obj_player_ship.accuracy, -25 * obj_player_ship.accuracy);
 				image_angle = direction;
 				bullet_type = bullet_types.player;
-				hit_bullet = weighted_chance(obj_player_ship.accuracy);
+				hit_bullet = weighted_chance(obj_player_ship.hit_chance);
 				bullet_dmg = obj_player_ship.bullet_damage;
 			}
 			can_shoot = false;

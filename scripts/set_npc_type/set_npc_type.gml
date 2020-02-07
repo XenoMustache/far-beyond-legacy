@@ -24,8 +24,9 @@ switch (npc_type) {
 		shield_max = 0;
 		damage_cooldown = 0.5;
 		bullet_speed = 40;
-		accuracy = 0.5;
+		accuracy = 0.3;
 		shield_percent = 0;
+		hit_chance = 0.5;
 	break;
 	case npc_types.pirate_boss:
 		ai_state = ai_directive.seek_player;
@@ -45,6 +46,7 @@ switch (npc_type) {
 		accuracy = 0;
 		spawn_amount = dmg;
 		shield_percent = 0;
+		hit_chance = 0;
 	break;
 	case npc_types.pirate_defense_drone:
 		ai_state = ai_directive.seek_player;
@@ -61,8 +63,9 @@ switch (npc_type) {
 		shield_max = 0;
 		damage_cooldown = 0.5;
 		bullet_speed = 40;
-		accuracy = 0.75;
+		accuracy = 0.25;
 		shield_percent = 0;
+		hit_chance = 0.75;
 	break;
 	case npc_types.civ_test:
 		ai_state = ai_directive.wander;
@@ -81,6 +84,7 @@ switch (npc_type) {
 		accuracy = 0;
 		shield_percent = 0;
 		civ_choice = choose(1, 3, 4, 5);
+		hit_chance = 0;
 	break;
 	// TODO civ defense drone - LATER RELEASE
 	case npc_types.civ_defense_drone:
@@ -98,7 +102,8 @@ switch (npc_type) {
 		shield_max = 0;
 		damage_cooldown = 0.5;
 		bullet_speed = 40;
-		accuracy = 0.75;
+		accuracy = 0.25;
 		shield_percent = 0;
+		hit_chance = 0.75;
 	break;
 }
