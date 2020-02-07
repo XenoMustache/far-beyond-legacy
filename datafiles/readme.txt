@@ -14,6 +14,19 @@ Space - Fire Projectile
 ####################
 Changelog
 ####################
+proto-pre-alpha-v0.5.1:
+
+Rebuilt display system
+Tons of optimizations and bugfixes
+Changes to player and enemy accuracy
+Rebuilt ship movement
+A lot of codebase and logic changes (See source code for specific details)
+Changes to user interface
+Disabled status bar for upcoming changes
+Zoom in/out functionality added
+Resolution scale is now togglable and automatic
+Misc changes/bugfixes
+####################
 proto-pre-alpha-v0.5:
 
 Added message boxes and buttons.
