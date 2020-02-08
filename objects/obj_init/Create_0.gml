@@ -1,18 +1,7 @@
-// TODO Changelog - NEXT RELEASE
-// TODO Dynamic attack damage / critical attacks
-// TODO Pirate waves and dynamic spawnpoints
-// TODO Resources
-// TODO Abilities
-// TODO Replace enum definitions of objects with strings/integers
-// TODO Localization
-// TODO Character customization
-// TODO Damage log
-// TODO Hazards
-
+/// @desc Create game initial data
 load_settings();
 gml_release_mode(true);
 
-/// @desc Create game initial data
 // Globals
 global.git_tag = "proto-pre-alpha-v0.5.1";
 global.debug_show_extra_data = false;
@@ -32,4 +21,5 @@ audio_stop_all();
 instance_create_depth(x, y, depth, obj_camera);
 room_goto_next();
 
-// TODO Chat system - LATER RELEASE
+// TODO Pirate waves and dynamic spawnpoints
+// TODO Replace enum definitions of objects with strings/integers
