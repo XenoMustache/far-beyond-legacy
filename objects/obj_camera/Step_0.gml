@@ -14,8 +14,7 @@ if (window_get_fullscreen()) {
 	window_set_size(ideal_width*zoom,ideal_height*zoom);
 	display_set_gui_size(ideal_width,ideal_height);
 	surface_resize(application_surface,ideal_width*zoom,ideal_height*zoom);
-}
-else {
+} else {
 	ideal_width=0;
 	ideal_height=256*2;
 	zoom=1;
