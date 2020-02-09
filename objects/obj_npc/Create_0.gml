@@ -25,7 +25,7 @@ enum factions {
 }
 
 // Register NPC states
-enum ai_directive {
+enum ai_state {
 	wander,
 	attack,
 	flee,

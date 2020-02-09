@@ -12,7 +12,7 @@ enum npc_types {
 
 switch (npc_type) {
 	case npc_types.pirate_test:
-		ai_state = ai_directive.wander;
+		ai_state = ai_state.wander;
 		spd = 2;
 		rotation_speed = 0.035;
 		ship_hull_max = 100;
@@ -31,7 +31,7 @@ switch (npc_type) {
 		hit_chance = 0.5;
 		break;
 	case npc_types.pirate_boss:
-		ai_state = ai_directive.seek_player;
+		ai_state = ai_state.seek_player;
 		spd = 1;
 		rotation_speed = 0.01;
 		ship_hull_max = 400;
@@ -51,7 +51,7 @@ switch (npc_type) {
 		hit_chance = 0;
 		break;
 	case npc_types.pirate_defense_drone:
-		ai_state = ai_directive.seek_player;
+		ai_state = ai_state.seek_player;
 		spd = 1.5;
 		rotation_speed = 0.04;
 		ship_hull_max = 200;
@@ -70,7 +70,7 @@ switch (npc_type) {
 		hit_chance = 0.75;
 		break;
 	case npc_types.civ_test:
-		ai_state = ai_directive.wander;
+		ai_state = ai_state.wander;
 		spd = 1.5;
 		rotation_speed = 0.025;
 		ship_hull_max = 100;
@@ -90,7 +90,7 @@ switch (npc_type) {
 		break;
 	// TODO civ defense drone - LATER RELEASE
 	case npc_types.civ_defense_drone:
-		ai_state = ai_directive.attack;
+		ai_state = ai_state.attack;
 		spd = 2;
 		rotation_speed = 0.05;
 		ship_hull_max = 200;

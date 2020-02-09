@@ -3,12 +3,12 @@ if (other.bullet_type == bullet_types.player) {
 	if (other.hit_bullet) {
 		if (can_take_damage) {
 			if (npc_type == npc_types.civ_test){ 
-				global.civ_disposition -= 5; 
-				global.pirate_disposition += 5;
+				global.civ_reputation -= 5; 
+				global.pirate_reputation += 5;
 			}
 			ship_hull -= other.bullet_dmg;
 			hit = true;
-			if (npc_type == npc_types.pirate_test) ai_state = ai_directive.attack;
+			if (npc_type == npc_types.pirate_test) ai_state = ai_state.attack;
 			alarm[2] = room_speed * damage_cooldown;
 		}
 	}

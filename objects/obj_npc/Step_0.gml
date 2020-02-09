@@ -1,101 +1,120 @@
 /// @desc State machine
 // TODO Fix NPC stopping issues
-// TODO NPC's interact with hazards
-// TODO Unspaghettify this code
+// TODO NPC's interact with hazard
 if (global.game_paused) { speed = 0; exit;}
 
 switch (ai_state) {
-	case ai_directive.wander:
+	case ai_state.wander:
 		if (!target_exist) {
 			target_exist = true;
 			target_x = random_range(128, room_width - 128);
 			target_y = random_range(128, room_height - 128);
 		}
+		
 		speed = lerp(speed, spd / 2, 0.05);
+		
 		if (distance_to_point(target_x, target_y) < 64) {
 			speed = lerp(speed, 0, 0.04);
 				if (alarm[0] = -1) alarm[0] = room_speed * 5;
 		}
-		if (npc_faction == factions.civ && global.civ_disposition < 0)
-				if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.flee; 
+		
+		if (npc_faction == factions.civ && global.civ_reputation < 0)
+				if (distance_to_object(obj_player_ship) < 128) ai_state = ai_state.flee; 
+		
 		if (npc_faction == factions.pirate && distance_to_object(obj_player_ship) > 128) {
 			with (instance_nearest_notme(x, y, obj_npc)) {
 				if (npc_faction == factions.civ && distance_to_object(other) < 128) {
 					other.civ_target = id;
 					other.target_x = x;
 					other.target_y = y;
-					other.ai_state = ai_directive.attack_civ;
+					other.ai_state = ai_state.attack_civ;
 				}
 			}
-		} else if (npc_faction == factions.pirate && global.pirate_disposition < 0)
-				if (distance_to_object(obj_player_ship) < 128) ai_state = ai_directive.attack;
+		} else if (npc_faction == factions.pirate && global.pirate_reputation < 0)
+				if (distance_to_object(obj_player_ship) < 128) ai_state = ai_state.attack;
 		break;
-	case ai_directive.attack:
+	case ai_state.attack:
 		alarm[0] = -1;
+		
 		target_exist = true;
 		target_x = obj_player_ship.x;
 		target_y = obj_player_ship.y;
+		
 		speed = lerp(speed, spd, 0.05);
+		
 		if (distance_to_point(target_x, target_y) < 128) speed = lerp(speed, 0, 0.04);
+		
 		if (distance_to_object(obj_player_ship) < 512)
-			if (npc_type == npc_types.pirate_test) ai_state = ai_directive.wander;
+			if (npc_type == npc_types.pirate_test) ai_state = ai_state.wander;
 			else if (npc_type == npc_types.pirate_defense_drone || npc_type == npc_types.pirate_boss) 
-				ai_state = ai_directive.seek_player;
+				ai_state = ai_state.seek_player;
+		
 		npc_attack(attack_type);
+		
 		if (npc_type != npc_types.pirate_defense_drone || npc_type != npc_types.pirate_boss)
-			if (ship_hull <= 25) ai_state = ai_directive.flee;
+			if (ship_hull <= 25) ai_state = ai_state.flee;
+		
 		if (obj_player_ship.ship_hull <= 0) {
 			target_exist = false;
-			if (npc_type == npc_types.pirate_test)
-				ai_state = ai_directive.wander;			
+		
+		if (npc_type == npc_types.pirate_test)
+				ai_state = ai_state.wander;			
 			else if (npc_type == npc_types.pirate_boss || npc_type == npc_types.pirate_defense_drone)
-				ai_state = ai_directive.seek_player;
+				ai_state = ai_state.seek_player;
 		}
 		break;
-	case ai_directive.flee:
+	case ai_state.flee:
 		can_shoot = false;
+		
 		if (distance_to_object(obj_player_ship) < 256) {
 			playerdirection = point_direction(x,y, obj_player_ship.x, obj_player_ship.y);
+			
 			direction = lerp(direction, -playerdirection, rotation_speed);
 			image_angle = direction;
 			speed = lerp(speed, spd + 0.5, 0.05);
-		} else if (npc_type == npc_types.pirate_defense_drone) ai_state = ai_directive.attack;	
-		else if (npc_type == npc_types.pirate_boss) ai_state = ai_directive.seek_player;
-		else ai_state = ai_directive.wander;
+		} else if (npc_type == npc_types.pirate_defense_drone) ai_state = ai_state.attack;	
+		else if (npc_type == npc_types.pirate_boss) ai_state = ai_state.seek_player;
+		else ai_state = ai_state.wander;
 		break;
-	case ai_directive.seek_player:
+	case ai_state.seek_player:
 	if (instance_exists(obj_player_ship)) {
 		target_exist = true;
 		target_x = obj_player_ship.x;
 		target_y = obj_player_ship.y;
+		
 		speed = lerp(speed, spd, 0.05);
-		if (distance_to_point(target_x, target_y) < 128) ai_state = ai_directive.attack;
+		
+		if (distance_to_point(target_x, target_y) < 128) ai_state = ai_state.attack;
+		
 		if (distance_to_point(target_x, target_y) < 64)
 			speed = lerp(speed, 0, 0.04);
-	} else {ai_state = ai_directive.seek_player;}
+	} else ai_state = ai_state.seek_player;
 		break;
-	case ai_directive.attack_civ:
+	case ai_state.attack_civ:
 		alarm[0] = -1;
 		speed = lerp(speed, spd + 0.5, 0.05);
+		
 		if (distance_to_point(target_x, target_y) < 128) speed = 0;
+		
 		if (distance_to_object(civ_target) < 512)
-			if (npc_type == npc_types.pirate_test) ai_state = ai_directive.wander;
+			
+			if (npc_type == npc_types.pirate_test) ai_state = ai_state.wander;
 			else if (npc_type == npc_types.pirate_defense_drone || npc_type == npc_types.pirate_boss) 
-				ai_state = ai_directive.seek_player;
-			else if (distance_to_object(obj_player_ship) < 128 && global.pirate_disposition < 0) ai_state = ai_directive.attack;
+				ai_state = ai_state.seek_player;
+			else if (distance_to_object(obj_player_ship) < 128 && global.pirate_reputation < 0) ai_state = ai_state.attack;
+		
 		npc_attack(attack_type);
+		
 		if (!instance_exists(civ_target)) {
 			civ_target = noone;
 			target_exist = false;
+			
 			if (npc_type == npc_types.pirate_test)
-				ai_state = ai_directive.wander;			
+				ai_state = ai_state.wander;			
 			else if (npc_type == npc_types.pirate_boss || npc_type == npc_types.pirate_defense_drone)
-				ai_state = ai_directive.seek_player;
+				ai_state = ai_state.seek_player;
 		}
 		break;
-	case ai_directive.flee_pirate:
-	// TODO Civillians flee pirates - NEXT RELEASE
-	break;
 }
 
 // Manage health

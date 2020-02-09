@@ -13,12 +13,6 @@ else image_angle += rotate * (rotation_speed * 0.25);
 
 direction = image_angle;
 
-// Move player
-//if (control_handler.mouse_locked) {
-	//image_angle -= (mouse_direction + wraps * 360 + image_angle) * rotation_speed;
-	//direction = image_angle;
-//}
-
 // Check movement
 if (speed != 0) is_moving = true else is_moving = false;
 

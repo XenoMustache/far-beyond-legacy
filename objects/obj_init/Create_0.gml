@@ -10,8 +10,8 @@ global.player_credits = 300;
 global.console_open = false;
 global.enemies_remaining = 0;
 global.god_mode = false;
-global.civ_disposition = 50;
-global.pirate_disposition = -100;
+global.civ_reputation = 50;
+global.pirate_reputation = -100;
 global.game_paused = false;
 global.show_notice = false;
 
