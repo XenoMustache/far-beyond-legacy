@@ -1,3 +1,4 @@
+/// @desc Draw hazard
 if (global.debug_show_extra_data) {
 	switch (hazard_type) {
 		case "small_asteroid_field":

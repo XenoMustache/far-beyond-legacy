@@ -1,4 +1,6 @@
+/// @desc Check tick
 if (global.game_paused) exit;
+
 switch (hazard_type) {
 	case "small_asteroid_field":
 		if (hazard_shape == "circle") {

@@ -1,3 +1,4 @@
+/// @desc Initialize hazard zone
 hazard_type = pointer_null;
 hazard_shape = pointer_null;
 hazard_inverted = false;
