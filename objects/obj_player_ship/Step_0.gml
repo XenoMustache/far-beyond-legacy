@@ -3,11 +3,14 @@ if (global.game_paused) { speed = 0; exit;}
 
 // Get input
 var rotate = (keyboard_check(ord("A")) - keyboard_check(ord("D")));
+
 if (keyboard_check(vk_space) && can_shoot == true && !global.console_open && !global.game_paused) {
 		player_attack(player_attack_types.shoot);
 }
 
-image_angle += rotate * rotation_speed;
+if (!move) image_angle += rotate * rotation_speed;
+else image_angle += rotate * (rotation_speed * 0.25);
+
 direction = image_angle;
 
 // Move player

@@ -6,6 +6,7 @@ gml_release_mode(true);
 global.git_tag = "proto-pre-alpha-v0.5.1";
 global.debug_show_extra_data = false;
 global.player_lives = 3;
+global.player_credits = 300;
 global.console_open = false;
 global.enemies_remaining = 0;
 global.god_mode = false;
