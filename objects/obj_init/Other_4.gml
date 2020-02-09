@@ -53,14 +53,14 @@ switch (rm) {
 				global.enemies_remaining ++;
 			}
 		}
-		//for (i = 0; i < 30; i++) {
-		//posX = random_range(0 + 16, room_height - 16);
-		//posY = random_range(0 + 16, room_height - 16);
-		//with (instance_create_depth(posX, posY, 0, obj_npc)) {
-		//		set_npc_type(npc_types.civ_test);
-		//		npc_faction = factions.civ;
-		//	}
-		//}
+		for (i = 0; i < 30; i++) {
+		posX = random_range(0 + 16, room_height - 16);
+		posY = random_range(0 + 16, room_height - 16);
+		with (instance_create_depth(posX, posY, 0, obj_npc)) {
+				set_npc_type(npc_types.civ_test);
+				npc_faction = factions.civ;
+			}
+		}
 		with (instance_create_depth(random_range(128, room_width - 128), random_range(128, room_height - 128) , 0, obj_npc)) {
 			set_npc_type(npc_types.pirate_boss);
 			npc_faction = factions.pirate;
