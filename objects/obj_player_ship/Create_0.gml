@@ -8,7 +8,7 @@ ship_hull_max = 100;
 ship_hull = ship_hull_max;
 shield_max = 50;
 shield = shield_max;
-spd = 3;
+spd = 4;
 rotation_speed = 3;
 is_moving = false;
 can_take_damage = true;
@@ -27,8 +27,11 @@ recharge_rate = 0.5;
 health_percent = 100;
 shield_percent = 100;
 move = false;
-slowdown_spd = 0.04;
+slowdown_spd = 0.01;
+c_speed = 0;
 speedup_spd = 0.05;
+memory_direction = direction;
+
 obj_ui_handler.player_exists = true;
 
 var shield_render = instance_create_depth(x, y, -1, obj_effect_renderer);

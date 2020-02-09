@@ -1,6 +1,7 @@
 ///@arg0 npc_type
 // Set variables according to NPC type
 npc_type = argument0;
+
 enum npc_types {
 	pirate_test,
 	pirate_boss,
@@ -8,6 +9,7 @@ enum npc_types {
 	civ_test,
 	civ_defense_drone
 }
+
 switch (npc_type) {
 	case npc_types.pirate_test:
 		ai_state = ai_directive.wander;
@@ -27,7 +29,7 @@ switch (npc_type) {
 		accuracy = 0.3;
 		shield_percent = 0;
 		hit_chance = 0.5;
-	break;
+		break;
 	case npc_types.pirate_boss:
 		ai_state = ai_directive.seek_player;
 		spd = 1;
@@ -47,7 +49,7 @@ switch (npc_type) {
 		spawn_amount = dmg;
 		shield_percent = 0;
 		hit_chance = 0;
-	break;
+		break;
 	case npc_types.pirate_defense_drone:
 		ai_state = ai_directive.seek_player;
 		spd = 1.5;
@@ -66,7 +68,7 @@ switch (npc_type) {
 		accuracy = 0.25;
 		shield_percent = 0;
 		hit_chance = 0.75;
-	break;
+		break;
 	case npc_types.civ_test:
 		ai_state = ai_directive.wander;
 		spd = 1.5;
@@ -85,7 +87,7 @@ switch (npc_type) {
 		shield_percent = 0;
 		civ_choice = choose(1, 3, 4, 5);
 		hit_chance = 0;
-	break;
+		break;
 	// TODO civ defense drone - LATER RELEASE
 	case npc_types.civ_defense_drone:
 		ai_state = ai_directive.attack;

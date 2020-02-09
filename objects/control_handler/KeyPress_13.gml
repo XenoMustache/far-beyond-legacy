@@ -11,8 +11,11 @@ if (global.console_open) {
 	}
 	show_debug_message(cmd + " " + param1 + " " + param2 + " " + param3);
 	execute_command(string_lettersdigits(cmd), string_lettersdigits(param1), string_lettersdigits(param2), string_lettersdigits(param3));
+	
 	keyboard_string = "";
+	
 	obj_ui_handler.console_output += obj_ui_handler.command_exec + obj_ui_handler.command_feedback + "\n";
+	
 	cmd = "";
 	param1 = "";
 	param2 = "";
