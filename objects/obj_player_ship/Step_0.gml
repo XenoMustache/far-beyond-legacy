@@ -20,15 +20,10 @@ if (ship_hull <= 0) {
 	if (global.player_credits <= -500) room_restart();
 	else {
 		global.player_credits -= 100;
-		// obj_init.player_spawn.trigger = true;
 		global.respawn_message = create_message("respawn");
 		global.respawn_button = create_button("respawn", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80, 120, 30, false, c_gray, false);
 		instance_destroy(obj_effect_renderer);
 		instance_destroy(id);
-		//ship_hull = ship_hull_max;
-		//shield = shield_max;
-		//x = room_width / 2;
-		//y = room_height / 2;
 	}
 }
 
