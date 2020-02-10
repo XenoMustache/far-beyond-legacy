@@ -1,5 +1,4 @@
-enum e__VW
-{
+enum e__VW {
 	XView,
 	YView,
 	WView,

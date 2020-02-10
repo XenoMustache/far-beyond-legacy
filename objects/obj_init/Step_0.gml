@@ -12,10 +12,15 @@ switch (rm) {
 		}
 		break;
 	case "rm_sandbox":
+		if (instance_exists(start_message) && start_message.display_text && !start_message.destroy_message && instance_number(message_button) = 0) {
+			message_button = create_button("Close", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80, 120, 30, false, c_gray, false);
+			show_debug_message("create");
+		}
+	
 		if (instance_exists(message_button)) {
 			if (message_button.button_clicked) {
 				control_handler.can_unpause_game = true;
-				instance_destroy(start_message);
+				start_message.destroy_message = true;
 				instance_destroy(message_button);
 				player_spawn.trigger = true;
 				control_handler.mouse_locked = false;

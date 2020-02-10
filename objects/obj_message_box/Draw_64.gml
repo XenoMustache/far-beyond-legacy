@@ -1,7 +1,5 @@
 /// @desc Display message
 var c_header = make_color_rgb(29,29,29);
-var width;
-var height;
 var title;
 var content;
 
