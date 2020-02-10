@@ -1,5 +1,6 @@
 /// @desc Hover and Debug
 draw_set_font(fnt_ui);
+draw_set_alpha(text_alpha);
 
 if (mouse_hover || activated_toggle) {
 	draw_set_color(text_offset_color);

@@ -24,7 +24,8 @@ switch (rm) {
 		if (!global.mute_music && !global.mute_all) audio_play_sound_on(music, snd_3SFU, true, 1);
 		
 		start_message = create_message("message_start");
-		message_button = noone;
+		message_button = create_button("Close", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80, 120, 30, false, c_gray, false);
+		message_button.text_alpha = 0;
 		
 		player_spawn = instance_create_depth(room_width / 2, room_height / 2, 0, obj_event_point);
 		player_spawn.point_type = point_types.player_spawn;

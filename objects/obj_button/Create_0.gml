@@ -11,3 +11,4 @@ text_offset_color = c_black;
 is_toggled = false;
 activated_toggle = false;
 does_untoggle = true;
+text_alpha = 1;
