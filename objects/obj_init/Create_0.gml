@@ -5,7 +5,7 @@ load_settings();
 gml_release_mode(true);
 
 // Globals
-global.git_tag = "proto-pre-alpha-v0.5.2";
+global.git_tag = "proto-pre-alpha-v0.6";
 global.debug_show_extra_data = false;
 global.player_lives = 3; // Soon to be removed
 global.player_credits = 300;

@@ -39,11 +39,12 @@ switch (rm) {
 		
 		if (instance_exists(global.respawn_button)) {
 			if (instance_exists(global.respawn_message)) {
+				global.respawn_button.text_alpha = global.respawn_message.text_alpha;
 				if (global.respawn_button.button_clicked) {
 					player_spawn.trigger = true;
 					
 					instance_destroy(global.respawn_button);
-					instance_destroy(global.respawn_message);
+					global.respawn_message.destroy_message = true;
 					
 					global.respawn_button = noone;
 					global.respawn_message = noone;
