@@ -5,7 +5,7 @@ load_settings();
 gml_release_mode(true);
 
 // Globals
-global.git_tag = "proto-pre-alpha-v0.5.1";
+global.git_tag = "proto-pre-alpha-v0.5.2";
 global.debug_show_extra_data = false;
 global.player_lives = 3; // Soon to be removed
 global.player_credits = 300;
@@ -16,6 +16,9 @@ global.civ_reputation = 50;
 global.pirate_reputation = -100;
 global.game_paused = false;
 global.show_notice = false;
+global.respawn_message = noone;
+global.respawn_button = noone;
+global.respawn_quit_button = noone;
 
 // Init
 randomize();

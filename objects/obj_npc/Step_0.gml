@@ -36,31 +36,35 @@ switch (ai_state) {
 	case ai_state.attack:
 		alarm[0] = -1;
 		
-		target_exist = true;
-		target_x = obj_player_ship.x;
-		target_y = obj_player_ship.y;
+		if (instance_exists(obj_player_ship)) {
+			target_exist = true;
+			target_x = obj_player_ship.x;
+			target_y = obj_player_ship.y;
 		
-		speed = lerp(speed, spd, 0.05);
+			speed = lerp(speed, spd, 0.05);
 		
-		if (distance_to_point(target_x, target_y) < 128) speed = lerp(speed, 0, 0.04);
+			if (distance_to_point(target_x, target_y) < 128) speed = lerp(speed, 0, 0.04);
 		
-		if (distance_to_object(obj_player_ship) < 512)
-			if (npc_type == npc_types.pirate_test) ai_state = ai_state.wander;
-			else if (npc_type == npc_types.pirate_defense_drone || npc_type == npc_types.pirate_boss) 
-				ai_state = ai_state.seek_player;
+			if (distance_to_object(obj_player_ship) < 512)
+				if (npc_type == npc_types.pirate_test) ai_state = ai_state.wander;
+				else if (npc_type == npc_types.pirate_defense_drone || npc_type == npc_types.pirate_boss) 
+					ai_state = ai_state.seek_player;
 		
-		npc_attack(attack_type);
+			npc_attack(attack_type);
 		
-		if (npc_type != npc_types.pirate_defense_drone || npc_type != npc_types.pirate_boss)
-			if (ship_hull <= 25) ai_state = ai_state.flee;
+			if (npc_type != npc_types.pirate_defense_drone || npc_type != npc_types.pirate_boss)
+				if (ship_hull <= 25) ai_state = ai_state.flee;
 		
-		if (obj_player_ship.ship_hull <= 0) {
-			target_exist = false;
+			if (obj_player_ship.ship_hull <= 0) {
+				target_exist = false;
 		
-		if (npc_type == npc_types.pirate_test)
-				ai_state = ai_state.wander;			
-			else if (npc_type == npc_types.pirate_boss || npc_type == npc_types.pirate_defense_drone)
-				ai_state = ai_state.seek_player;
+			if (npc_type == npc_types.pirate_test)
+					ai_state = ai_state.wander;			
+				else if (npc_type == npc_types.pirate_boss || npc_type == npc_types.pirate_defense_drone)
+					ai_state = ai_state.seek_player;
+			}
+		} else {
+			ai_state = ai_state.wander
 		}
 		break;
 	case ai_state.flee:

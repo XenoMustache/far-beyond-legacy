@@ -47,10 +47,16 @@ if (display_message) {
 			draw_message(width, height, title, content);
 			break;
 		case "respawn":
-		break;
+			width = 500;
+			height = 200;
+			title = "ship destroyed"
+			content = "Your ship was taken out of commission due to heavy damage sustained to its hull. You may respawn for the cost of 100 credits. If you do not have the money you will go in debt until you reach -500 credits in which case you will lose the game."
+		
+			draw_message(width, height, title, content);
+			break;
 		case "game_over":
-		break;
+			break;
 		case "coming_soon": 
-		break;
+			break;
 	}
 }
