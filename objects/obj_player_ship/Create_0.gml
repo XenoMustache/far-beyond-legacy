@@ -31,8 +31,11 @@ slowdown_spd = 0.01;
 c_speed = 0;
 speedup_spd = 0.05;
 memory_direction = direction;
+weapon[0] = "none";
+weapon_choice = weapon[0];
 
 obj_ui_handler.player_exists = true;
 
 var shield_render = instance_create_depth(x, y, -1, obj_effect_renderer);
+
 shield_render.effect = effects.shield;

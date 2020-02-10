@@ -1,4 +1,7 @@
-/// draw_message(width, height, title, content)
+/// @param width
+/// @param height
+/// @param title
+/// @param content
 var width = argument0;
 var height = argument1;
 var title = argument2;
