@@ -25,7 +25,7 @@ switch (npc_type) {
 		shield = 0;
 		shield_max = 0;
 		damage_cooldown = 0.5;
-		bullet_speed = 40;
+		bullet_speed = 5;
 		accuracy = 0.3;
 		shield_percent = 0;
 		hit_chance = 0.5;
@@ -44,7 +44,7 @@ switch (npc_type) {
 		shield = 0;
 		shield_max = 0;
 		damage_cooldown = 0.5;
-		bullet_speed = 40;
+		bullet_speed = 5;
 		accuracy = 0;
 		spawn_amount = dmg;
 		shield_percent = 0;
@@ -64,7 +64,7 @@ switch (npc_type) {
 		shield = 0;
 		shield_max = 0;
 		damage_cooldown = 0.5;
-		bullet_speed = 40;
+		bullet_speed = 5;
 		accuracy = 0.25;
 		shield_percent = 0;
 		hit_chance = 0.75;
@@ -82,13 +82,12 @@ switch (npc_type) {
 		shield = 0;
 		shield_max = 0;
 		damage_cooldown = 0.5;
-		bullet_speed = 40;
+		bullet_speed = 5;
 		accuracy = 0;
 		shield_percent = 0;
 		civ_choice = choose(1, 3, 4, 5);
 		hit_chance = 0;
 		break;
-	// TODO civ defense drone - LATER RELEASE
 	case npc_types.civ_defense_drone:
 		ai_state = ai_state.attack;
 		spd = 2;
@@ -103,7 +102,7 @@ switch (npc_type) {
 		shield = 0;
 		shield_max = 0;
 		damage_cooldown = 0.5;
-		bullet_speed = 40;
+		bullet_speed = 5;
 		accuracy = 0.25;
 		shield_percent = 0;
 		hit_chance = 0.75;

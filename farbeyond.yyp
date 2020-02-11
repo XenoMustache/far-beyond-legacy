@@ -631,6 +631,14 @@
             }
         },
         {
+            "Key": "e6f3b4f9-5299-4d7a-a3db-6d070bc0ab0b",
+            "Value": {
+                "id": "f6664502-c04d-4691-bb2e-4ab612852743",
+                "resourcePath": "shaders\\shd_pixelate\\shd_pixelate.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "e78e6bf2-98ef-4cdc-ac9a-9e4c968b50fd",
             "Value": {
                 "id": "069e583e-5811-4902-8fa7-081b09552a05",
