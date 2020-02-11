@@ -130,7 +130,7 @@ if (ship_hull <= 0) {
 		var pirate_drop = weighted_chance(0.25);
 		if (pirate_drop) { 
 			var loot_drop = instance_create_depth(x, y, 0, obj_loot);
-			loot_drop.loot = choose(loot_types.sm_hp, loot_types.life);
+			loot_drop.loot = choose(loot_types.sm_hp);
 		}
 	}
 	instance_destroy();

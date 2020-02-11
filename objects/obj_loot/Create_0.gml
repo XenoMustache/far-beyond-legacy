@@ -4,7 +4,6 @@ led_effect.effect = effects.capsule;
 
 enum loot_types {
 	sm_hp,
-	life,
 	shield,
 	pu_damage
 }
