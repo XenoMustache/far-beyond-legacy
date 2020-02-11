@@ -4,7 +4,7 @@ var rm = room_get_name(room);
 switch (rm) {
 	case "rm_title":
 		if(buttons_exist) {
-			if (instance_exists(logo) && logo.image_alpha < 1) 
+			if (logo.image_alpha < 1) 
 				logo.image_alpha += 0.025;
 			
 			if (instance_exists(button_play) && button_play.text_alpha < 1)
@@ -15,12 +15,6 @@ switch (rm) {
 				
 			if (instance_exists(button_changelog) && button_changelog.text_alpha < 1)
 				button_changelog.text_alpha += 0.025;
-			
-			if (button_play.button_clicked) {room_goto_next();}
-		//	if (button_settings.button_clicked) { } 
-		//	else alarm[2] = -1;
-			if (button_quit.button_clicked) game_end();
-			if (button_changelog.button_clicked) { }
 		}
 		break;
 	case "rm_sandbox":

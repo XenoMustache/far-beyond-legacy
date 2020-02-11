@@ -28,7 +28,7 @@ switch (npc_type) {
 		bullet_speed = 5;
 		accuracy = 0.3;
 		shield_percent = 0;
-		hit_chance = 0.5;
+		hit_chance = 1;
 		break;
 	case npc_types.pirate_boss:
 		ai_state = ai_state.seek_player;

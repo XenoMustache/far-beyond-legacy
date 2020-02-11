@@ -18,7 +18,7 @@ global.game_paused = false;
 global.show_notice = false;
 global.respawn_message = noone;
 global.respawn_button = noone;
-global.respawn_quit_button = noone;
+global.respawn_quit_button = noone; // Soon to be added
 
 // Init
 randomize();

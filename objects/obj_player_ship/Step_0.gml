@@ -21,7 +21,7 @@ if (ship_hull <= 0) {
 	else {
 		global.player_credits -= 100;
 		global.respawn_message = create_message("respawn");
-		global.respawn_button = create_button("respawn", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80, 120, 30, false, c_gray, false);
+		global.respawn_button = create_button("respawn", display_get_gui_width() / 2, (display_get_gui_height() / 2) + 80, 120, 30, false, c_gray, false, dummy);
 		
 		instance_destroy(obj_effect_renderer);
 		instance_destroy(id);
