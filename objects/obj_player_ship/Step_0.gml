@@ -40,7 +40,7 @@ if (shield <= 0) has_shield = false;
 
 if (can_rechage_shield) {
 	has_shield = true;
-	shield += recharge_rate;
+	if (shield != 100) shield += recharge_rate;
 }
 
 if (ship_hull > ship_hull_max) ship_hull = ship_hull_max;

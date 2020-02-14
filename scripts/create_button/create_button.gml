@@ -17,6 +17,7 @@ var show_button = argument5;
 var text_offset_color = argument6;
 var is_toggled = argument7;
 var script = argument8;
+
 button.button_text = message;
 button.button_x = xx;
 button.button_y = yy;
