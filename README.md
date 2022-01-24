@@ -1,7 +1,4 @@
 # Far Beyond - Legacy
-## About
-Far Beyond is a space exploration RPG set in a procedural generated galaxy. Originally made as a closed source game, now turned open source. The original plan was to develop this game over the years and eventually release it on Steam. I quickly lost interest in the project, and now I am giving it to you, the Open Source community to contribute to the project as you will.
-
 ## Contributing
 To contribue, simply fork the repository, make your changes, and then create a pull request. Your changes will be validated, and if successful they will be added to the primary code base. Any changes made to this repository that are proven to be counter-active, mischievous, or otherwise unneeded will be removed and the contributing user will be unable to make changes to this repository.
 
